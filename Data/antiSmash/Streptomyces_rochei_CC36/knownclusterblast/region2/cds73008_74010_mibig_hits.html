@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ALV82360.1</td>
+              <td>oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001370/1">BGC0001370</a></td>
+              <td>NRP</td>
+              <td>99.0</td>
+              <td>100.0</td>
+              <td>671.0</td>
+              <td>6.8e-193</td>
+          </tr>
+    
+          <tr>
+              <td>CAB38880.1</td>
+              <td>Asparagine_oxygenase_(AsnO)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000315/1">BGC0000315</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>90.0</td>
+              <td>100.0</td>
+              <td>607.0</td>
+              <td>9.2e-174</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ23083.1</td>
+              <td>possible_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000291/1">BGC0000291</a></td>
+              <td>NRP</td>
+              <td>45.0</td>
+              <td>95.2</td>
+              <td>255.0</td>
+              <td>1.5e-67</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf19</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001329/1">BGC0001329</a></td>
+              <td>Polyketide + NRP:Cyclic depsipeptide</td>
+              <td>44.0</td>
+              <td>99.4</td>
+              <td>252.0</td>
+              <td>1.3e-66</td>
+          </tr>
+    
+          <tr>
+              <td>WP_030498981.1</td>
+              <td>clavaminate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001327/1">BGC0001327</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Modular type I</td>
+              <td>44.0</td>
+              <td>96.7</td>
+              <td>250.0</td>
+              <td>3.7e-66</td>
+          </tr>
+    
+          <tr>
+              <td>EWM63011.1</td>
+              <td>clavaminate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001328/1">BGC0001328</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Modular type I</td>
+              <td>44.0</td>
+              <td>96.7</td>
+              <td>250.0</td>
+              <td>4.9e-66</td>
+          </tr>
+    
+          <tr>
+              <td>BAU50943.1</td>
+              <td>L-arginine_hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001379/1">BGC0001379</a></td>
+              <td>NRP</td>
+              <td>31.0</td>
+              <td>104.8</td>
+              <td>113.0</td>
+              <td>9.3e-25</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

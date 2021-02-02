@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AFU82630.1</td>
+              <td>carbamoyl_phosphate_synthetase_like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000998/1">BGC0000998</a></td>
+              <td>NRP + Polyketide</td>
+              <td>33.0</td>
+              <td>101.2</td>
+              <td>188.0</td>
+              <td>1.6e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AFI41899.1</td>
+              <td>MboD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000387/1">BGC0000387</a></td>
+              <td>NRP</td>
+              <td>37.0</td>
+              <td>82.6</td>
+              <td>186.0</td>
+              <td>1.1e-46</td>
+          </tr>
+    
+          <tr>
+              <td>ADB43068.1</td>
+              <td>putative_amino_acid_ligase_of_ATP-grasp_superfamily</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000926/1">BGC0000926</a></td>
+              <td>Other</td>
+              <td>29.0</td>
+              <td>78.7</td>
+              <td>129.0</td>
+              <td>9.1e-30</td>
+          </tr>
+    
+          <tr>
+              <td>WP_033283298.1</td>
+              <td>ATP-grasp_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001739/1">BGC0001739</a></td>
+              <td>Other</td>
+              <td>33.0</td>
+              <td>64.1</td>
+              <td>117.0</td>
+              <td>4.7e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ARO49589.1</td>
+              <td>ATP-dependent_carboxylate-amide_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001441/1">BGC0001441</a></td>
+              <td>Other</td>
+              <td>26.0</td>
+              <td>91.4</td>
+              <td>73.0</td>
+              <td>1e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

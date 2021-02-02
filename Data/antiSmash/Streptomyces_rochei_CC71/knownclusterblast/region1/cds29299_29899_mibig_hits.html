@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAH10100.1</td>
+              <td>putative_phosphate_mutase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000268/1">BGC0000268</a></td>
+              <td>Polyketide</td>
+              <td>63.0</td>
+              <td>99.5</td>
+              <td>221.0</td>
+              <td>1.1e-57</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79606.1</td>
+              <td>FilG2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001501/1">BGC0001501</a></td>
+              <td>Alkaloid</td>
+              <td>31.0</td>
+              <td>100.0</td>
+              <td>81.0</td>
+              <td>2.3e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AHB62783.1</td>
+              <td>phosphoglycerate_mutase_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001126/1">BGC0001126</a></td>
+              <td>Terpene + Alkaloid</td>
+              <td>31.0</td>
+              <td>100.0</td>
+              <td>80.0</td>
+              <td>4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>APB62269.1</td>
+              <td>phosphoglycerate_mutase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001612/1">BGC0001612</a></td>
+              <td>Alkaloid</td>
+              <td>31.0</td>
+              <td>100.0</td>
+              <td>80.0</td>
+              <td>4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79629.1</td>
+              <td>FisG2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001595/1">BGC0001595</a></td>
+              <td>Alkaloid</td>
+              <td>31.0</td>
+              <td>102.5</td>
+              <td>79.0</td>
+              <td>6.8e-15</td>
+          </tr>
+    
+          <tr>
+              <td>BAF92606.1</td>
+              <td>putative_phosphatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000118/1">BGC0000118</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>60.3</td>
+              <td>57.0</td>
+              <td>2.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ACJ24880.1</td>
+              <td>putative_phosphatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000119/1">BGC0000119</a></td>
+              <td>Polyketide:Iterative type I + Saccharide:Hybrid/tailoring</td>
+              <td>35.0</td>
+              <td>60.3</td>
+              <td>57.0</td>
+              <td>2.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BAV57067.1</td>
+              <td>phosphoglycerate_mutases</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001514/1">BGC0001514</a></td>
+              <td>Other</td>
+              <td>31.0</td>
+              <td>101.5</td>
+              <td>55.0</td>
+              <td>1.1e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CCM09441.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000468/1">BGC0000468</a></td>
+              <td>RiPP:Bottromycin</td>
+              <td>40.0</td>
+              <td>94.2</td>
+              <td>156.0</td>
+              <td>6.1e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AFV25479.1</td>
+              <td>BotOMT</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000469/1">BGC0000469</a></td>
+              <td>RiPP:Bottromycin</td>
+              <td>40.0</td>
+              <td>89.5</td>
+              <td>154.0</td>
+              <td>2.3e-37</td>
+          </tr>
+    
+          <tr>
+              <td>CBG72696.1</td>
+              <td>Methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001157/1">BGC0001157</a></td>
+              <td>RiPP:Bottromycin</td>
+              <td>40.0</td>
+              <td>94.2</td>
+              <td>154.0</td>
+              <td>3e-37</td>
+          </tr>
+    
+          <tr>
+              <td>CAP12605.1</td>
+              <td>carboxyl_O-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000219/1">BGC0000219</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>38.0</td>
+              <td>96.7</td>
+              <td>147.0</td>
+              <td>3.7e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AFU90406.1</td>
+              <td>O-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000470/1">BGC0000470</a></td>
+              <td>RiPP:Cyanobactin</td>
+              <td>38.0</td>
+              <td>80.0</td>
+              <td>146.0</td>
+              <td>8.2e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AEZ53956.1</td>
+              <td>putative_O-methyltransferase-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000144/1">BGC0000144</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>31.0</td>
+              <td>95.6</td>
+              <td>136.0</td>
+              <td>6.5e-32</td>
+          </tr>
+    
+          <tr>
+              <td>BAF98637.1</td>
+              <td>putative_methyl_transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000651/1">BGC0000651</a></td>
+              <td>Terpene</td>
+              <td>41.0</td>
+              <td>66.9</td>
+              <td>127.0</td>
+              <td>3.9e-29</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020636847.1</td>
+              <td>class_I_SAM-dependent_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002011/1">BGC0002011</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>87.3</td>
+              <td>112.0</td>
+              <td>1e-24</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

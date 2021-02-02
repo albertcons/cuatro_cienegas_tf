@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAL15727.1</td>
+              <td>aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000432/1">BGC0000432</a></td>
+              <td>NRP</td>
+              <td>99.0</td>
+              <td>100.0</td>
+              <td>743.0</td>
+              <td>1.2e-214</td>
+          </tr>
+    
+          <tr>
+              <td>BAU50945.1</td>
+              <td>aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001379/1">BGC0001379</a></td>
+              <td>NRP</td>
+              <td>60.0</td>
+              <td>99.2</td>
+              <td>430.0</td>
+              <td>3.9e-120</td>
+          </tr>
+    
+          <tr>
+              <td>ABR67747.1</td>
+              <td>CmnD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000316/1">BGC0000316</a></td>
+              <td>NRP</td>
+              <td>43.0</td>
+              <td>97.9</td>
+              <td>255.0</td>
+              <td>1.7e-67</td>
+          </tr>
+    
+          <tr>
+              <td>AAP92494.1</td>
+              <td>capreomycidine_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000458/1">BGC0000458</a></td>
+              <td>NRP</td>
+              <td>39.0</td>
+              <td>100.3</td>
+              <td>242.0</td>
+              <td>8.8e-64</td>
+          </tr>
+    
+          <tr>
+              <td>ABP57743.1</td>
+              <td>DepM</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000993/1">BGC0000993</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Modular type I</td>
+              <td>26.0</td>
+              <td>107.0</td>
+              <td>74.0</td>
+              <td>5.4e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ACZ13455.1</td>
+              <td>predicted_aspartate_transaminase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000897/1">BGC0000897</a></td>
+              <td>Other</td>
+              <td>26.0</td>
+              <td>98.9</td>
+              <td>71.0</td>
+              <td>4.6e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CAH18565.1</td>
+              <td>putative_aspartate_aminotransferase,_TobA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000721/1">BGC0000721</a></td>
+              <td>Saccharide</td>
+              <td>29.0</td>
+              <td>58.3</td>
+              <td>63.0</td>
+              <td>7.3e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ACY02009.1</td>
+              <td>GntR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000343/1">BGC0000343</a></td>
+              <td>NRP</td>
+              <td>29.0</td>
+              <td>78.9</td>
+              <td>57.0</td>
+              <td>4e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AGG35703.1</td>
+              <td>aminotransferase,_class_I_and_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000883/1">BGC0000883</a></td>
+              <td>Other</td>
+              <td>27.0</td>
+              <td>82.6</td>
+              <td>56.0</td>
+              <td>1.2e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

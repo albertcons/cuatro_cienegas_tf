@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADZ24985.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000380/1">BGC0000380</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>39.0</td>
+              <td>55.8</td>
+              <td>106.0</td>
+              <td>5.5e-23</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf515</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001199/1">BGC0001199</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>68.6</td>
+              <td>104.0</td>
+              <td>2.7e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ52621.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001066/1">BGC0001066</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>38.0</td>
+              <td>57.3</td>
+              <td>101.0</td>
+              <td>3e-21</td>
+          </tr>
+    
+          <tr>
+              <td>BAO66517.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000042/1">BGC0000042</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>60.2</td>
+              <td>96.0</td>
+              <td>9.7e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CAL58678.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000149/1">BGC0000149</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>35.0</td>
+              <td>56.2</td>
+              <td>91.0</td>
+              <td>1.8e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AXI91544.1</td>
+              <td>FunA11</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001944/1">BGC0001944</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>65.3</td>
+              <td>89.0</td>
+              <td>7e-18</td>
+          </tr>
+    
+          <tr>
+              <td>WP_006051177.1</td>
+              <td>thioesterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001999/1">BGC0001999</a></td>
+              <td>NRP</td>
+              <td>32.0</td>
+              <td>62.4</td>
+              <td>69.0</td>
+              <td>9.7e-12</td>
+          </tr>
+    
+          <tr>
+              <td>WP_051700103.1</td>
+              <td>thioesterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001368/1">BGC0001368</a></td>
+              <td>NRP</td>
+              <td>32.0</td>
+              <td>63.5</td>
+              <td>61.0</td>
+              <td>2.7e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>sipS3</td>
+              <td>Nucleoside-diphosphate_sugar_epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001452/1">BGC0001452</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>83.7</td>
+              <td>130.0</td>
+              <td>4.8e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AWR88390.1</td>
+              <td>putative_NAD-dependent_epimerase/dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001522/1">BGC0001522</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>83.7</td>
+              <td>130.0</td>
+              <td>6.2e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ACB37735.1</td>
+              <td>dTDP-glucose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000162/1">BGC0000162</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>89.6</td>
+              <td>125.0</td>
+              <td>2e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AAK83179.1</td>
+              <td>putative_NDP-glucose_4-epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000026/1">BGC0000026</a></td>
+              <td>Saccharide:Oligosaccharide</td>
+              <td>33.0</td>
+              <td>90.5</td>
+              <td>123.0</td>
+              <td>5.8e-28</td>
+          </tr>
+    
+          <tr>
+              <td>ABB05110.1</td>
+              <td>LipDig4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001003/1">BGC0001003</a></td>
+              <td>NRP:Lipopeptide + Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>90.7</td>
+              <td>118.0</td>
+              <td>1.9e-26</td>
+          </tr>
+    
+          <tr>
+              <td>BAC76482.1</td>
+              <td>putative_NDP-hexose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000085/1">BGC0000085</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>91.0</td>
+              <td>111.0</td>
+              <td>3e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AAG26471.1</td>
+              <td>putative_UDP-glucuronic_acid_epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001411/1">BGC0001411</a></td>
+              <td>Saccharide</td>
+              <td>28.0</td>
+              <td>98.1</td>
+              <td>109.0</td>
+              <td>8.7e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ACN29712.1</td>
+              <td>dTDP-glucose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000814/1">BGC0000814</a></td>
+              <td>Alkaloid</td>
+              <td>28.0</td>
+              <td>86.4</td>
+              <td>105.0</td>
+              <td>1.6e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAF25549.1</td>
+              <td>GalE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000916/1">BGC0000916</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>87.2</td>
+              <td>105.0</td>
+              <td>2.1e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAD13546.1</td>
+              <td>NDP-hexose_4,6-dehydratase_homolog</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000239/1">BGC0000239</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>26.0</td>
+              <td>89.1</td>
+              <td>102.0</td>
+              <td>1.1e-21</td>
+          </tr>
+    
+          <tr>
+              <td>KFL51878.1</td>
+              <td>NAD-dependent_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001711/1">BGC0001711</a></td>
+              <td>NRP + Polyketide</td>
+              <td>28.0</td>
+              <td>87.5</td>
+              <td>99.0</td>
+              <td>1.5e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AAK83169.1</td>
+              <td>putative_UDP-glucose_4-epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000026/1">BGC0000026</a></td>
+              <td>Saccharide:Oligosaccharide</td>
+              <td>28.0</td>
+              <td>87.5</td>
+              <td>92.0</td>
+              <td>1.9e-18</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

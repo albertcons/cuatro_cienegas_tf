@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAV57456.1</td>
+              <td>adenylylsulfate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001912/1">BGC0001912</a></td>
+              <td>NRP</td>
+              <td>68.0</td>
+              <td>96.2</td>
+              <td>241.0</td>
+              <td>9.6e-64</td>
+          </tr>
+    
+          <tr>
+              <td>BAC79014.1</td>
+              <td>adenylylsulfate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000245/1">BGC0000245</a></td>
+              <td>Polyketide</td>
+              <td>68.0</td>
+              <td>94.6</td>
+              <td>238.0</td>
+              <td>8.1e-63</td>
+          </tr>
+    
+          <tr>
+              <td>ABY83151.1</td>
+              <td>Azi12</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000960/1">BGC0000960</a></td>
+              <td>NRP + Polyketide</td>
+              <td>62.0</td>
+              <td>98.4</td>
+              <td>222.0</td>
+              <td>6e-58</td>
+          </tr>
+    
+          <tr>
+              <td>BAW27677.1</td>
+              <td>adenylsulfate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001764/1">BGC0001764</a></td>
+              <td>NRP</td>
+              <td>63.0</td>
+              <td>98.9</td>
+              <td>222.0</td>
+              <td>6e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ARF06210.1</td>
+              <td>adenylsulfate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001593/1">BGC0001593</a></td>
+              <td>NRP</td>
+              <td>62.0</td>
+              <td>98.9</td>
+              <td>215.0</td>
+              <td>5.6e-56</td>
+          </tr>
+    
+          <tr>
+              <td>AAD32745.1</td>
+              <td>MmcU</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000915/1">BGC0000915</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>51.0</td>
+              <td>95.1</td>
+              <td>139.0</td>
+              <td>3.9e-33</td>
+          </tr>
+    
+          <tr>
+              <td>QBF51779.1</td>
+              <td>adenylyl-sulfate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001856/1">BGC0001856</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>44.0</td>
+              <td>94.6</td>
+              <td>135.0</td>
+              <td>9.7e-32</td>
+          </tr>
+    
+          <tr>
+              <td>TXC99992.1</td>
+              <td>adenylyl-sulfate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001877/1">BGC0001877</a></td>
+              <td>Polyketide</td>
+              <td>39.0</td>
+              <td>94.6</td>
+              <td>112.0</td>
+              <td>8.8e-25</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

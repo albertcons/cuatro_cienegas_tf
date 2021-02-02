@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>crtaU</td>
+              <td>isorenieratene_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001456/1">BGC0001456</a></td>
+              <td>Terpene</td>
+              <td>63.0</td>
+              <td>99.0</td>
+              <td>591.0</td>
+              <td>1.8e-168</td>
+          </tr>
+    
+          <tr>
+              <td>AGS67382.1</td>
+              <td>beta-carotene_desaturase/methylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001227/1">BGC0001227</a></td>
+              <td>Terpene</td>
+              <td>62.0</td>
+              <td>99.2</td>
+              <td>575.0</td>
+              <td>7.8e-164</td>
+          </tr>
+    
+          <tr>
+              <td>BAB69140.1</td>
+              <td>phytoene_desaturase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000633/1">BGC0000633</a></td>
+              <td>Terpene</td>
+              <td>62.0</td>
+              <td>97.1</td>
+              <td>569.0</td>
+              <td>7.3e-162</td>
+          </tr>
+    
+          <tr>
+              <td>BAG23655.1</td>
+              <td>putative_beta-carotene_desaturase/methylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000664/1">BGC0000664</a></td>
+              <td>Terpene</td>
+              <td>61.0</td>
+              <td>99.8</td>
+              <td>563.0</td>
+              <td>4e-160</td>
+          </tr>
+    
+          <tr>
+              <td>AAG28703.1</td>
+              <td>CrtU</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000649/1">BGC0000649</a></td>
+              <td>Terpene</td>
+              <td>60.0</td>
+              <td>99.8</td>
+              <td>559.0</td>
+              <td>5.8e-159</td>
+          </tr>
+    
+          <tr>
+              <td>ASA76649.1</td>
+              <td>isorenierate_synthase_like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001751/1">BGC0001751</a></td>
+              <td>NRP + Polyketide</td>
+              <td>51.0</td>
+              <td>96.9</td>
+              <td>444.0</td>
+              <td>2.1e-124</td>
+          </tr>
+    
+          <tr>
+              <td>AAF65586.1</td>
+              <td>betacarotene_desaturase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000636/1">BGC0000636</a></td>
+              <td>Terpene</td>
+              <td>49.0</td>
+              <td>98.6</td>
+              <td>419.0</td>
+              <td>7.1e-117</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22341.1</td>
+              <td>oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000065/1">BGC0000065</a></td>
+              <td>Polyketide:Iterative type I</td>
+              <td>31.0</td>
+              <td>45.3</td>
+              <td>50.0</td>
+              <td>6.7e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

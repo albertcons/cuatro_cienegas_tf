@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AFJ52696.1</td>
+              <td>Dioxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001073/1">BGC0001073</a></td>
+              <td>NRP + Polyketide</td>
+              <td>37.0</td>
+              <td>79.5</td>
+              <td>195.0</td>
+              <td>1.7e-49</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ64696.1</td>
+              <td>serine-type_D-Ala-D-Ala_carboxypeptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000087/1">BGC0000087</a></td>
+              <td>Polyketide</td>
+              <td>42.0</td>
+              <td>72.0</td>
+              <td>181.0</td>
+              <td>2e-45</td>
+          </tr>
+    
+          <tr>
+              <td>ABB05108.1</td>
+              <td>LipX4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001003/1">BGC0001003</a></td>
+              <td>NRP:Lipopeptide + Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>35.0</td>
+              <td>95.0</td>
+              <td>158.0</td>
+              <td>3.1e-38</td>
+          </tr>
+    
+          <tr>
+              <td>SCN11944.1</td>
+              <td>alkaline_D-peptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001580/1">BGC0001580</a></td>
+              <td>Polyketide</td>
+              <td>40.0</td>
+              <td>68.1</td>
+              <td>158.0</td>
+              <td>3.1e-38</td>
+          </tr>
+    
+          <tr>
+              <td>BAG85035.1</td>
+              <td>putative_serine-type_D-Ala-D-Ala_carboxypeptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000086/1">BGC0000086</a></td>
+              <td>Polyketide</td>
+              <td>40.0</td>
+              <td>51.0</td>
+              <td>128.0</td>
+              <td>2e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AID65221.1</td>
+              <td>beta-lactamase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000335/1">BGC0000335</a></td>
+              <td>NRP</td>
+              <td>30.0</td>
+              <td>75.7</td>
+              <td>111.0</td>
+              <td>2.5e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AID65219.1</td>
+              <td>beta-lactamase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000335/1">BGC0000335</a></td>
+              <td>NRP</td>
+              <td>28.0</td>
+              <td>63.1</td>
+              <td>98.0</td>
+              <td>2.9e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AID65220.1</td>
+              <td>beta-lactamase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000335/1">BGC0000335</a></td>
+              <td>NRP</td>
+              <td>30.0</td>
+              <td>76.7</td>
+              <td>96.0</td>
+              <td>1.4e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAU34204.1</td>
+              <td>alpha/beta_hydrolase_MppK</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000388/1">BGC0000388</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>52.5</td>
+              <td>89.0</td>
+              <td>1e-17</td>
+          </tr>
+    
+          <tr>
+              <td>ADZ45342.1</td>
+              <td>beta-lactamase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001020/1">BGC0001020</a></td>
+              <td>NRP + Polyketide</td>
+              <td>33.0</td>
+              <td>43.1</td>
+              <td>84.0</td>
+              <td>5.6e-16</td>
+          </tr>
+    
+          <tr>
+              <td>WP_003948921.1</td>
+              <td>serine_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001792/1">BGC0001792</a></td>
+              <td>NRP</td>
+              <td>27.0</td>
+              <td>84.2</td>
+              <td>81.0</td>
+              <td>3.6e-15</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ76284.1</td>
+              <td>putative_penicillin_binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000972/1">BGC0000972</a></td>
+              <td>NRP + Polyketide:Modular type I + Polyketide:Trans-AT type I</td>
+              <td>27.0</td>
+              <td>47.3</td>
+              <td>69.0</td>
+              <td>1.4e-11</td>
+          </tr>
+    
+          <tr>
+              <td>QBC65477.1</td>
+              <td>beta-lactamase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001962/1">BGC0001962</a></td>
+              <td>Polyketide</td>
+              <td>27.0</td>
+              <td>55.2</td>
+              <td>62.0</td>
+              <td>1.8e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

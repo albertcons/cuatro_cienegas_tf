@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ARU08088.1</td>
+              <td>mlcS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001448/1">BGC0001448</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>62.0</td>
+              <td>72.4</td>
+              <td>898.0</td>
+              <td>8.2e-261</td>
+          </tr>
+    
+          <tr>
+              <td>CAN89659.1</td>
+              <td>putative_pyridoxal-phosphate_dependent_enzyme</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001070/1">BGC0001070</a></td>
+              <td>NRP + Polyketide:Modular type I + Polyketide:Trans-AT type I</td>
+              <td>60.0</td>
+              <td>72.6</td>
+              <td>832.0</td>
+              <td>9.4e-241</td>
+          </tr>
+    
+          <tr>
+              <td>ATL73055.1</td>
+              <td>TotD2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001807/1">BGC0001807</a></td>
+              <td>NRP + Polyketide</td>
+              <td>57.0</td>
+              <td>71.6</td>
+              <td>772.0</td>
+              <td>1.2e-222</td>
+          </tr>
+    
+          <tr>
+              <td>AGC09511.1</td>
+              <td>cysteine_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001183/1">BGC0001183</a></td>
+              <td>Polyketide</td>
+              <td>56.0</td>
+              <td>71.6</td>
+              <td>767.0</td>
+              <td>2.8e-221</td>
+          </tr>
+    
+          <tr>
+              <td>ADY76670.1</td>
+              <td>DABA_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000950/1">BGC0000950</a></td>
+              <td>NRP:Uridylpeptide + Other:Nucleoside</td>
+              <td>56.0</td>
+              <td>72.5</td>
+              <td>759.0</td>
+              <td>7.7e-219</td>
+          </tr>
+    
+          <tr>
+              <td>ADN26255.1</td>
+              <td>fusion_protein_containing_a_PLP-dependent_cysteine_synthase_and_an_argininosuccinate_lyase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000951/1">BGC0000951</a></td>
+              <td>NRP</td>
+              <td>53.0</td>
+              <td>72.5</td>
+              <td>708.0</td>
+              <td>2e-203</td>
+          </tr>
+    
+          <tr>
+              <td>BAM73634.1</td>
+              <td>putative_phospho-2-dehydro-3-deoxyheptonate_aldolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000889/1">BGC0000889</a></td>
+              <td>Other</td>
+              <td>70.0</td>
+              <td>24.9</td>
+              <td>368.0</td>
+              <td>5e-101</td>
+          </tr>
+    
+          <tr>
+              <td>AVI10275.1</td>
+              <td>putative_phospho-2-dehydro-3-deoxyheptonate_aldolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002029/1">BGC0002029</a></td>
+              <td>Other</td>
+              <td>67.0</td>
+              <td>25.8</td>
+              <td>367.0</td>
+              <td>8.6e-101</td>
+          </tr>
+    
+          <tr>
+              <td>OLZ52452.1</td>
+              <td>3-deoxy-7-phosphoheptulonate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001462/1">BGC0001462</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>69.0</td>
+              <td>25.7</td>
+              <td>364.0</td>
+              <td>4.2e-100</td>
+          </tr>
+    
+          <tr>
+              <td>AGS77329.1</td>
+              <td>DAHP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001178/1">BGC0001178</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>68.0</td>
+              <td>25.7</td>
+              <td>362.0</td>
+              <td>2.8e-99</td>
+          </tr>
+    
+          <tr>
+              <td>ALK27898.1</td>
+              <td>putative_3-deoxy-D-arabinoseheptulosonate_7-phosphate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001233/1">BGC0001233</a></td>
+              <td>NRP</td>
+              <td>68.0</td>
+              <td>26.5</td>
+              <td>362.0</td>
+              <td>2.8e-99</td>
+          </tr>
+    
+          <tr>
+              <td>CAE53368.1</td>
+              <td>phospho-2-dehydro-3-deoxyheptonate_aldolase,_AroA_type</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000440/1">BGC0000440</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>66.0</td>
+              <td>25.9</td>
+              <td>356.0</td>
+              <td>2e-97</td>
+          </tr>
+    
+          <tr>
+              <td>CAG15026.1</td>
+              <td>heptulosonate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000441/1">BGC0000441</a></td>
+              <td>NRP</td>
+              <td>65.0</td>
+              <td>25.9</td>
+              <td>351.0</td>
+              <td>6.3e-96</td>
+          </tr>
+    
+          <tr>
+              <td>ARR97042.1</td>
+              <td>SphI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001780/1">BGC0001780</a></td>
+              <td>NRP</td>
+              <td>52.0</td>
+              <td>28.5</td>
+              <td>295.0</td>
+              <td>4.1e-79</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52120.1</td>
+              <td>DAHP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000081/1">BGC0000081</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>54.0</td>
+              <td>26.8</td>
+              <td>280.0</td>
+              <td>1.1e-74</td>
+          </tr>
+    
+          <tr>
+              <td>CAO85892.1</td>
+              <td>NorJ_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000110/1">BGC0000110</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>57.0</td>
+              <td>25.1</td>
+              <td>277.0</td>
+              <td>6.8e-74</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79567.1</td>
+              <td>FimI1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001594/1">BGC0001594</a></td>
+              <td>Alkaloid</td>
+              <td>56.0</td>
+              <td>23.4</td>
+              <td>265.0</td>
+              <td>2.7e-70</td>
+          </tr>
+    
+          <tr>
+              <td>AHI58835.1</td>
+              <td>3-deoxy-D-arabinoheptulosonate_7-phosphate_(DAHP)_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000668/1">BGC0000668</a></td>
+              <td>Terpene + Alkaloid</td>
+              <td>56.0</td>
+              <td>23.4</td>
+              <td>264.0</td>
+              <td>7.8e-70</td>
+          </tr>
+    
+          <tr>
+              <td>AHB62777.1</td>
+              <td>3-deoxy-D-arabinoheptulosonate_7-phosphate_(DAHP)_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001126/1">BGC0001126</a></td>
+              <td>Terpene + Alkaloid</td>
+              <td>57.0</td>
+              <td>23.0</td>
+              <td>263.0</td>
+              <td>1.3e-69</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79600.1</td>
+              <td>FilI1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001501/1">BGC0001501</a></td>
+              <td>Alkaloid</td>
+              <td>57.0</td>
+              <td>23.0</td>
+              <td>263.0</td>
+              <td>1.3e-69</td>
+          </tr>
+    
+          <tr>
+              <td>APB62263.1</td>
+              <td>3-deoxy-D-arabinoheptulosonate-7-phosphate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001612/1">BGC0001612</a></td>
+              <td>Alkaloid</td>
+              <td>57.0</td>
+              <td>23.0</td>
+              <td>263.0</td>
+              <td>1.3e-69</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79623.1</td>
+              <td>FisI1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001595/1">BGC0001595</a></td>
+              <td>Alkaloid</td>
+              <td>57.0</td>
+              <td>23.0</td>
+              <td>262.0</td>
+              <td>2.3e-69</td>
+          </tr>
+    
+          <tr>
+              <td>ATN39913.1</td>
+              <td>MstT</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001664/1">BGC0001664</a></td>
+              <td>Terpene</td>
+              <td>55.0</td>
+              <td>23.1</td>
+              <td>259.0</td>
+              <td>2.5e-68</td>
+          </tr>
+    
+          <tr>
+              <td>AEG64688.1</td>
+              <td>diaminobutyric_acid_synthase_C</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000379/1">BGC0000379</a></td>
+              <td>NRP</td>
+              <td>40.0</td>
+              <td>39.4</td>
+              <td>254.0</td>
+              <td>8.1e-67</td>
+          </tr>
+    
+          <tr>
+              <td>CAM56767.1</td>
+              <td>DabA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000354/1">BGC0000354</a></td>
+              <td>NRP</td>
+              <td>43.0</td>
+              <td>29.5</td>
+              <td>220.0</td>
+              <td>1.3e-56</td>
+          </tr>
+    
+          <tr>
+              <td>AEG64686.1</td>
+              <td>diaminobutyric_acid_synthase_A</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000379/1">BGC0000379</a></td>
+              <td>NRP</td>
+              <td>44.0</td>
+              <td>27.6</td>
+              <td>215.0</td>
+              <td>3.2e-55</td>
+          </tr>
+    
+          <tr>
+              <td>CAM56769.1</td>
+              <td>DabC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000354/1">BGC0000354</a></td>
+              <td>NRP</td>
+              <td>39.0</td>
+              <td>38.4</td>
+              <td>210.0</td>
+              <td>1.3e-53</td>
+          </tr>
+    
+          <tr>
+              <td>BAC73327.1</td>
+              <td>putative_cysteine_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001587/1">BGC0001587</a></td>
+              <td>Other</td>
+              <td>38.0</td>
+              <td>30.3</td>
+              <td>172.0</td>
+              <td>4e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AFU82627.1</td>
+              <td>carbamoyl_phosphate_synthetase_like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000998/1">BGC0000998</a></td>
+              <td>NRP + Polyketide</td>
+              <td>33.0</td>
+              <td>34.0</td>
+              <td>136.0</td>
+              <td>1.9e-31</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

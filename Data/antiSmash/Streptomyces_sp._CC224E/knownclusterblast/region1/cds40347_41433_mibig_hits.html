@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CBJ83014.1</td>
+              <td>alcohol_dehydrogenase_class_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000189/1">BGC0000189</a></td>
+              <td>Polyketide:Type III</td>
+              <td>35.0</td>
+              <td>101.4</td>
+              <td>200.0</td>
+              <td>3.7e-51</td>
+          </tr>
+    
+          <tr>
+              <td>ADM34147.1</td>
+              <td>dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001084/1">BGC0001084</a></td>
+              <td>NRP + Terpene + Alkaloid</td>
+              <td>27.0</td>
+              <td>100.6</td>
+              <td>107.0</td>
+              <td>4.2e-23</td>
+          </tr>
+    
+          <tr>
+              <td>ABY66028.1</td>
+              <td>Zn-dependent_alcohol_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001008/1">BGC0001008</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>29.0</td>
+              <td>97.0</td>
+              <td>103.0</td>
+              <td>8e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CAF32372.1</td>
+              <td>putative_3-amino-2,3-dideoxy-scyllo-inositol_1-dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000712/1">BGC0000712</a></td>
+              <td>Saccharide</td>
+              <td>28.0</td>
+              <td>91.4</td>
+              <td>96.0</td>
+              <td>1.3e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAF31844.1</td>
+              <td>putative_3-amino-2,3-dideoxy-scyllo-inositol_1-dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000699/1">BGC0000699</a></td>
+              <td>Saccharide</td>
+              <td>28.0</td>
+              <td>96.7</td>
+              <td>95.0</td>
+              <td>2.2e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AIG62135.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000120/1">BGC0000120</a></td>
+              <td>Polyketide:Iterative type I</td>
+              <td>26.0</td>
+              <td>98.1</td>
+              <td>94.0</td>
+              <td>4.9e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AEO57486.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001449/1">BGC0001449</a></td>
+              <td>NRP + Alkaloid + Polyketide:Iterative type I</td>
+              <td>32.0</td>
+              <td>73.1</td>
+              <td>92.0</td>
+              <td>1.8e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAG38695.1</td>
+              <td>putative_3-amino-2,3-dideoxy-scyllo-inositol_1-dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000708/1">BGC0000708</a></td>
+              <td>Saccharide</td>
+              <td>28.0</td>
+              <td>91.7</td>
+              <td>89.0</td>
+              <td>1.2e-17</td>
+          </tr>
+    
+          <tr>
+              <td>CAG34720.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000713/1">BGC0000713</a></td>
+              <td>Saccharide</td>
+              <td>28.0</td>
+              <td>91.7</td>
+              <td>86.0</td>
+              <td>7.8e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AKQ22658.1</td>
+              <td>s-(hydroxymethyl)glutathione_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001656/1">BGC0001656</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>45.7</td>
+              <td>84.0</td>
+              <td>3.9e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AAD28446.1</td>
+              <td>unknown</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000915/1">BGC0000915</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>26.0</td>
+              <td>102.8</td>
+              <td>67.0</td>
+              <td>3.7e-11</td>
+          </tr>
+    
+          <tr>
+              <td>QBK46642.1</td>
+              <td>HrsP1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001960/1">BGC0001960</a></td>
+              <td>Polyketide</td>
+              <td>25.0</td>
+              <td>97.0</td>
+              <td>60.0</td>
+              <td>6e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAU93806.2</td>
+              <td>polyketide_synthase_modules_3_and_4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000054/1">BGC0000054</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>69.3</td>
+              <td>52.0</td>
+              <td>2.1e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

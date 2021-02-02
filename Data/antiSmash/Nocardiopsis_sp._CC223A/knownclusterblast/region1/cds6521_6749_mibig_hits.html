@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAZ55901.1</td>
+              <td>isochorismatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000359/1">BGC0000359</a></td>
+              <td>NRP</td>
+              <td>63.0</td>
+              <td>94.7</td>
+              <td>90.0</td>
+              <td>1.5e-18</td>
+          </tr>
+    
+          <tr>
+              <td>ABS75233.1</td>
+              <td>DhbB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001185/1">BGC0001185</a></td>
+              <td>NRP:NRP siderophore</td>
+              <td>55.0</td>
+              <td>97.3</td>
+              <td>73.0</td>
+              <td>1.8e-13</td>
+          </tr>
+    
+          <tr>
+              <td>CAB15187.1</td>
+              <td>isochorismatase_(siderophore_specific)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000309/1">BGC0000309</a></td>
+              <td>NRP</td>
+              <td>51.0</td>
+              <td>93.3</td>
+              <td>70.0</td>
+              <td>1.2e-12</td>
+          </tr>
+    
+          <tr>
+              <td>BAH33404.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000371/1">BGC0000371</a></td>
+              <td>NRP</td>
+              <td>48.0</td>
+              <td>97.3</td>
+              <td>70.0</td>
+              <td>1.6e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ABG94128.1</td>
+              <td>probable_isochorismatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000417/1">BGC0000417</a></td>
+              <td>NRP</td>
+              <td>49.0</td>
+              <td>90.7</td>
+              <td>69.0</td>
+              <td>3.5e-12</td>
+          </tr>
+    
+          <tr>
+              <td>YP_856991.1</td>
+              <td>isochorismatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001502/1">BGC0001502</a></td>
+              <td>NRP</td>
+              <td>49.0</td>
+              <td>88.0</td>
+              <td>63.0</td>
+              <td>1.5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAG31129.1</td>
+              <td>MxcF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001345/1">BGC0001345</a></td>
+              <td>NRP</td>
+              <td>48.0</td>
+              <td>92.0</td>
+              <td>63.0</td>
+              <td>1.9e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf1262</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001752/1">BGC0001752</a></td>
+              <td>NRP</td>
+              <td>49.0</td>
+              <td>88.0</td>
+              <td>60.0</td>
+              <td>1.2e-09</td>
+          </tr>
+    
+          <tr>
+              <td>CAC17499.1</td>
+              <td>putative_non-ribosomal_peptide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000324/1">BGC0000324</a></td>
+              <td>NRP</td>
+              <td>45.0</td>
+              <td>80.0</td>
+              <td>51.0</td>
+              <td>7.5e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

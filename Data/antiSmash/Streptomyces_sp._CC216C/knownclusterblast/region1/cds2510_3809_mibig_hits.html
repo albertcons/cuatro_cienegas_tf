@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAG77429.1</td>
+              <td>putative_glutamate_decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000694/1">BGC0000694</a></td>
+              <td>Saccharide</td>
+              <td>39.0</td>
+              <td>98.1</td>
+              <td>312.0</td>
+              <td>8e-85</td>
+          </tr>
+    
+          <tr>
+              <td>BAE07075.1</td>
+              <td>BtrK</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000693/1">BGC0000693</a></td>
+              <td>Saccharide</td>
+              <td>40.0</td>
+              <td>96.3</td>
+              <td>311.0</td>
+              <td>2.3e-84</td>
+          </tr>
+    
+          <tr>
+              <td>ANH11406.1</td>
+              <td>MacK</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001908/1">BGC0001908</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>91.2</td>
+              <td>207.0</td>
+              <td>4.7e-53</td>
+          </tr>
+    
+          <tr>
+              <td>BAD08372.1</td>
+              <td>decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000167/1">BGC0000167</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>91.9</td>
+              <td>204.0</td>
+              <td>4e-52</td>
+          </tr>
+    
+          <tr>
+              <td>ADB02854.1</td>
+              <td>AzicN</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000202/1">BGC0000202</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>88.9</td>
+              <td>201.0</td>
+              <td>2.6e-51</td>
+          </tr>
+    
+          <tr>
+              <td>OAP25806.1</td>
+              <td>L-glutamyl-[BtrI_acyl-carrier_protein]_decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001658/1">BGC0001658</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>89.1</td>
+              <td>200.0</td>
+              <td>4.4e-51</td>
+          </tr>
+    
+          <tr>
+              <td>DAC74149.1</td>
+              <td>pyridoxal-dependent_decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002019/1">BGC0002019</a></td>
+              <td>Terpene</td>
+              <td>36.0</td>
+              <td>89.4</td>
+              <td>185.0</td>
+              <td>2.5e-46</td>
+          </tr>
+    
+          <tr>
+              <td>BAV56007.1</td>
+              <td>PLP-dependent_decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001597/1">BGC0001597</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>92.6</td>
+              <td>177.0</td>
+              <td>4e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AQT01379.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001690/1">BGC0001690</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>88.2</td>
+              <td>155.0</td>
+              <td>2.8e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AGG35710.1</td>
+              <td>diaminopimelate_decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000883/1">BGC0000883</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>95.6</td>
+              <td>138.0</td>
+              <td>2.7e-32</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABB69740.1</td>
+              <td>PlaP6</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000654/1">BGC0000654</a></td>
+              <td>Terpene + Saccharide:Hybrid/tailoring</td>
+              <td>38.0</td>
+              <td>100.4</td>
+              <td>139.0</td>
+              <td>7.8e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AAG29792.1</td>
+              <td>acyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000833/1">BGC0000833</a></td>
+              <td>Saccharide:Hybrid/tailoring + Other:Aminocoumarin</td>
+              <td>37.0</td>
+              <td>92.1</td>
+              <td>137.0</td>
+              <td>3.9e-32</td>
+          </tr>
+    
+          <tr>
+              <td>DAC74140.1</td>
+              <td>alpha_beta_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002019/1">BGC0002019</a></td>
+              <td>Terpene</td>
+              <td>35.0</td>
+              <td>103.6</td>
+              <td>136.0</td>
+              <td>6.6e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AAN65236.1</td>
+              <td>acyl_transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000832/1">BGC0000832</a></td>
+              <td>Saccharide:Hybrid/tailoring + Other:Aminocoumarin</td>
+              <td>35.0</td>
+              <td>98.6</td>
+              <td>128.0</td>
+              <td>2.3e-29</td>
+          </tr>
+    
+          <tr>
+              <td>ABY66017.1</td>
+              <td>acetyltransferase/esterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001008/1">BGC0001008</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>33.0</td>
+              <td>100.0</td>
+              <td>96.0</td>
+              <td>7.6e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ATV95596.1</td>
+              <td>aceryltransferase/esterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001503/1">BGC0001503</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>101.1</td>
+              <td>85.0</td>
+              <td>1.7e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AAM77996.1</td>
+              <td>esterase/hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000112/1">BGC0000112</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>34.0</td>
+              <td>41.9</td>
+              <td>55.0</td>
+              <td>1.5e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

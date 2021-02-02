@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ATU31820.1</td>
+              <td>aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001814/1">BGC0001814</a></td>
+              <td>NRP</td>
+              <td>75.0</td>
+              <td>88.6</td>
+              <td>299.0</td>
+              <td>6.3e-81</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ32825.1</td>
+              <td>putative_p-aminobenzoate_synthase_glutamine_amidotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002031/1">BGC0002031</a></td>
+              <td>Alkaloid</td>
+              <td>71.0</td>
+              <td>81.1</td>
+              <td>270.0</td>
+              <td>3.1e-72</td>
+          </tr>
+    
+          <tr>
+              <td>ANY94433.1</td>
+              <td>anthranilate_synthase_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001584/1">BGC0001584</a></td>
+              <td>Polyketide</td>
+              <td>56.0</td>
+              <td>89.9</td>
+              <td>223.0</td>
+              <td>4.4e-58</td>
+          </tr>
+    
+          <tr>
+              <td>AAL06663.1</td>
+              <td>anthranilate_synthase_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000965/1">BGC0000965</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>55.0</td>
+              <td>89.9</td>
+              <td>222.0</td>
+              <td>7.5e-58</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52122.1</td>
+              <td>ADC_synthase_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000081/1">BGC0000081</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>56.0</td>
+              <td>88.2</td>
+              <td>213.0</td>
+              <td>4.5e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ALU98529.1</td>
+              <td>anthranilate_synthase_subunit_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001397/1">BGC0001397</a></td>
+              <td>NRP + Polyketide</td>
+              <td>56.0</td>
+              <td>78.1</td>
+              <td>197.0</td>
+              <td>2.6e-50</td>
+          </tr>
+    
+          <tr>
+              <td>CAB38584.1</td>
+              <td>probable_anthranilate_synthase_component_II_(trpG)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000315/1">BGC0000315</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>54.0</td>
+              <td>82.0</td>
+              <td>171.0</td>
+              <td>2e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ82560.1</td>
+              <td>PabAB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000061/1">BGC0000061</a></td>
+              <td>Polyketide</td>
+              <td>53.0</td>
+              <td>82.9</td>
+              <td>166.0</td>
+              <td>3.7e-41</td>
+          </tr>
+    
+          <tr>
+              <td>OJF16273.1</td>
+              <td>PabAB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001491/1">BGC0001491</a></td>
+              <td>Polyketide</td>
+              <td>49.0</td>
+              <td>82.9</td>
+              <td>155.0</td>
+              <td>1.1e-37</td>
+          </tr>
+    
+          <tr>
+              <td>CAO85894.1</td>
+              <td>PABA_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000110/1">BGC0000110</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>48.0</td>
+              <td>87.3</td>
+              <td>144.0</td>
+              <td>2e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AKP45392.1</td>
+              <td>CysD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001413/1">BGC0001413</a></td>
+              <td>NRP</td>
+              <td>43.0</td>
+              <td>86.4</td>
+              <td>143.0</td>
+              <td>4.4e-34</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79624.1</td>
+              <td>FisI2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001595/1">BGC0001595</a></td>
+              <td>Alkaloid</td>
+              <td>45.0</td>
+              <td>79.8</td>
+              <td>130.0</td>
+              <td>3.9e-30</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79568.1</td>
+              <td>FimI2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001594/1">BGC0001594</a></td>
+              <td>Alkaloid</td>
+              <td>45.0</td>
+              <td>79.8</td>
+              <td>129.0</td>
+              <td>8.6e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AHB62778.1</td>
+              <td>anthranilate_synthase_(TrpE)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001126/1">BGC0001126</a></td>
+              <td>Terpene + Alkaloid</td>
+              <td>45.0</td>
+              <td>79.8</td>
+              <td>125.0</td>
+              <td>9.5e-29</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79601.1</td>
+              <td>FilI2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001501/1">BGC0001501</a></td>
+              <td>Alkaloid</td>
+              <td>45.0</td>
+              <td>79.8</td>
+              <td>125.0</td>
+              <td>9.5e-29</td>
+          </tr>
+    
+          <tr>
+              <td>APB62264.1</td>
+              <td>anthranilate_synthase_subunit_I</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001612/1">BGC0001612</a></td>
+              <td>Alkaloid</td>
+              <td>45.0</td>
+              <td>79.8</td>
+              <td>125.0</td>
+              <td>9.5e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AEF16052.1</td>
+              <td>PABA_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000953/1">BGC0000953</a></td>
+              <td>Saccharide:Aminoglycoside</td>
+              <td>37.0</td>
+              <td>89.0</td>
+              <td>124.0</td>
+              <td>2.8e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AHI58834.1</td>
+              <td>anthranilate_synthase_(TrpE)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000668/1">BGC0000668</a></td>
+              <td>Terpene + Alkaloid</td>
+              <td>41.0</td>
+              <td>85.5</td>
+              <td>122.0</td>
+              <td>8.1e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AAG04391.1</td>
+              <td>anthranilate_synthase_component_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000922/1">BGC0000922</a></td>
+              <td>Other</td>
+              <td>41.0</td>
+              <td>90.4</td>
+              <td>122.0</td>
+              <td>1.1e-27</td>
+          </tr>
+    
+          <tr>
+              <td>CAE02603.1</td>
+              <td>PABA_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000024/1">BGC0000024</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>43.0</td>
+              <td>91.7</td>
+              <td>120.0</td>
+              <td>4e-27</td>
+          </tr>
+    
+          <tr>
+              <td>CAE52330.1</td>
+              <td>putative_para-amino_benzoate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001088/1">BGC0001088</a></td>
+              <td>NRP + Polyketide</td>
+              <td>40.0</td>
+              <td>86.8</td>
+              <td>119.0</td>
+              <td>8.9e-27</td>
+          </tr>
+    
+          <tr>
+              <td>WP_051673846.1</td>
+              <td>phenazine-specific_anthranilate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001444/1">BGC0001444</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>89.9</td>
+              <td>61.0</td>
+              <td>2.9e-09</td>
+          </tr>
+    
+          <tr>
+              <td>KDQ70113.1</td>
+              <td>anthranilate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001538/1">BGC0001538</a></td>
+              <td>NRP + Polyketide</td>
+              <td>28.0</td>
+              <td>89.9</td>
+              <td>61.0</td>
+              <td>2.9e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

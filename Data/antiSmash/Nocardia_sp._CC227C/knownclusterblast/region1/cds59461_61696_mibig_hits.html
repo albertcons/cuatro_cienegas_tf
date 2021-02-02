@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADM46380.1</td>
+              <td>magnesium_or_manganese-dependent_protein_phosphatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000106/1">BGC0000106</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>62.1</td>
+              <td>141.0</td>
+              <td>4.2e-33</td>
+          </tr>
+    
+          <tr>
+              <td>EFL36747.1</td>
+              <td>magnesium_or_manganese-dependent_protein_phosphatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000518/1">BGC0000518</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>30.0</td>
+              <td>52.8</td>
+              <td>136.0</td>
+              <td>2.3e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ABD65941.1</td>
+              <td>PAS_protein_phosphatase_2C-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000341/1">BGC0000341</a></td>
+              <td>NRP</td>
+              <td>33.0</td>
+              <td>39.1</td>
+              <td>132.0</td>
+              <td>3.3e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AFW04547.1</td>
+              <td>DNA_binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001783/1">BGC0001783</a></td>
+              <td>Other</td>
+              <td>34.0</td>
+              <td>35.6</td>
+              <td>130.0</td>
+              <td>1.3e-29</td>
+          </tr>
+    
+          <tr>
+              <td>ABA41517.1</td>
+              <td>regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000722/1">BGC0000722</a></td>
+              <td>Polyketide + Other:Cyclitol</td>
+              <td>33.0</td>
+              <td>35.1</td>
+              <td>126.0</td>
+              <td>1.8e-28</td>
+          </tr>
+    
+          <tr>
+              <td>SCN11967.1</td>
+              <td>putative_serine_phosphatase_RsbU,_regulator_of_sigma_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001580/1">BGC0001580</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>36.6</td>
+              <td>126.0</td>
+              <td>1.8e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AFL48546.1</td>
+              <td>putative_magnesium/manganese-dependent_protein_phosphatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000084/1">BGC0000084</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>52.0</td>
+              <td>124.0</td>
+              <td>9e-28</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

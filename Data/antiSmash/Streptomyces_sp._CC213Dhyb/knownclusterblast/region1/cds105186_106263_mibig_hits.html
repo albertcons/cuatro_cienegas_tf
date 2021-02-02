@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABW71837.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000303/1">BGC0000303</a></td>
+              <td>NRP</td>
+              <td>61.0</td>
+              <td>80.7</td>
+              <td>356.0</td>
+              <td>6.8e-98</td>
+          </tr>
+    
+          <tr>
+              <td>ACN39025.1</td>
+              <td>putative_gamma-glutamyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000448/1">BGC0000448</a></td>
+              <td>NRP</td>
+              <td>61.0</td>
+              <td>80.4</td>
+              <td>355.0</td>
+              <td>1.2e-97</td>
+          </tr>
+    
+          <tr>
+              <td>AOC89013.1</td>
+              <td>putative_gamma-glutamyltransferase-like_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001652/1">BGC0001652</a></td>
+              <td>NRP</td>
+              <td>61.0</td>
+              <td>80.7</td>
+              <td>354.0</td>
+              <td>2e-97</td>
+          </tr>
+    
+          <tr>
+              <td>AEH41785.1</td>
+              <td>HrmG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000374/1">BGC0000374</a></td>
+              <td>NRP:Cyclic depsipeptide</td>
+              <td>60.0</td>
+              <td>80.7</td>
+              <td>351.0</td>
+              <td>1.7e-96</td>
+          </tr>
+    
+          <tr>
+              <td>ACN39748.1</td>
+              <td>SibY</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000428/1">BGC0000428</a></td>
+              <td>NRP</td>
+              <td>57.0</td>
+              <td>89.9</td>
+              <td>349.0</td>
+              <td>4.9e-96</td>
+          </tr>
+    
+          <tr>
+              <td>ABX00597.1</td>
+              <td>LmbA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000907/1">BGC0000907</a></td>
+              <td>Other</td>
+              <td>59.0</td>
+              <td>81.8</td>
+              <td>339.0</td>
+              <td>5e-93</td>
+          </tr>
+    
+          <tr>
+              <td>AEA29634.1</td>
+              <td>Por11</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000409/1">BGC0000409</a></td>
+              <td>NRP</td>
+              <td>59.0</td>
+              <td>80.7</td>
+              <td>336.0</td>
+              <td>5.6e-92</td>
+          </tr>
+    
+          <tr>
+              <td>AAG42852.1</td>
+              <td>putative_gamma-glutamyl_transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000249/1">BGC0000249</a></td>
+              <td>Polyketide</td>
+              <td>50.0</td>
+              <td>74.3</td>
+              <td>222.0</td>
+              <td>1.2e-57</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>
