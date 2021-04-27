@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AEE65503.1</td>
+              <td>galactoside_O-acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000223/1">BGC0000223</a></td>
+              <td>Polyketide:Type II</td>
+              <td>69.0</td>
+              <td>92.8</td>
+              <td>211.0</td>
+              <td>1.1e-54</td>
+          </tr>
+    
+          <tr>
+              <td>ARE72418.1</td>
+              <td>acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001510/1">BGC0001510</a></td>
+              <td>Other</td>
+              <td>50.0</td>
+              <td>96.4</td>
+              <td>152.0</td>
+              <td>8.1e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AGC09471.1</td>
+              <td>chloramphenicol_acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001183/1">BGC0001183</a></td>
+              <td>Polyketide</td>
+              <td>41.0</td>
+              <td>85.1</td>
+              <td>81.0</td>
+              <td>2.3e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AAC77841.1</td>
+              <td>putative_acetyl_transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000799/1">BGC0000799</a></td>
+              <td>Saccharide</td>
+              <td>34.0</td>
+              <td>73.7</td>
+              <td>74.0</td>
+              <td>2.8e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AAD40715.1</td>
+              <td>putative_acetyl_transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001412/1">BGC0001412</a></td>
+              <td>Saccharide</td>
+              <td>24.0</td>
+              <td>95.9</td>
+              <td>53.0</td>
+              <td>5.1e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

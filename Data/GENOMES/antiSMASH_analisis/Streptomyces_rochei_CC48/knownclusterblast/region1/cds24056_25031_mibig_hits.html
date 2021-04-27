@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AWR88382.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001522/1">BGC0001522</a></td>
+              <td>Polyketide</td>
+              <td>66.0</td>
+              <td>41.7</td>
+              <td>189.0</td>
+              <td>7.6e-48</td>
+          </tr>
+    
+          <tr>
+              <td>ASZ00134.1</td>
+              <td>peptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001785/1">BGC0001785</a></td>
+              <td>Polyketide</td>
+              <td>60.0</td>
+              <td>81.8</td>
+              <td>189.0</td>
+              <td>1e-47</td>
+          </tr>
+    
+          <tr>
+              <td>CAH60132.1</td>
+              <td>putative_peptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000700/1">BGC0000700</a></td>
+              <td>Saccharide</td>
+              <td>54.0</td>
+              <td>42.3</td>
+              <td>141.0</td>
+              <td>3.1e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ACJ24883.1</td>
+              <td>putative_peptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000119/1">BGC0000119</a></td>
+              <td>Polyketide:Iterative type I + Saccharide:Hybrid/tailoring</td>
+              <td>46.0</td>
+              <td>40.7</td>
+              <td>119.0</td>
+              <td>1.3e-26</td>
+          </tr>
+    
+          <tr>
+              <td>WP_037657037.1</td>
+              <td>transglycosylase_SLT_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001519/1">BGC0001519</a></td>
+              <td>NRP + Polyketide</td>
+              <td>51.0</td>
+              <td>44.4</td>
+              <td>113.0</td>
+              <td>9.1e-25</td>
+          </tr>
+    
+          <tr>
+              <td>BAV56287.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001657/1">BGC0001657</a></td>
+              <td>NRP</td>
+              <td>40.0</td>
+              <td>39.8</td>
+              <td>73.0</td>
+              <td>8e-13</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

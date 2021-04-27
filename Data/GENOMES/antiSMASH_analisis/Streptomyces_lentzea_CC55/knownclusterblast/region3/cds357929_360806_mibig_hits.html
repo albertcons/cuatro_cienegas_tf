@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>EFG08000.1</td>
+              <td>DnrI/RedD/AfsR-family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000843/1">BGC0000843</a></td>
+              <td>Other:Non-NRP beta-lactam</td>
+              <td>28.0</td>
+              <td>52.7</td>
+              <td>107.0</td>
+              <td>1.1e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CAF33326.1</td>
+              <td>putative_regulator,_NeoR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000709/1">BGC0000709</a></td>
+              <td>Saccharide</td>
+              <td>29.0</td>
+              <td>49.0</td>
+              <td>95.0</td>
+              <td>5.8e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAH58704.1</td>
+              <td>putative_LuxR_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000711/1">BGC0000711</a></td>
+              <td>Saccharide</td>
+              <td>29.0</td>
+              <td>49.0</td>
+              <td>95.0</td>
+              <td>5.8e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAP92511.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000458/1">BGC0000458</a></td>
+              <td>NRP</td>
+              <td>28.0</td>
+              <td>48.1</td>
+              <td>79.0</td>
+              <td>3.3e-14</td>
+          </tr>
+    
+          <tr>
+              <td>BAN83929.1</td>
+              <td>putative_LuxR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001803/1">BGC0001803</a></td>
+              <td>RiPP</td>
+              <td>26.0</td>
+              <td>93.7</td>
+              <td>74.0</td>
+              <td>1.4e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AFH74309.1</td>
+              <td>SanG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001151/1">BGC0001151</a></td>
+              <td>Other:Non-NRP beta-lactam</td>
+              <td>26.0</td>
+              <td>40.3</td>
+              <td>63.0</td>
+              <td>1.9e-09</td>
+          </tr>
+    
+          <tr>
+              <td>CCP20059.1</td>
+              <td>divU_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001119/1">BGC0001119</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>23.0</td>
+              <td>103.0</td>
+              <td>53.0</td>
+              <td>2.5e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

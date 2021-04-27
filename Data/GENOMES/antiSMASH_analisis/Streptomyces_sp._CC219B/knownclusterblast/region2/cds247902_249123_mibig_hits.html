@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAV57454.1</td>
+              <td>sulfate_adenylyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001912/1">BGC0001912</a></td>
+              <td>NRP</td>
+              <td>68.0</td>
+              <td>105.7</td>
+              <td>528.0</td>
+              <td>8.7e-150</td>
+          </tr>
+    
+          <tr>
+              <td>ABY83149.1</td>
+              <td>Azi10</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000960/1">BGC0000960</a></td>
+              <td>NRP + Polyketide</td>
+              <td>68.0</td>
+              <td>101.0</td>
+              <td>505.0</td>
+              <td>6e-143</td>
+          </tr>
+    
+          <tr>
+              <td>BAW27679.1</td>
+              <td>sulfate_adenyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001764/1">BGC0001764</a></td>
+              <td>NRP</td>
+              <td>67.0</td>
+              <td>100.7</td>
+              <td>505.0</td>
+              <td>1e-142</td>
+          </tr>
+    
+          <tr>
+              <td>ARF06208.1</td>
+              <td>sulfate_adenylyltransferase_subunit_1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001593/1">BGC0001593</a></td>
+              <td>NRP</td>
+              <td>64.0</td>
+              <td>101.2</td>
+              <td>483.0</td>
+              <td>3.2e-136</td>
+          </tr>
+    
+          <tr>
+              <td>AQX14446.1</td>
+              <td>bifunctional_ATP_sulfurylase_(ATPS)_/_adenosine_5&#39;-phosphosulfate_kinase_(APSK)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001671/1">BGC0001671</a></td>
+              <td>NRP</td>
+              <td>45.0</td>
+              <td>100.2</td>
+              <td>319.0</td>
+              <td>8e-87</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

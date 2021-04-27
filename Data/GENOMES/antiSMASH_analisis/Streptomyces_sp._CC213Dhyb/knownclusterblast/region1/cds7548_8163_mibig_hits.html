@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ATU31820.1</td>
+              <td>aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001814/1">BGC0001814</a></td>
+              <td>NRP</td>
+              <td>64.0</td>
+              <td>94.6</td>
+              <td>228.0</td>
+              <td>1.2e-59</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ32825.1</td>
+              <td>putative_p-aminobenzoate_synthase_glutamine_amidotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002031/1">BGC0002031</a></td>
+              <td>Alkaloid</td>
+              <td>58.0</td>
+              <td>92.6</td>
+              <td>201.0</td>
+              <td>1.6e-51</td>
+          </tr>
+    
+          <tr>
+              <td>ANY94433.1</td>
+              <td>anthranilate_synthase_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001584/1">BGC0001584</a></td>
+              <td>Polyketide</td>
+              <td>51.0</td>
+              <td>94.1</td>
+              <td>178.0</td>
+              <td>1.1e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AAL06663.1</td>
+              <td>anthranilate_synthase_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000965/1">BGC0000965</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>49.0</td>
+              <td>101.0</td>
+              <td>175.0</td>
+              <td>7.2e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52122.1</td>
+              <td>ADC_synthase_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000081/1">BGC0000081</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>51.0</td>
+              <td>91.7</td>
+              <td>170.0</td>
+              <td>3.9e-42</td>
+          </tr>
+    
+          <tr>
+              <td>ALU98529.1</td>
+              <td>anthranilate_synthase_subunit_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001397/1">BGC0001397</a></td>
+              <td>NRP + Polyketide</td>
+              <td>54.0</td>
+              <td>74.5</td>
+              <td>157.0</td>
+              <td>2.6e-38</td>
+          </tr>
+    
+          <tr>
+              <td>CAB38584.1</td>
+              <td>probable_anthranilate_synthase_component_II_(trpG)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000315/1">BGC0000315</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>48.0</td>
+              <td>90.7</td>
+              <td>140.0</td>
+              <td>2.6e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ82560.1</td>
+              <td>PabAB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000061/1">BGC0000061</a></td>
+              <td>Polyketide</td>
+              <td>44.0</td>
+              <td>110.3</td>
+              <td>137.0</td>
+              <td>2.8e-32</td>
+          </tr>
+    
+          <tr>
+              <td>OJF16273.1</td>
+              <td>PabAB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001491/1">BGC0001491</a></td>
+              <td>Polyketide</td>
+              <td>45.0</td>
+              <td>91.7</td>
+              <td>128.0</td>
+              <td>1.3e-29</td>
+          </tr>
+    
+          <tr>
+              <td>CAO85894.1</td>
+              <td>PABA_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000110/1">BGC0000110</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>43.0</td>
+              <td>97.5</td>
+              <td>119.0</td>
+              <td>8e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAG04391.1</td>
+              <td>anthranilate_synthase_component_II</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000922/1">BGC0000922</a></td>
+              <td>Other</td>
+              <td>38.0</td>
+              <td>99.5</td>
+              <td>94.0</td>
+              <td>2.7e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAE02603.1</td>
+              <td>PABA_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000024/1">BGC0000024</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>39.0</td>
+              <td>98.0</td>
+              <td>88.0</td>
+              <td>1.2e-17</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

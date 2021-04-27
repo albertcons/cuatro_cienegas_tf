@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABO15867.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000130/1">BGC0000130</a></td>
+              <td>Polyketide</td>
+              <td>43.0</td>
+              <td>92.3</td>
+              <td>390.0</td>
+              <td>4.3e-108</td>
+          </tr>
+    
+          <tr>
+              <td>QBC75019.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001968/1">BGC0001968</a></td>
+              <td>NRP</td>
+              <td>41.0</td>
+              <td>91.8</td>
+              <td>365.0</td>
+              <td>1.5e-100</td>
+          </tr>
+    
+          <tr>
+              <td>QBK46632.1</td>
+              <td>HrsK1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001960/1">BGC0001960</a></td>
+              <td>Polyketide</td>
+              <td>38.0</td>
+              <td>94.5</td>
+              <td>340.0</td>
+              <td>6.7e-93</td>
+          </tr>
+    
+          <tr>
+              <td>ABD65964.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000341/1">BGC0000341</a></td>
+              <td>NRP</td>
+              <td>40.0</td>
+              <td>92.7</td>
+              <td>339.0</td>
+              <td>1.5e-92</td>
+          </tr>
+    
+          <tr>
+              <td>ARU08071.1</td>
+              <td>mlcI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001448/1">BGC0001448</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>37.0</td>
+              <td>89.2</td>
+              <td>315.0</td>
+              <td>1.8e-85</td>
+          </tr>
+    
+          <tr>
+              <td>AHH53504.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000439/1">BGC0000439</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>36.0</td>
+              <td>88.9</td>
+              <td>300.0</td>
+              <td>4.5e-81</td>
+          </tr>
+    
+          <tr>
+              <td>AEG64690.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000379/1">BGC0000379</a></td>
+              <td>NRP</td>
+              <td>28.0</td>
+              <td>88.7</td>
+              <td>171.0</td>
+              <td>3.2e-42</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020636832.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002011/1">BGC0002011</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>29.5</td>
+              <td>58.0</td>
+              <td>5.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AHL24503.1</td>
+              <td>acyl-CoA_dehydrogenase_short_chain_specific_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000806/1">BGC0000806</a></td>
+              <td>Saccharide</td>
+              <td>28.0</td>
+              <td>26.9</td>
+              <td>56.0</td>
+              <td>1.5e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

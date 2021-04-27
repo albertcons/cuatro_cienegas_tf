@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAB69176.1</td>
+              <td>tyrosinase_co-factor_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000908/1">BGC0000908</a></td>
+              <td>Other</td>
+              <td>65.0</td>
+              <td>87.0</td>
+              <td>113.0</td>
+              <td>3e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ABQ41257.1</td>
+              <td>tyrosinase_co-factor</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000422/1">BGC0000422</a></td>
+              <td>NRP</td>
+              <td>46.0</td>
+              <td>78.7</td>
+              <td>72.0</td>
+              <td>4.5e-13</td>
+          </tr>
+    
+          <tr>
+              <td>BAG19275.1</td>
+              <td>putative_tyrosinase_co-factor_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000912/1">BGC0000912</a></td>
+              <td>Other</td>
+              <td>53.0</td>
+              <td>94.4</td>
+              <td>69.0</td>
+              <td>2.9e-12</td>
+          </tr>
+    
+          <tr>
+              <td>BAB69181.1</td>
+              <td>putative_tyrosinase_co-factor_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000909/1">BGC0000909</a></td>
+              <td>Other</td>
+              <td>45.0</td>
+              <td>85.2</td>
+              <td>67.0</td>
+              <td>1.1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAI59988.1</td>
+              <td>putative_tyrosinase_co-factor_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000700/1">BGC0000700</a></td>
+              <td>Saccharide</td>
+              <td>36.0</td>
+              <td>101.9</td>
+              <td>56.0</td>
+              <td>4.4e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BAG17357.1</td>
+              <td>putative_tyrosinase_co-factor_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000911/1">BGC0000911</a></td>
+              <td>Other</td>
+              <td>39.0</td>
+              <td>95.4</td>
+              <td>53.0</td>
+              <td>2.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ08173.1</td>
+              <td>copper_chaperon</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000885/1">BGC0000885</a></td>
+              <td>Other</td>
+              <td>37.0</td>
+              <td>99.1</td>
+              <td>49.0</td>
+              <td>4.1e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

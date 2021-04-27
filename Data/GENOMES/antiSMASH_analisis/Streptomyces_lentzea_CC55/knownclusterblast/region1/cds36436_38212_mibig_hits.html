@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAW27713.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001764/1">BGC0001764</a></td>
+              <td>NRP</td>
+              <td>40.0</td>
+              <td>107.3</td>
+              <td>398.0</td>
+              <td>2e-110</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68897.1</td>
+              <td>oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001083/1">BGC0001083</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>36.0</td>
+              <td>109.0</td>
+              <td>303.0</td>
+              <td>8.6e-82</td>
+          </tr>
+    
+          <tr>
+              <td>BAE78984.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001078/1">BGC0001078</a></td>
+              <td>Terpene + Polyketide</td>
+              <td>35.0</td>
+              <td>107.4</td>
+              <td>300.0</td>
+              <td>5.6e-81</td>
+          </tr>
+    
+          <tr>
+              <td>AEH42492.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000032/1">BGC0000032</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>107.6</td>
+              <td>299.0</td>
+              <td>1.2e-80</td>
+          </tr>
+    
+          <tr>
+              <td>AXO35221.1</td>
+              <td>FAD-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001848/1">BGC0001848</a></td>
+              <td>Other</td>
+              <td>35.0</td>
+              <td>106.4</td>
+              <td>298.0</td>
+              <td>2.1e-80</td>
+          </tr>
+    
+          <tr>
+              <td>AGZ93908.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000937/1">BGC0000937</a></td>
+              <td>Other</td>
+              <td>37.0</td>
+              <td>108.6</td>
+              <td>295.0</td>
+              <td>2.4e-79</td>
+          </tr>
+    
+          <tr>
+              <td>QCT05754.1</td>
+              <td>Tri21</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001983/1">BGC0001983</a></td>
+              <td>Other</td>
+              <td>36.0</td>
+              <td>109.5</td>
+              <td>292.0</td>
+              <td>1.2e-78</td>
+          </tr>
+    
+          <tr>
+              <td>RZB16711.1</td>
+              <td>FAD-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001850/1">BGC0001850</a></td>
+              <td>Other:Shikimate-derived</td>
+              <td>36.0</td>
+              <td>106.1</td>
+              <td>291.0</td>
+              <td>3.4e-78</td>
+          </tr>
+    
+          <tr>
+              <td>AYV61403.1</td>
+              <td>FAD-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001965/1">BGC0001965</a></td>
+              <td>Other</td>
+              <td>34.0</td>
+              <td>109.1</td>
+              <td>287.0</td>
+              <td>4.9e-77</td>
+          </tr>
+    
+          <tr>
+              <td>ALA99202.1</td>
+              <td>CreE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001295/1">BGC0001295</a></td>
+              <td>Other</td>
+              <td>34.0</td>
+              <td>108.5</td>
+              <td>273.0</td>
+              <td>9.6e-73</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

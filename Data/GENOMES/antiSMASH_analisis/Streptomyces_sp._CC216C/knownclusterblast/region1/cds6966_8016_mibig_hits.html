@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAX64256.1</td>
+              <td>alanine_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001623/1">BGC0001623</a></td>
+              <td>NRP + Polyketide</td>
+              <td>67.0</td>
+              <td>97.1</td>
+              <td>463.0</td>
+              <td>3.9e-130</td>
+          </tr>
+    
+          <tr>
+              <td>EFE73307.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000431/1">BGC0000431</a></td>
+              <td>NRP:Cyclic depsipeptide</td>
+              <td>66.0</td>
+              <td>97.7</td>
+              <td>458.0</td>
+              <td>7.3e-129</td>
+          </tr>
+    
+          <tr>
+              <td>ADO85580.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000653/1">BGC0000653</a></td>
+              <td>Terpene</td>
+              <td>66.0</td>
+              <td>98.3</td>
+              <td>453.0</td>
+              <td>3.1e-127</td>
+          </tr>
+    
+          <tr>
+              <td>AOZ21314.1</td>
+              <td>SulG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001790/1">BGC0001790</a></td>
+              <td>NRP</td>
+              <td>50.0</td>
+              <td>97.4</td>
+              <td>301.0</td>
+              <td>1.9e-81</td>
+          </tr>
+    
+          <tr>
+              <td>AYJ71718.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001942/1">BGC0001942</a></td>
+              <td>NRP + Polyketide</td>
+              <td>50.0</td>
+              <td>96.0</td>
+              <td>300.0</td>
+              <td>2.5e-81</td>
+          </tr>
+    
+          <tr>
+              <td>AQX14440.1</td>
+              <td>SbnB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001671/1">BGC0001671</a></td>
+              <td>NRP</td>
+              <td>43.0</td>
+              <td>96.6</td>
+              <td>261.0</td>
+              <td>2.2e-69</td>
+          </tr>
+    
+          <tr>
+              <td>ACM79821.1</td>
+              <td>ZmaV</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001059/1">BGC0001059</a></td>
+              <td>NRP + Polyketide</td>
+              <td>28.0</td>
+              <td>87.4</td>
+              <td>119.0</td>
+              <td>8e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ABD29259.1</td>
+              <td>ornithine_cyclodeaminase,_putative</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000943/1">BGC0000943</a></td>
+              <td>Other</td>
+              <td>27.0</td>
+              <td>88.0</td>
+              <td>109.0</td>
+              <td>8.3e-24</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

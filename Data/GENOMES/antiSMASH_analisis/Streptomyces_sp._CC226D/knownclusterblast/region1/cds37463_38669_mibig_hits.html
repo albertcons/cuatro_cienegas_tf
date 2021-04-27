@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAL92976.1</td>
+              <td>putative_type-III_polyketide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001077/1">BGC0001077</a></td>
+              <td>Terpene + Polyketide</td>
+              <td>30.0</td>
+              <td>88.5</td>
+              <td>148.0</td>
+              <td>2.4e-35</td>
+          </tr>
+    
+          <tr>
+              <td>ONK09688.1</td>
+              <td>Alpha-pyrone_synthesis_polyketide_synthase-like_Pks11</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001647/1">BGC0001647</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>84.0</td>
+              <td>140.0</td>
+              <td>5e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AAL78053.1</td>
+              <td>Type_III_PKS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000285/1">BGC0000285</a></td>
+              <td>Polyketide:Type III + Saccharide:Oligosaccharide</td>
+              <td>25.0</td>
+              <td>86.5</td>
+              <td>123.0</td>
+              <td>8.3e-28</td>
+          </tr>
+    
+          <tr>
+              <td>CAM00568.1</td>
+              <td>putative_type_III_polyketide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000902/1">BGC0000902</a></td>
+              <td>Other</td>
+              <td>25.0</td>
+              <td>86.5</td>
+              <td>121.0</td>
+              <td>4.1e-27</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ05880.1</td>
+              <td>putative_type_III_polyketide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000872/1">BGC0000872</a></td>
+              <td>Other</td>
+              <td>31.0</td>
+              <td>69.1</td>
+              <td>109.0</td>
+              <td>9.5e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ACO79121.1</td>
+              <td>Type_III_polyketide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000284/1">BGC0000284</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>68.1</td>
+              <td>82.0</td>
+              <td>2.1e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ACO79120.1</td>
+              <td>Type_III_polyketide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000284/1">BGC0000284</a></td>
+              <td>Polyketide</td>
+              <td>27.0</td>
+              <td>66.1</td>
+              <td>78.0</td>
+              <td>3.1e-14</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

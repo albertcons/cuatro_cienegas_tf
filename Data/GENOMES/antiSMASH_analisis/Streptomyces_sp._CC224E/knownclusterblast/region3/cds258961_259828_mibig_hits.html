@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADI71451.1</td>
+              <td>putative_sugar_epimerase/reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000203/1">BGC0000203</a></td>
+              <td>Polyketide</td>
+              <td>72.0</td>
+              <td>97.9</td>
+              <td>401.0</td>
+              <td>1.1e-111</td>
+          </tr>
+    
+          <tr>
+              <td>CAG14959.1</td>
+              <td>putative_nucleotide-diphosphate-sugar_epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000253/1">BGC0000253</a></td>
+              <td>Polyketide:Type II</td>
+              <td>41.0</td>
+              <td>99.0</td>
+              <td>176.0</td>
+              <td>5.9e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AEU17892.1</td>
+              <td>putative_hydroxylase/dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001072/1">BGC0001072</a></td>
+              <td>Saccharide + Polyketide:Modular type I + Polyketide:Type II + Other:Aminocoumarin</td>
+              <td>39.0</td>
+              <td>99.7</td>
+              <td>172.0</td>
+              <td>8.6e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35075.1</td>
+              <td>NAD(P)-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001675/1">BGC0001675</a></td>
+              <td>Polyketide</td>
+              <td>39.0</td>
+              <td>104.2</td>
+              <td>170.0</td>
+              <td>3.3e-42</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020275086.1</td>
+              <td>NAD(P)H-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002012/1">BGC0002012</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>100.7</td>
+              <td>156.0</td>
+              <td>8.3e-38</td>
+          </tr>
+    
+          <tr>
+              <td>BAB72056.1</td>
+              <td>AclQ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000191/1">BGC0000191</a></td>
+              <td>Polyketide</td>
+              <td>38.0</td>
+              <td>89.9</td>
+              <td>155.0</td>
+              <td>1.9e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AOZ61198.1</td>
+              <td>NAD_dependent_epimerase/dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001762/1">BGC0001762</a></td>
+              <td>Alkaloid</td>
+              <td>38.0</td>
+              <td>99.3</td>
+              <td>153.0</td>
+              <td>4.1e-37</td>
+          </tr>
+    
+          <tr>
+              <td>CAM34355.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000242/1">BGC0000242</a></td>
+              <td>Polyketide</td>
+              <td>38.0</td>
+              <td>100.7</td>
+              <td>148.0</td>
+              <td>1.3e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AAP85342.1</td>
+              <td>putative_hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000233/1">BGC0000233</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>100.3</td>
+              <td>143.0</td>
+              <td>4.3e-34</td>
+          </tr>
+    
+          <tr>
+              <td>WP_019631324.1</td>
+              <td>NAD(P)H-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001364/1">BGC0001364</a></td>
+              <td>RiPP</td>
+              <td>35.0</td>
+              <td>97.9</td>
+              <td>132.0</td>
+              <td>1.3e-30</td>
+          </tr>
+    
+          <tr>
+              <td>CAC37884.1</td>
+              <td>CpkJ;_NmrA-family_protein_(unknown_function)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000038/1">BGC0000038</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>31.0</td>
+              <td>99.3</td>
+              <td>99.0</td>
+              <td>9.2e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ABV57825.1</td>
+              <td>ergot_alkaloid_biosynthetic_protein_A</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001267/1">BGC0001267</a></td>
+              <td>Terpene</td>
+              <td>26.0</td>
+              <td>99.0</td>
+              <td>54.0</td>
+              <td>2.6e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CCC55916.1</td>
+              <td>amidohydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000973/1">BGC0000973</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>97.0</td>
+              <td>100.2</td>
+              <td>806.0</td>
+              <td>2.2e-233</td>
+          </tr>
+    
+          <tr>
+              <td>AFD30949.1</td>
+              <td>CrmL</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000966/1">BGC0000966</a></td>
+              <td>NRP + Polyketide</td>
+              <td>57.0</td>
+              <td>98.3</td>
+              <td>462.0</td>
+              <td>1e-129</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46734.1</td>
+              <td>putative_amidohydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001179/1">BGC0001179</a></td>
+              <td>Polyketide:Type II</td>
+              <td>32.0</td>
+              <td>98.8</td>
+              <td>154.0</td>
+              <td>4.5e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ23044.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000291/1">BGC0000291</a></td>
+              <td>NRP</td>
+              <td>39.0</td>
+              <td>66.7</td>
+              <td>152.0</td>
+              <td>1.3e-36</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ52698.1</td>
+              <td>putative_amidohydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000222/1">BGC0000222</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>95.1</td>
+              <td>78.0</td>
+              <td>3.2e-14</td>
+          </tr>
+    
+          <tr>
+              <td>TXD00011.1</td>
+              <td>amidohydrolase_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001877/1">BGC0001877</a></td>
+              <td>Polyketide</td>
+              <td>24.0</td>
+              <td>94.9</td>
+              <td>67.0</td>
+              <td>5.6e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

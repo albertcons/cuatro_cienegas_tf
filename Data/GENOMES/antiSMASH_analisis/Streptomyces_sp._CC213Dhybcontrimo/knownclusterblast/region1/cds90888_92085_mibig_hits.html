@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CCC55913.1</td>
+              <td>GriD-like_dehydrogenase_component</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000973/1">BGC0000973</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>97.0</td>
+              <td>66.1</td>
+              <td>504.0</td>
+              <td>1.7e-142</td>
+          </tr>
+    
+          <tr>
+              <td>AFD30947.1</td>
+              <td>CrmO</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000966/1">BGC0000966</a></td>
+              <td>NRP + Polyketide</td>
+              <td>68.0</td>
+              <td>64.8</td>
+              <td>352.0</td>
+              <td>6.4e-97</td>
+          </tr>
+    
+          <tr>
+              <td>AFB35621.1</td>
+              <td>Function_with_EsmB1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000935/1">BGC0000935</a></td>
+              <td>Polyketide + Other:Aminocoumarin</td>
+              <td>54.0</td>
+              <td>65.1</td>
+              <td>269.0</td>
+              <td>7.1e-72</td>
+          </tr>
+    
+          <tr>
+              <td>AKC91604.1</td>
+              <td>aldehyde_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001302/1">BGC0001302</a></td>
+              <td>Other</td>
+              <td>52.0</td>
+              <td>66.1</td>
+              <td>261.0</td>
+              <td>2.5e-69</td>
+          </tr>
+    
+          <tr>
+              <td>WP_018960022.1</td>
+              <td>aldehyde_dehydrogenase_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002010/1">BGC0002010</a></td>
+              <td>NRP + Polyketide</td>
+              <td>52.0</td>
+              <td>66.1</td>
+              <td>254.0</td>
+              <td>3.1e-67</td>
+          </tr>
+    
+          <tr>
+              <td>WP_024483799.1</td>
+              <td>aldehyde_dehydrogenase_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002002/1">BGC0002002</a></td>
+              <td>NRP</td>
+              <td>39.0</td>
+              <td>55.5</td>
+              <td>157.0</td>
+              <td>5.2e-38</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ARF06239.1</td>
+              <td>siderophore_synthetase_component</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001593/1">BGC0001593</a></td>
+              <td>NRP</td>
+              <td>46.0</td>
+              <td>96.8</td>
+              <td>434.0</td>
+              <td>2.6e-121</td>
+          </tr>
+    
+          <tr>
+              <td>AAP25873.1</td>
+              <td>petrobactin_biosynthesis_protein_AsbA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000942/1">BGC0000942</a></td>
+              <td>Other</td>
+              <td>34.0</td>
+              <td>95.8</td>
+              <td>274.0</td>
+              <td>4.5e-73</td>
+          </tr>
+    
+          <tr>
+              <td>KIU65666.1</td>
+              <td>IucA/IucC_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001713/1">BGC0001713</a></td>
+              <td>Other</td>
+              <td>33.0</td>
+              <td>87.5</td>
+              <td>237.0</td>
+              <td>8e-62</td>
+          </tr>
+    
+          <tr>
+              <td>BAM09326.1</td>
+              <td>putative_acinetoferrin_biosynthesis_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000295/1">BGC0000295</a></td>
+              <td>NRP</td>
+              <td>32.0</td>
+              <td>89.1</td>
+              <td>218.0</td>
+              <td>2.3e-56</td>
+          </tr>
+    
+          <tr>
+              <td>AAW74609.1</td>
+              <td>iron_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001408/1">BGC0001408</a></td>
+              <td>Other</td>
+              <td>27.0</td>
+              <td>99.5</td>
+              <td>122.0</td>
+              <td>2.2e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ABD29262.1</td>
+              <td>conserved_hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000943/1">BGC0000943</a></td>
+              <td>Other</td>
+              <td>25.0</td>
+              <td>94.2</td>
+              <td>122.0</td>
+              <td>2.9e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ABM30202.1</td>
+              <td>PvsD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000947/1">BGC0000947</a></td>
+              <td>Other</td>
+              <td>25.0</td>
+              <td>95.7</td>
+              <td>118.0</td>
+              <td>4.2e-26</td>
+          </tr>
+    
+          <tr>
+              <td>BAC16547.1</td>
+              <td>vibrioferrin_biosynthesis_protein_PvsD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000946/1">BGC0000946</a></td>
+              <td>Other</td>
+              <td>24.0</td>
+              <td>95.7</td>
+              <td>111.0</td>
+              <td>3.9e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ABD31458.1</td>
+              <td>L-ornithine_Racemase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000944/1">BGC0000944</a></td>
+              <td>Other:Non-NRP siderophore</td>
+              <td>22.0</td>
+              <td>62.1</td>
+              <td>52.0</td>
+              <td>2.2e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

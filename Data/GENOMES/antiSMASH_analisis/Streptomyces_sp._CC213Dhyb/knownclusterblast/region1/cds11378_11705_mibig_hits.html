@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AHH53512.1</td>
+              <td>tryptophan_halogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000439/1">BGC0000439</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>39.0</td>
+              <td>98.1</td>
+              <td>68.0</td>
+              <td>8.5e-12</td>
+          </tr>
+    
+          <tr>
+              <td>DAC74150.1</td>
+              <td>tryptophan_halogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002019/1">BGC0002019</a></td>
+              <td>Terpene</td>
+              <td>40.0</td>
+              <td>98.1</td>
+              <td>67.0</td>
+              <td>1.1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ABV56598.1</td>
+              <td>KtzR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000378/1">BGC0000378</a></td>
+              <td>NRP</td>
+              <td>38.0</td>
+              <td>97.2</td>
+              <td>67.0</td>
+              <td>1.9e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ATU31801.1</td>
+              <td>tryptophan_halogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001814/1">BGC0001814</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>97.2</td>
+              <td>66.0</td>
+              <td>3.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AEO12707.1</td>
+              <td>halogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001334/1">BGC0001334</a></td>
+              <td>Alkaloid</td>
+              <td>39.0</td>
+              <td>96.3</td>
+              <td>66.0</td>
+              <td>4.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ANZ15833.1</td>
+              <td>tryptophan_halogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001569/1">BGC0001569</a></td>
+              <td>NRP</td>
+              <td>33.0</td>
+              <td>97.2</td>
+              <td>66.0</td>
+              <td>4.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AEF32095.1</td>
+              <td>tryptophan_5-halogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001333/1">BGC0001333</a></td>
+              <td>Alkaloid</td>
+              <td>38.0</td>
+              <td>102.8</td>
+              <td>65.0</td>
+              <td>7.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>KUM80507.1</td>
+              <td>tryptophan_halogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001562/1">BGC0001562</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>97.2</td>
+              <td>59.0</td>
+              <td>5.2e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

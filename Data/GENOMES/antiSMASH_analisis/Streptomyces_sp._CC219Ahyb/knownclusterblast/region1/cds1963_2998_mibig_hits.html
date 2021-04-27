@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>TXD00008.1</td>
+              <td>A-factor_biosynthesis_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001877/1">BGC0001877</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>92.4</td>
+              <td>180.0</td>
+              <td>6.4e-45</td>
+          </tr>
+    
+          <tr>
+              <td>WP_078889005.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001771/1">BGC0001771</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>82.8</td>
+              <td>136.0</td>
+              <td>8.1e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ACO51012.1</td>
+              <td>SabA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000850/1">BGC0000850</a></td>
+              <td>Other</td>
+              <td>36.0</td>
+              <td>80.8</td>
+              <td>135.0</td>
+              <td>1.8e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68922.1</td>
+              <td>AfsA-like_gamma-butyrolactone_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001083/1">BGC0001083</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>32.0</td>
+              <td>95.3</td>
+              <td>127.0</td>
+              <td>3.8e-29</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71092.1</td>
+              <td>Lct9</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000238/1">BGC0000238</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>79.1</td>
+              <td>126.0</td>
+              <td>8.4e-29</td>
+          </tr>
+    
+          <tr>
+              <td>WP_012015345.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001458/1">BGC0001458</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>33.0</td>
+              <td>90.4</td>
+              <td>117.0</td>
+              <td>5.1e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AGN74905.1</td>
+              <td>AfsA-like_gamma-butyrolactone_biosynthetic_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000459/1">BGC0000459</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Trans-AT type I</td>
+              <td>34.0</td>
+              <td>68.3</td>
+              <td>116.0</td>
+              <td>1.1e-25</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

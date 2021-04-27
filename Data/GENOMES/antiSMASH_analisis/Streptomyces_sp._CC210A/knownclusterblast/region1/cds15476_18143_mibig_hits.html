@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABW11816.1</td>
+              <td>integral_membrane_sensor_signal_transduction_histidine_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001197/1">BGC0001197</a></td>
+              <td>Polyketide</td>
+              <td>50.0</td>
+              <td>40.5</td>
+              <td>325.0</td>
+              <td>3.2e-88</td>
+          </tr>
+    
+          <tr>
+              <td>ANA09440.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001483/1">BGC0001483</a></td>
+              <td>Other</td>
+              <td>32.0</td>
+              <td>33.6</td>
+              <td>98.0</td>
+              <td>4.9e-20</td>
+          </tr>
+    
+          <tr>
+              <td>BAR97445.1</td>
+              <td>histidine_sensor_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001910/1">BGC0001910</a></td>
+              <td>Terpene</td>
+              <td>29.0</td>
+              <td>36.6</td>
+              <td>77.0</td>
+              <td>1.5e-13</td>
+          </tr>
+    
+          <tr>
+              <td>BAR97455.1</td>
+              <td>histidine_sensor_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001911/1">BGC0001911</a></td>
+              <td>Terpene</td>
+              <td>28.0</td>
+              <td>46.5</td>
+              <td>76.0</td>
+              <td>2.6e-13</td>
+          </tr>
+    
+          <tr>
+              <td>CAG38672.1</td>
+              <td>putative_signal_transduction_histidine_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000695/1">BGC0000695</a></td>
+              <td>Saccharide</td>
+              <td>24.0</td>
+              <td>51.7</td>
+              <td>57.0</td>
+              <td>1.2e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

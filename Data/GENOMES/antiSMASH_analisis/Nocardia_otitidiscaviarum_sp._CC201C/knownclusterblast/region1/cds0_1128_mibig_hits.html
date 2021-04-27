@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_006051174.1</td>
+              <td>cyclic_peptide_export_ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001999/1">BGC0001999</a></td>
+              <td>NRP</td>
+              <td>30.0</td>
+              <td>81.1</td>
+              <td>121.0</td>
+              <td>2.3e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf14</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001329/1">BGC0001329</a></td>
+              <td>Polyketide + NRP:Cyclic depsipeptide</td>
+              <td>30.0</td>
+              <td>87.0</td>
+              <td>112.0</td>
+              <td>1.4e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AUD11995.1</td>
+              <td>OrbE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001721/1">BGC0001721</a></td>
+              <td>NRP</td>
+              <td>26.0</td>
+              <td>90.7</td>
+              <td>100.0</td>
+              <td>5.4e-21</td>
+          </tr>
+    
+          <tr>
+              <td>CDG17992.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000464/1">BGC0000464</a></td>
+              <td>NRP:Cyclic depsipeptide</td>
+              <td>26.0</td>
+              <td>79.0</td>
+              <td>98.0</td>
+              <td>2.7e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ACM79808.1</td>
+              <td>ZmaM</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001059/1">BGC0001059</a></td>
+              <td>NRP + Polyketide</td>
+              <td>24.0</td>
+              <td>86.2</td>
+              <td>97.0</td>
+              <td>6e-20</td>
+          </tr>
+    
+          <tr>
+              <td>WP_039806837.1</td>
+              <td>cyclic_peptide_export_ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002001/1">BGC0002001</a></td>
+              <td>NRP + Polyketide</td>
+              <td>27.0</td>
+              <td>94.9</td>
+              <td>95.0</td>
+              <td>1.7e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAY37652.1</td>
+              <td>Cyclic_peptide_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000437/1">BGC0000437</a></td>
+              <td>NRP</td>
+              <td>25.0</td>
+              <td>82.2</td>
+              <td>88.0</td>
+              <td>2.8e-17</td>
+          </tr>
+    
+          <tr>
+              <td>KFL51890.1</td>
+              <td>ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001711/1">BGC0001711</a></td>
+              <td>NRP + Polyketide</td>
+              <td>24.0</td>
+              <td>76.3</td>
+              <td>85.0</td>
+              <td>2.4e-16</td>
+          </tr>
+    
+          <tr>
+              <td>ADJ63848.1</td>
+              <td>ABC-type_siderophore_(cyclic_peptide)_export_system_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000424/1">BGC0000424</a></td>
+              <td>NRP:NRP siderophore</td>
+              <td>25.0</td>
+              <td>97.1</td>
+              <td>83.0</td>
+              <td>6.8e-16</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

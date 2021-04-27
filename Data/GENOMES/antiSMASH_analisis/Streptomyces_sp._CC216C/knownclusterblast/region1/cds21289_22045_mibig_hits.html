@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAE17539.1</td>
+              <td>membrane_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000210/1">BGC0000210</a></td>
+              <td>Polyketide:Type II + Saccharide:Oligosaccharide</td>
+              <td>81.0</td>
+              <td>100.0</td>
+              <td>369.0</td>
+              <td>3.2e-102</td>
+          </tr>
+    
+          <tr>
+              <td>TXD00258.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001877/1">BGC0001877</a></td>
+              <td>Polyketide</td>
+              <td>52.0</td>
+              <td>98.8</td>
+              <td>223.0</td>
+              <td>2.8e-58</td>
+          </tr>
+    
+          <tr>
+              <td>QBF51772.1</td>
+              <td>ABC_transporter_permease_component</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001856/1">BGC0001856</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>51.0</td>
+              <td>98.0</td>
+              <td>220.0</td>
+              <td>3.1e-57</td>
+          </tr>
+    
+          <tr>
+              <td>CAK50798.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000247/1">BGC0000247</a></td>
+              <td>Polyketide:Type II + Saccharide:Oligosaccharide</td>
+              <td>49.0</td>
+              <td>92.0</td>
+              <td>192.0</td>
+              <td>9.1e-49</td>
+          </tr>
+    
+          <tr>
+              <td>AEM00616.1</td>
+              <td>ABC_type_II_transporter_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000605/1">BGC0000605</a></td>
+              <td>RiPP:Thiopeptide</td>
+              <td>43.0</td>
+              <td>98.0</td>
+              <td>174.0</td>
+              <td>2e-43</td>
+          </tr>
+    
+          <tr>
+              <td>ADG27346.1</td>
+              <td>ABC_2-type_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000296/1">BGC0000296</a></td>
+              <td>NRP</td>
+              <td>40.0</td>
+              <td>101.2</td>
+              <td>156.0</td>
+              <td>4.2e-38</td>
+          </tr>
+    
+          <tr>
+              <td>ALA09344.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001303/1">BGC0001303</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>100.4</td>
+              <td>145.0</td>
+              <td>1.3e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ADG27369.1</td>
+              <td>ABC_2-type_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000296/1">BGC0000296</a></td>
+              <td>NRP</td>
+              <td>36.0</td>
+              <td>101.2</td>
+              <td>133.0</td>
+              <td>6.6e-31</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

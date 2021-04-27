@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>desaB</td>
+              <td>FAD-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001453/1">BGC0001453</a></td>
+              <td>Other</td>
+              <td>78.0</td>
+              <td>97.4</td>
+              <td>139.0</td>
+              <td>2.8e-33</td>
+          </tr>
+    
+          <tr>
+              <td>CAB87220.1</td>
+              <td>putative_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000940/1">BGC0000940</a></td>
+              <td>Other</td>
+              <td>77.0</td>
+              <td>100.0</td>
+              <td>138.0</td>
+              <td>6.3e-33</td>
+          </tr>
+    
+          <tr>
+              <td>BAG21578.1</td>
+              <td>putative_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000941/1">BGC0000941</a></td>
+              <td>Other</td>
+              <td>79.0</td>
+              <td>96.2</td>
+              <td>128.0</td>
+              <td>5e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AVV61971.1</td>
+              <td>DesC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001478/1">BGC0001478</a></td>
+              <td>Other</td>
+              <td>71.0</td>
+              <td>98.7</td>
+              <td>128.0</td>
+              <td>5e-30</td>
+          </tr>
+    
+          <tr>
+              <td>PHM29820.1</td>
+              <td>L-lysine_6-monooxygenase_involved_in_desferrioxamine_biosynthesis</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001870/1">BGC0001870</a></td>
+              <td>Other</td>
+              <td>53.0</td>
+              <td>100.0</td>
+              <td>95.0</td>
+              <td>3.6e-20</td>
+          </tr>
+    
+          <tr>
+              <td>BAX07666.1</td>
+              <td>lysine-6-monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001531/1">BGC0001531</a></td>
+              <td>Other</td>
+              <td>51.0</td>
+              <td>97.4</td>
+              <td>95.0</td>
+              <td>4.7e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AWD37886.1</td>
+              <td>putative_lysine/ornithine_N-monooxygenase_DfoA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001572/1">BGC0001572</a></td>
+              <td>Other</td>
+              <td>55.0</td>
+              <td>93.6</td>
+              <td>94.0</td>
+              <td>1.1e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAG69513.1</td>
+              <td>putative_siderophore_biosynthesis_protein;_putative_Lysine/ornithine_N-monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000352/1">BGC0000352</a></td>
+              <td>NRP:NRP siderophore</td>
+              <td>52.0</td>
+              <td>98.7</td>
+              <td>89.0</td>
+              <td>2e-18</td>
+          </tr>
+    
+          <tr>
+              <td>BAM09327.1</td>
+              <td>putative_acinetoferrin_biosynthesis_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000295/1">BGC0000295</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>102.6</td>
+              <td>53.0</td>
+              <td>1.6e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

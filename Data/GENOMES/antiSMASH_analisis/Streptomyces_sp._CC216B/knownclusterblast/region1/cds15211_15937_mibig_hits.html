@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ARF06240.1</td>
+              <td>acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001593/1">BGC0001593</a></td>
+              <td>NRP</td>
+              <td>44.0</td>
+              <td>78.8</td>
+              <td>144.0</td>
+              <td>1.6e-34</td>
+          </tr>
+    
+          <tr>
+              <td>BAE16003.1</td>
+              <td>N6-hydroxylysine_acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000939/1">BGC0000939</a></td>
+              <td>Other</td>
+              <td>38.0</td>
+              <td>65.1</td>
+              <td>109.0</td>
+              <td>9.8e-24</td>
+          </tr>
+    
+          <tr>
+              <td>CDL83404.1</td>
+              <td>Aerobactin_siderophore_biosynthesis_protein_iucB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001498/1">BGC0001498</a></td>
+              <td>Other</td>
+              <td>35.0</td>
+              <td>65.6</td>
+              <td>109.0</td>
+              <td>9.8e-24</td>
+          </tr>
+    
+          <tr>
+              <td>YP_002539375.1</td>
+              <td>IucB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001555/1">BGC0001555</a></td>
+              <td>RiPP</td>
+              <td>39.0</td>
+              <td>64.3</td>
+              <td>108.0</td>
+              <td>2.2e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AWD37849.1</td>
+              <td>aerobactin_biosynthesis_protein_IucB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001499/1">BGC0001499</a></td>
+              <td>Other</td>
+              <td>37.0</td>
+              <td>64.7</td>
+              <td>106.0</td>
+              <td>8.3e-23</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ71837.1</td>
+              <td>siderophore_biosynthesis_protein,_putative_acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001189/1">BGC0001189</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>71.0</td>
+              <td>105.0</td>
+              <td>1.1e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ96466.1</td>
+              <td>N-acyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000330/1">BGC0000330</a></td>
+              <td>NRP:NRP siderophore</td>
+              <td>33.0</td>
+              <td>71.8</td>
+              <td>101.0</td>
+              <td>2.7e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ADJ63846.1</td>
+              <td>acetyltransferases,_including_N-acetylases_of_ribosomal_proteins</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000424/1">BGC0000424</a></td>
+              <td>NRP:NRP siderophore</td>
+              <td>34.0</td>
+              <td>67.6</td>
+              <td>91.0</td>
+              <td>2.1e-18</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAG17644.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001043/1">BGC0001043</a></td>
+              <td>NRP + Polyketide</td>
+              <td>90.0</td>
+              <td>84.6</td>
+              <td>403.0</td>
+              <td>2.1e-112</td>
+          </tr>
+    
+          <tr>
+              <td>EFL02192.1</td>
+              <td>frontalamide_hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000996/1">BGC0000996</a></td>
+              <td>NRP + Polyketide:Iterative type I</td>
+              <td>67.0</td>
+              <td>91.2</td>
+              <td>321.0</td>
+              <td>1.8e-87</td>
+          </tr>
+    
+          <tr>
+              <td>AUD08662.1</td>
+              <td>C25_hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001553/1">BGC0001553</a></td>
+              <td>NRP + Polyketide</td>
+              <td>65.0</td>
+              <td>96.5</td>
+              <td>317.0</td>
+              <td>1.9e-86</td>
+          </tr>
+    
+          <tr>
+              <td>AWO77087.1</td>
+              <td>sterol_desaturase_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001556/1">BGC0001556</a></td>
+              <td>NRP + Polyketide</td>
+              <td>67.0</td>
+              <td>85.0</td>
+              <td>312.0</td>
+              <td>8.2e-85</td>
+          </tr>
+    
+          <tr>
+              <td>ABL86392.1</td>
+              <td>sterol_desaturase-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000999/1">BGC0000999</a></td>
+              <td>NRP + Polyketide</td>
+              <td>65.0</td>
+              <td>84.2</td>
+              <td>293.0</td>
+              <td>3e-79</td>
+          </tr>
+    
+          <tr>
+              <td>APD26278.1</td>
+              <td>PtmD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001726/1">BGC0001726</a></td>
+              <td>NRP + Polyketide</td>
+              <td>57.0</td>
+              <td>84.2</td>
+              <td>262.0</td>
+              <td>7.4e-70</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

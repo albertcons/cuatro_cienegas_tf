@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACR50763.1</td>
+              <td>periplasmic_beta-glucosidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000163/1">BGC0000163</a></td>
+              <td>Polyketide</td>
+              <td>36.0</td>
+              <td>102.3</td>
+              <td>394.0</td>
+              <td>3.6e-109</td>
+          </tr>
+    
+          <tr>
+              <td>BAV56273.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001657/1">BGC0001657</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>100.4</td>
+              <td>374.0</td>
+              <td>2.9e-103</td>
+          </tr>
+    
+          <tr>
+              <td>AEH59053.1</td>
+              <td>glycosyl_hydrolase_family_3/N_terminal_domain_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000385/1">BGC0000385</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>100.4</td>
+              <td>364.0</td>
+              <td>5.2e-100</td>
+          </tr>
+    
+          <tr>
+              <td>AAU93797.1</td>
+              <td>beta-glucosidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000054/1">BGC0000054</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>103.4</td>
+              <td>190.0</td>
+              <td>7.9e-48</td>
+          </tr>
+    
+          <tr>
+              <td>ADN68487.1</td>
+              <td>SorL</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000184/1">BGC0000184</a></td>
+              <td>Polyketide:Trans-AT type I</td>
+              <td>30.0</td>
+              <td>96.6</td>
+              <td>186.0</td>
+              <td>1.5e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AGC95327.1</td>
+              <td>putative_glycosyl_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000045/1">BGC0000045</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>87.5</td>
+              <td>175.0</td>
+              <td>3.4e-43</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ33997.1</td>
+              <td>beta-glucosidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001497/1">BGC0001497</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>59.9</td>
+              <td>156.0</td>
+              <td>1.6e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AAY32974.1</td>
+              <td>glycosyl_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001093/1">BGC0001093</a></td>
+              <td>NRP + Polyketide</td>
+              <td>30.0</td>
+              <td>64.2</td>
+              <td>134.0</td>
+              <td>8.8e-31</td>
+          </tr>
+    
+          <tr>
+              <td>CAM00073.1</td>
+              <td>beta-D-glucosidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000055/1">BGC0000055</a></td>
+              <td>Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>31.0</td>
+              <td>36.6</td>
+              <td>86.0</td>
+              <td>1.6e-16</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

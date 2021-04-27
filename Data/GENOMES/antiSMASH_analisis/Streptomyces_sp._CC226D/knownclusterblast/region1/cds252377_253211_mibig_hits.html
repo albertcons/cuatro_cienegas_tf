@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADC45521.1</td>
+              <td>cyclopropane-fatty-acyl-phospholipid_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000093/1">BGC0000093</a></td>
+              <td>Polyketide</td>
+              <td>54.0</td>
+              <td>97.8</td>
+              <td>298.0</td>
+              <td>1.3e-80</td>
+          </tr>
+    
+          <tr>
+              <td>SCO70325.1</td>
+              <td>Methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001433/1">BGC0001433</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>53.0</td>
+              <td>97.8</td>
+              <td>297.0</td>
+              <td>2.9e-80</td>
+          </tr>
+    
+          <tr>
+              <td>ANA09433.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001483/1">BGC0001483</a></td>
+              <td>Other</td>
+              <td>32.0</td>
+              <td>90.6</td>
+              <td>135.0</td>
+              <td>1.5e-31</td>
+          </tr>
+    
+          <tr>
+              <td>CCP43385.1</td>
+              <td>Methoxy_mycolic_acid_synthase_4_MmaA4_(methyl_mycolic_acid_synthase_4)_(MMA4)_(hydroxy_mycolic_acid_synthase)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000870/1">BGC0000870</a></td>
+              <td>Other</td>
+              <td>29.0</td>
+              <td>87.4</td>
+              <td>104.0</td>
+              <td>3.6e-22</td>
+          </tr>
+    
+          <tr>
+              <td>EFG04600.1</td>
+              <td>Staurosporine_biosynthesis_methyltransferase_StaMA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000826/1">BGC0000826</a></td>
+              <td>Alkaloid</td>
+              <td>26.0</td>
+              <td>83.4</td>
+              <td>69.0</td>
+              <td>7.5e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ACR50778.1</td>
+              <td>methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000163/1">BGC0000163</a></td>
+              <td>Polyketide</td>
+              <td>25.0</td>
+              <td>59.9</td>
+              <td>67.0</td>
+              <td>4.9e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ACN29714.1</td>
+              <td>carboxylate_O-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000814/1">BGC0000814</a></td>
+              <td>Alkaloid</td>
+              <td>33.0</td>
+              <td>43.7</td>
+              <td>59.0</td>
+              <td>1.3e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ARS01468.1</td>
+              <td>NcmP</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001702/1">BGC0001702</a></td>
+              <td>NRP + Polyketide</td>
+              <td>34.0</td>
+              <td>41.2</td>
+              <td>50.0</td>
+              <td>6.2e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

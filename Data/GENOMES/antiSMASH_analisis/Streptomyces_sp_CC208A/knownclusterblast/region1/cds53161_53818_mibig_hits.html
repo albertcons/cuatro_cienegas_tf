@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ARD70858.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001693/1">BGC0001693</a></td>
+              <td>Polyketide</td>
+              <td>63.0</td>
+              <td>100.5</td>
+              <td>307.0</td>
+              <td>2.2e-83</td>
+          </tr>
+    
+          <tr>
+              <td>ABP54633.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000241/1">BGC0000241</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>61.0</td>
+              <td>99.5</td>
+              <td>305.0</td>
+              <td>8.4e-83</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ61844.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000240/1">BGC0000240</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>62.0</td>
+              <td>100.0</td>
+              <td>303.0</td>
+              <td>3.2e-82</td>
+          </tr>
+    
+          <tr>
+              <td>BBG91906.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001927/1">BGC0001927</a></td>
+              <td>Other</td>
+              <td>41.0</td>
+              <td>98.2</td>
+              <td>175.0</td>
+              <td>7.7e-44</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ05881.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000872/1">BGC0000872</a></td>
+              <td>Other</td>
+              <td>43.0</td>
+              <td>96.3</td>
+              <td>174.0</td>
+              <td>1.7e-43</td>
+          </tr>
+    
+          <tr>
+              <td>ADC96654.1</td>
+              <td>sulfotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001076/1">BGC0001076</a></td>
+              <td>Other:Nucleoside</td>
+              <td>43.0</td>
+              <td>94.5</td>
+              <td>165.0</td>
+              <td>1.4e-40</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

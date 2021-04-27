@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AWH12906.1</td>
+              <td>StmE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001939/1">BGC0001939</a></td>
+              <td>Polyketide</td>
+              <td>48.0</td>
+              <td>61.9</td>
+              <td>62.0</td>
+              <td>4.6e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAK83172.1</td>
+              <td>putative_two-component_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000026/1">BGC0000026</a></td>
+              <td>Saccharide:Oligosaccharide</td>
+              <td>50.0</td>
+              <td>62.9</td>
+              <td>57.0</td>
+              <td>1.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>WP_147474396.1</td>
+              <td>response_regulator_transcription_factor</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002015/1">BGC0002015</a></td>
+              <td>RiPP</td>
+              <td>49.0</td>
+              <td>58.1</td>
+              <td>51.0</td>
+              <td>8e-07</td>
+          </tr>
+    
+          <tr>
+              <td>SFF02673.1</td>
+              <td>DNA-binding_response_regulator,_NarL/FixJ_family,_contains_REC_and_HTH_domains</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001674/1">BGC0001674</a></td>
+              <td>RiPP</td>
+              <td>49.0</td>
+              <td>56.2</td>
+              <td>50.0</td>
+              <td>2.3e-06</td>
+          </tr>
+    
+          <tr>
+              <td>BBD82036.1</td>
+              <td>LuxR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001921/1">BGC0001921</a></td>
+              <td>Other</td>
+              <td>49.0</td>
+              <td>56.2</td>
+              <td>50.0</td>
+              <td>2.3e-06</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ20013.1</td>
+              <td>putative_DNA_binding_regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000903/1">BGC0000903</a></td>
+              <td>Other</td>
+              <td>41.0</td>
+              <td>72.4</td>
+              <td>49.0</td>
+              <td>4e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

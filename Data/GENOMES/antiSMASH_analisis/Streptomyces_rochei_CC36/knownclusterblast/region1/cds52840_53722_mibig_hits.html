@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAB53320.1</td>
+              <td>putative_esterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000325/1">BGC0000325</a></td>
+              <td>NRP</td>
+              <td>82.0</td>
+              <td>96.9</td>
+              <td>480.0</td>
+              <td>1.5e-135</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ45640.1</td>
+              <td>putative_vanchrobactin_esterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000454/1">BGC0000454</a></td>
+              <td>NRP</td>
+              <td>27.0</td>
+              <td>100.0</td>
+              <td>101.0</td>
+              <td>3.2e-21</td>
+          </tr>
+    
+          <tr>
+              <td>YP_002539288.1</td>
+              <td>IroD,_ferric_enterochelin_esterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001555/1">BGC0001555</a></td>
+              <td>RiPP</td>
+              <td>29.0</td>
+              <td>95.2</td>
+              <td>88.0</td>
+              <td>1.7e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAL08397.1</td>
+              <td>MceD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000586/1">BGC0000586</a></td>
+              <td>RiPP:Microcin</td>
+              <td>25.0</td>
+              <td>92.5</td>
+              <td>67.0</td>
+              <td>4e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAG25571.1</td>
+              <td>MchS1_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000587/1">BGC0000587</a></td>
+              <td>RiPP:Microcin</td>
+              <td>23.0</td>
+              <td>93.2</td>
+              <td>62.0</td>
+              <td>1.3e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

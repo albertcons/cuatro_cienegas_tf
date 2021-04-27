@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADI71470.1</td>
+              <td>putative_gamma-glutamyltranspeptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000203/1">BGC0000203</a></td>
+              <td>Polyketide</td>
+              <td>66.0</td>
+              <td>96.0</td>
+              <td>732.0</td>
+              <td>5.8e-211</td>
+          </tr>
+    
+          <tr>
+              <td>ABW71837.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000303/1">BGC0000303</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>90.3</td>
+              <td>203.0</td>
+              <td>7.2e-52</td>
+          </tr>
+    
+          <tr>
+              <td>AOC89013.1</td>
+              <td>putative_gamma-glutamyltransferase-like_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001652/1">BGC0001652</a></td>
+              <td>NRP</td>
+              <td>32.0</td>
+              <td>100.7</td>
+              <td>190.0</td>
+              <td>6.3e-48</td>
+          </tr>
+    
+          <tr>
+              <td>ACN39748.1</td>
+              <td>SibY</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000428/1">BGC0000428</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>84.2</td>
+              <td>189.0</td>
+              <td>1.4e-47</td>
+          </tr>
+    
+          <tr>
+              <td>ABX00597.1</td>
+              <td>LmbA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000907/1">BGC0000907</a></td>
+              <td>Other</td>
+              <td>33.0</td>
+              <td>88.6</td>
+              <td>183.0</td>
+              <td>1e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AEA29634.1</td>
+              <td>Por11</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000409/1">BGC0000409</a></td>
+              <td>NRP</td>
+              <td>30.0</td>
+              <td>101.2</td>
+              <td>178.0</td>
+              <td>4.2e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AEH41785.1</td>
+              <td>HrmG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000374/1">BGC0000374</a></td>
+              <td>NRP:Cyclic depsipeptide</td>
+              <td>32.0</td>
+              <td>84.6</td>
+              <td>169.0</td>
+              <td>1.5e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AIL50153.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000213/1">BGC0000213</a></td>
+              <td>Polyketide:Type II</td>
+              <td>28.0</td>
+              <td>82.0</td>
+              <td>106.0</td>
+              <td>1.6e-22</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

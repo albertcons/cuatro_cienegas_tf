@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAM27540.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000784/1">BGC0000784</a></td>
+              <td>Saccharide</td>
+              <td>37.0</td>
+              <td>93.0</td>
+              <td>267.0</td>
+              <td>3.9e-71</td>
+          </tr>
+    
+          <tr>
+              <td>sipS2</td>
+              <td>nucleotide-glucose-dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001452/1">BGC0001452</a></td>
+              <td>Polyketide</td>
+              <td>40.0</td>
+              <td>88.3</td>
+              <td>263.0</td>
+              <td>5.7e-70</td>
+          </tr>
+    
+          <tr>
+              <td>AWR88391.1</td>
+              <td>putative_nucleotide_sugar_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001522/1">BGC0001522</a></td>
+              <td>Polyketide</td>
+              <td>40.0</td>
+              <td>88.3</td>
+              <td>263.0</td>
+              <td>7.4e-70</td>
+          </tr>
+    
+          <tr>
+              <td>BAP34704.1</td>
+              <td>UDP-glucose/GDP-mannose_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000078/1">BGC0000078</a></td>
+              <td>Polyketide</td>
+              <td>40.0</td>
+              <td>91.2</td>
+              <td>257.0</td>
+              <td>5.3e-68</td>
+          </tr>
+    
+          <tr>
+              <td>ABC02801.1</td>
+              <td>putative_UDP-N-acetyl-D-mannosaminuronic_acid_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000809/1">BGC0000809</a></td>
+              <td>Alkaloid</td>
+              <td>34.0</td>
+              <td>81.7</td>
+              <td>189.0</td>
+              <td>1.4e-47</td>
+          </tr>
+    
+          <tr>
+              <td>ATV95598.1</td>
+              <td>NDP-glucose_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001503/1">BGC0001503</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>94.8</td>
+              <td>185.0</td>
+              <td>2e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AAF23997.1</td>
+              <td>WbpO</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000781/1">BGC0000781</a></td>
+              <td>Saccharide</td>
+              <td>35.0</td>
+              <td>80.8</td>
+              <td>174.0</td>
+              <td>3.5e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AWL83830.1</td>
+              <td>Gna</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001947/1">BGC0001947</a></td>
+              <td>Saccharide</td>
+              <td>32.0</td>
+              <td>82.4</td>
+              <td>166.0</td>
+              <td>7.2e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AAM70332.1</td>
+              <td>CalS8</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000033/1">BGC0000033</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>84.2</td>
+              <td>156.0</td>
+              <td>7.5e-38</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

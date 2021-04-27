@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACN39738.1</td>
+              <td>SibO</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000428/1">BGC0000428</a></td>
+              <td>NRP</td>
+              <td>45.0</td>
+              <td>98.8</td>
+              <td>186.0</td>
+              <td>3.8e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AEH42477.1</td>
+              <td>N-methyl-transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000032/1">BGC0000032</a></td>
+              <td>Polyketide</td>
+              <td>54.0</td>
+              <td>63.1</td>
+              <td>173.0</td>
+              <td>5.7e-43</td>
+          </tr>
+    
+          <tr>
+              <td>CAA63163.1</td>
+              <td>N-methyl-transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000878/1">BGC0000878</a></td>
+              <td>Other</td>
+              <td>51.0</td>
+              <td>71.5</td>
+              <td>164.0</td>
+              <td>2e-40</td>
+          </tr>
+    
+          <tr>
+              <td>CAD27648.1</td>
+              <td>AtaP5_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000873/1">BGC0000873</a></td>
+              <td>Other</td>
+              <td>47.0</td>
+              <td>74.3</td>
+              <td>159.0</td>
+              <td>8.5e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AET51846.1</td>
+              <td>N-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001138/1">BGC0001138</a></td>
+              <td>Other:Nucleoside</td>
+              <td>49.0</td>
+              <td>70.7</td>
+              <td>148.0</td>
+              <td>1.1e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AGZ93903.1</td>
+              <td>methyltransferase_small</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000937/1">BGC0000937</a></td>
+              <td>Other</td>
+              <td>33.0</td>
+              <td>49.4</td>
+              <td>55.0</td>
+              <td>1.3e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ADC45587.1</td>
+              <td>C5-O-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000093/1">BGC0000093</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>40.6</td>
+              <td>50.0</td>
+              <td>3.3e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AQZ37104.1</td>
+              <td>O-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001511/1">BGC0001511</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>89.6</td>
+              <td>50.0</td>
+              <td>5.6e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

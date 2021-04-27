@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABR67775.1</td>
+              <td>unknown</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000316/1">BGC0000316</a></td>
+              <td>NRP</td>
+              <td>75.0</td>
+              <td>98.3</td>
+              <td>358.0</td>
+              <td>9.2e-99</td>
+          </tr>
+    
+          <tr>
+              <td>AAU34198.1</td>
+              <td>polyprenyl_mannose_synthase_MppG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000388/1">BGC0000388</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>97.1</td>
+              <td>106.0</td>
+              <td>4.8e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ20763.1</td>
+              <td>glycosyl_transferase_family_2_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000369/1">BGC0000369</a></td>
+              <td>NRP + Saccharide:Hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>95.0</td>
+              <td>101.0</td>
+              <td>1.5e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ADG29300.1</td>
+              <td>putative_family_2_glycosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000796/1">BGC0000796</a></td>
+              <td>Saccharide</td>
+              <td>27.0</td>
+              <td>74.1</td>
+              <td>55.0</td>
+              <td>1.7e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

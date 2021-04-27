@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADB92579.1</td>
+              <td>Ccb5</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001225/1">BGC0001225</a></td>
+              <td>NRP</td>
+              <td>64.0</td>
+              <td>100.0</td>
+              <td>443.0</td>
+              <td>2.4e-124</td>
+          </tr>
+    
+          <tr>
+              <td>ABY66028.1</td>
+              <td>Zn-dependent_alcohol_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001008/1">BGC0001008</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>33.0</td>
+              <td>98.6</td>
+              <td>160.0</td>
+              <td>5.3e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ATV95592.1</td>
+              <td>zinc-containing_alcohol_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001503/1">BGC0001503</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>93.1</td>
+              <td>140.0</td>
+              <td>4.3e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABP55167.1</td>
+              <td>Alcohol_dehydrogenase_GroES_domain_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000150/1">BGC0000150</a></td>
+              <td>NRP + Polyketide:Enediyne type I</td>
+              <td>32.0</td>
+              <td>96.5</td>
+              <td>136.0</td>
+              <td>1.1e-31</td>
+          </tr>
+    
+          <tr>
+              <td>BAD20754.1</td>
+              <td>dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000702/1">BGC0000702</a></td>
+              <td>Saccharide</td>
+              <td>28.0</td>
+              <td>75.7</td>
+              <td>91.0</td>
+              <td>3.9e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAF60530.1</td>
+              <td>GntP-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000704/1">BGC0000704</a></td>
+              <td>Saccharide</td>
+              <td>28.0</td>
+              <td>75.7</td>
+              <td>91.0</td>
+              <td>3.9e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAF31584.1</td>
+              <td>3-amino-2,3-dideoxy-scyllo-inositol_1-dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000705/1">BGC0000705</a></td>
+              <td>Saccharide</td>
+              <td>28.0</td>
+              <td>75.7</td>
+              <td>91.0</td>
+              <td>3.9e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAI47653.1</td>
+              <td>putative_3-amino-2,3-dideoxy-scyllo-inositol_1_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000692/1">BGC0000692</a></td>
+              <td>Saccharide</td>
+              <td>27.0</td>
+              <td>72.8</td>
+              <td>88.0</td>
+              <td>2.6e-17</td>
+          </tr>
+    
+          <tr>
+              <td>CBJ83014.1</td>
+              <td>alcohol_dehydrogenase_class_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000189/1">BGC0000189</a></td>
+              <td>Polyketide:Type III</td>
+              <td>29.0</td>
+              <td>98.6</td>
+              <td>84.0</td>
+              <td>4.8e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AGZ20490.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001776/1">BGC0001776</a></td>
+              <td>Terpene</td>
+              <td>28.0</td>
+              <td>80.3</td>
+              <td>83.0</td>
+              <td>6.3e-16</td>
+          </tr>
+    
+          <tr>
+              <td>CAE22477.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000720/1">BGC0000720</a></td>
+              <td>Saccharide</td>
+              <td>27.0</td>
+              <td>73.7</td>
+              <td>82.0</td>
+              <td>1.4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>CAH18550.1</td>
+              <td>putative_cyclitol_1-dehydrogenase,_TobE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000721/1">BGC0000721</a></td>
+              <td>Saccharide</td>
+              <td>27.0</td>
+              <td>73.7</td>
+              <td>82.0</td>
+              <td>1.4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>CAF33310.1</td>
+              <td>putative_3-amino-2,3-dideoxy-scyllo-inositol_1-dehydrogenase,_NeoE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000709/1">BGC0000709</a></td>
+              <td>Saccharide</td>
+              <td>26.0</td>
+              <td>77.7</td>
+              <td>81.0</td>
+              <td>2.4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>CAH58688.1</td>
+              <td>putative_alcohol_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000711/1">BGC0000711</a></td>
+              <td>Saccharide</td>
+              <td>26.0</td>
+              <td>77.7</td>
+              <td>81.0</td>
+              <td>2.4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>CAF32372.1</td>
+              <td>putative_3-amino-2,3-dideoxy-scyllo-inositol_1-dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000712/1">BGC0000712</a></td>
+              <td>Saccharide</td>
+              <td>26.0</td>
+              <td>76.0</td>
+              <td>81.0</td>
+              <td>2.4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>BAE98076.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000719/1">BGC0000719</a></td>
+              <td>Saccharide</td>
+              <td>28.0</td>
+              <td>74.0</td>
+              <td>81.0</td>
+              <td>2.4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>CAG34720.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000713/1">BGC0000713</a></td>
+              <td>Saccharide</td>
+              <td>25.0</td>
+              <td>70.8</td>
+              <td>79.0</td>
+              <td>1.6e-14</td>
+          </tr>
+    
+          <tr>
+              <td>ACN38356.1</td>
+              <td>2-deoxy-scyllo-inosamine_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000714/1">BGC0000714</a></td>
+              <td>Saccharide</td>
+              <td>25.0</td>
+              <td>71.1</td>
+              <td>72.0</td>
+              <td>1.9e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CAF34032.1</td>
+              <td>putative_alcohol_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000689/1">BGC0000689</a></td>
+              <td>Saccharide</td>
+              <td>25.0</td>
+              <td>69.9</td>
+              <td>71.0</td>
+              <td>2.5e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CAF31445.1</td>
+              <td>putative_aminocyclitol_1-dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000696/1">BGC0000696</a></td>
+              <td>Saccharide</td>
+              <td>25.0</td>
+              <td>69.9</td>
+              <td>71.0</td>
+              <td>2.5e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ARV75722.1</td>
+              <td>2-deoxy-scyllo-inosose_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001603/1">BGC0001603</a></td>
+              <td>Saccharide</td>
+              <td>25.0</td>
+              <td>69.9</td>
+              <td>71.0</td>
+              <td>2.5e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAM33674.1</td>
+              <td>putative_NADPH:quinone_oxidoreductase_GrhO7</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000230/1">BGC0000230</a></td>
+              <td>Polyketide:Type II</td>
+              <td>28.0</td>
+              <td>81.2</td>
+              <td>67.0</td>
+              <td>6.1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAG38695.1</td>
+              <td>putative_3-amino-2,3-dideoxy-scyllo-inositol_1-dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000708/1">BGC0000708</a></td>
+              <td>Saccharide</td>
+              <td>25.0</td>
+              <td>52.6</td>
+              <td>67.0</td>
+              <td>6.1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AVX51099.1</td>
+              <td>NysJ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001709/1">BGC0001709</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>74.3</td>
+              <td>62.0</td>
+              <td>2e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ARG41923.1</td>
+              <td>IstT</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001622/1">BGC0001622</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>58.1</td>
+              <td>61.0</td>
+              <td>4.4e-09</td>
+          </tr>
+    
+          <tr>
+              <td>EMF00967.1</td>
+              <td>alcohol_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001633/1">BGC0001633</a></td>
+              <td>Other</td>
+              <td>31.0</td>
+              <td>43.6</td>
+              <td>60.0</td>
+              <td>5.7e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAF71767.1</td>
+              <td>nysJ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000115/1">BGC0000115</a></td>
+              <td>Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>30.0</td>
+              <td>74.3</td>
+              <td>59.0</td>
+              <td>1.7e-08</td>
+          </tr>
+    
+          <tr>
+              <td>CAI59982.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000700/1">BGC0000700</a></td>
+              <td>Saccharide</td>
+              <td>26.0</td>
+              <td>72.5</td>
+              <td>57.0</td>
+              <td>3.7e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AXI91546.1</td>
+              <td>FunP7</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001944/1">BGC0001944</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>81.2</td>
+              <td>57.0</td>
+              <td>3.7e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AVX51108.1</td>
+              <td>nysC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001709/1">BGC0001709</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>78.0</td>
+              <td>55.0</td>
+              <td>2.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAF71776.1</td>
+              <td>nysC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000115/1">BGC0000115</a></td>
+              <td>Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>77.7</td>
+              <td>54.0</td>
+              <td>3.1e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BBA91552.1</td>
+              <td>dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001616/1">BGC0001616</a></td>
+              <td>NRP + Polyketide</td>
+              <td>26.0</td>
+              <td>65.0</td>
+              <td>51.0</td>
+              <td>2.7e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ACN69988.1</td>
+              <td>polyketide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000079/1">BGC0000079</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>73.1</td>
+              <td>51.0</td>
+              <td>3.5e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>
