@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ATY37612.1</td>
+              <td>BreG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001536/1">BGC0001536</a></td>
+              <td>NRP</td>
+              <td>33.0</td>
+              <td>104.6</td>
+              <td>479.0</td>
+              <td>1.3e-134</td>
+          </tr>
+    
+          <tr>
+              <td>ABO15880.1</td>
+              <td>assimilatory_nitrate_reductase_catalytic_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000132/1">BGC0000132</a></td>
+              <td>Polyketide</td>
+              <td>41.0</td>
+              <td>77.5</td>
+              <td>404.0</td>
+              <td>4.2e-112</td>
+          </tr>
+    
+          <tr>
+              <td>ADZ13548.1</td>
+              <td>YtkK</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000466/1">BGC0000466</a></td>
+              <td>NRP</td>
+              <td>30.0</td>
+              <td>75.8</td>
+              <td>214.0</td>
+              <td>6.1e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ARK19477.1</td>
+              <td>oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001540/1">BGC0001540</a></td>
+              <td>Other</td>
+              <td>29.0</td>
+              <td>77.5</td>
+              <td>203.0</td>
+              <td>1.1e-51</td>
+          </tr>
+    
+          <tr>
+              <td>CAE45689.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000031/1">BGC0000031</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>27.0</td>
+              <td>68.7</td>
+              <td>161.0</td>
+              <td>6.2e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ADF88267.1</td>
+              <td>oxidoreductase_alpha_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000981/1">BGC0000981</a></td>
+              <td>NRP + Polyketide</td>
+              <td>26.0</td>
+              <td>42.7</td>
+              <td>159.0</td>
+              <td>3.1e-38</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

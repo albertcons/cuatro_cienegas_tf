@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_026275164.1</td>
+              <td>LLM_class_F420-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001458/1">BGC0001458</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>34.0</td>
+              <td>77.9</td>
+              <td>126.0</td>
+              <td>5.7e-29</td>
+          </tr>
+    
+          <tr>
+              <td>ADE34500.1</td>
+              <td>ssfP</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000269/1">BGC0000269</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>32.0</td>
+              <td>72.6</td>
+              <td>95.0</td>
+              <td>1.4e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AWH12642.1</td>
+              <td>Rmp11</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001759/1">BGC0001759</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>63.4</td>
+              <td>75.0</td>
+              <td>1.5e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ARU08084.1</td>
+              <td>mlcP</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001448/1">BGC0001448</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>30.0</td>
+              <td>73.3</td>
+              <td>73.0</td>
+              <td>5.7e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ADH04638.1</td>
+              <td>monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001051/1">BGC0001051</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>33.0</td>
+              <td>37.0</td>
+              <td>67.0</td>
+              <td>4.1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ19083.1</td>
+              <td>putative_luciferase_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000288/1">BGC0000288</a></td>
+              <td>NRP</td>
+              <td>28.0</td>
+              <td>73.3</td>
+              <td>64.0</td>
+              <td>4.5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ACU36650.1</td>
+              <td>Luciferase-like_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000392/1">BGC0000392</a></td>
+              <td>NRP</td>
+              <td>24.0</td>
+              <td>89.8</td>
+              <td>61.0</td>
+              <td>2.2e-09</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ07847.1</td>
+              <td>putative_oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000232/1">BGC0000232</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>42.2</td>
+              <td>60.0</td>
+              <td>5e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

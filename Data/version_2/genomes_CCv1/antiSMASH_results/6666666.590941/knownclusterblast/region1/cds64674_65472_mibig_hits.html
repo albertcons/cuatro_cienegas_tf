@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABV57825.1</td>
+              <td>ergot_alkaloid_biosynthetic_protein_A</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001267/1">BGC0001267</a></td>
+              <td>Terpene</td>
+              <td>37.0</td>
+              <td>105.3</td>
+              <td>161.0</td>
+              <td>2.4e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ABM91452.1</td>
+              <td>conserved_protein_EasG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000348/1">BGC0000348</a></td>
+              <td>NRP</td>
+              <td>39.0</td>
+              <td>105.7</td>
+              <td>157.0</td>
+              <td>2.6e-38</td>
+          </tr>
+    
+          <tr>
+              <td>EAL94096.1</td>
+              <td>ergot_alkaloid_biosynthetic_protein_A</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000811/1">BGC0000811</a></td>
+              <td>Alkaloid</td>
+              <td>34.0</td>
+              <td>107.2</td>
+              <td>125.0</td>
+              <td>1.1e-28</td>
+          </tr>
+    
+          <tr>
+              <td>ABD59204.1</td>
+              <td>InkH</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000813/1">BGC0000813</a></td>
+              <td>Alkaloid</td>
+              <td>30.0</td>
+              <td>101.9</td>
+              <td>96.0</td>
+              <td>5.5e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ACN29707.1</td>
+              <td>putative_nucleoside-diphosphate-sugar_epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000814/1">BGC0000814</a></td>
+              <td>Alkaloid</td>
+              <td>30.0</td>
+              <td>101.9</td>
+              <td>96.0</td>
+              <td>5.5e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ACB47067.1</td>
+              <td>conserved_hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001060/1">BGC0001060</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>105.3</td>
+              <td>96.0</td>
+              <td>5.5e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AEU17892.1</td>
+              <td>putative_hydroxylase/dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001072/1">BGC0001072</a></td>
+              <td>Saccharide + Polyketide:Modular type I + Polyketide:Type II + Other:Aminocoumarin</td>
+              <td>33.0</td>
+              <td>105.3</td>
+              <td>87.0</td>
+              <td>2.6e-17</td>
+          </tr>
+    
+          <tr>
+              <td>CAM34355.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000242/1">BGC0000242</a></td>
+              <td>Polyketide</td>
+              <td>38.0</td>
+              <td>71.3</td>
+              <td>75.0</td>
+              <td>1.3e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46687.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001177/1">BGC0001177</a></td>
+              <td>Polyketide:Type II</td>
+              <td>32.0</td>
+              <td>86.4</td>
+              <td>72.0</td>
+              <td>8.5e-13</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

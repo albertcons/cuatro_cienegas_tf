@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACI88874.1</td>
+              <td>alnumycin_P_phosphatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000195/1">BGC0000195</a></td>
+              <td>Polyketide:Type II</td>
+              <td>51.0</td>
+              <td>94.7</td>
+              <td>203.0</td>
+              <td>3.6e-52</td>
+          </tr>
+    
+          <tr>
+              <td>QDO67112.1</td>
+              <td>PyrC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001985/1">BGC0001985</a></td>
+              <td>Other</td>
+              <td>47.0</td>
+              <td>94.7</td>
+              <td>176.0</td>
+              <td>3.6e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AFV27436.1</td>
+              <td>putative_phosphatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000375/1">BGC0000375</a></td>
+              <td>NRP</td>
+              <td>40.0</td>
+              <td>92.5</td>
+              <td>154.0</td>
+              <td>2.5e-37</td>
+          </tr>
+    
+          <tr>
+              <td>WP_013310332.1</td>
+              <td>HAD_family_phosphatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001728/1">BGC0001728</a></td>
+              <td>NRP + Polyketide</td>
+              <td>29.0</td>
+              <td>88.2</td>
+              <td>93.0</td>
+              <td>4e-19</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

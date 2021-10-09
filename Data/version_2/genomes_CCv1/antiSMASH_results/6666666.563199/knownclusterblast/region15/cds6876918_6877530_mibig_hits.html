@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_031052719.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001634/1">BGC0001634</a></td>
+              <td>RiPP</td>
+              <td>55.0</td>
+              <td>75.9</td>
+              <td>132.0</td>
+              <td>6.9e-31</td>
+          </tr>
+    
+          <tr>
+              <td>WP_106429870.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000578/1">BGC0000578</a></td>
+              <td>RiPP:Lassopeptide</td>
+              <td>53.0</td>
+              <td>75.9</td>
+              <td>129.0</td>
+              <td>4.5e-30</td>
+          </tr>
+    
+          <tr>
+              <td>WP_078888087.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001645/1">BGC0001645</a></td>
+              <td>RiPP</td>
+              <td>60.0</td>
+              <td>62.6</td>
+              <td>127.0</td>
+              <td>2.2e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ55180.1</td>
+              <td>ABC-type_multidrug_transport_system_ATPase_and_permease_components</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001889/1">BGC0001889</a></td>
+              <td>RiPP</td>
+              <td>48.0</td>
+              <td>77.3</td>
+              <td>116.0</td>
+              <td>3.9e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AHH99931.1</td>
+              <td>ABC_transporter_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000002/1">BGC0000002</a></td>
+              <td>Polyketide</td>
+              <td>43.0</td>
+              <td>73.9</td>
+              <td>94.0</td>
+              <td>1.6e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ALV82355.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001370/1">BGC0001370</a></td>
+              <td>NRP</td>
+              <td>45.0</td>
+              <td>65.5</td>
+              <td>94.0</td>
+              <td>2.7e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAB38879.1</td>
+              <td>putative_ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000315/1">BGC0000315</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>44.0</td>
+              <td>65.5</td>
+              <td>91.0</td>
+              <td>1.8e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AEP18658.1</td>
+              <td>efflux_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000461/1">BGC0000461</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>70.9</td>
+              <td>56.0</td>
+              <td>4.8e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

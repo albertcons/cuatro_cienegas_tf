@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAH33411.1</td>
+              <td>putative_siderophore_export_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000371/1">BGC0000371</a></td>
+              <td>NRP</td>
+              <td>100.0</td>
+              <td>100.0</td>
+              <td>795.0</td>
+              <td>5.3e-230</td>
+          </tr>
+    
+          <tr>
+              <td>ABG94127.1</td>
+              <td>transporter,_MFS_superfamily_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000417/1">BGC0000417</a></td>
+              <td>NRP</td>
+              <td>49.0</td>
+              <td>93.3</td>
+              <td>356.0</td>
+              <td>8.2e-98</td>
+          </tr>
+    
+          <tr>
+              <td>EFL06870.1</td>
+              <td>major_facilitator_superfamily_transporter_multidrug_resistance_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000300/1">BGC0000300</a></td>
+              <td>NRP</td>
+              <td>39.0</td>
+              <td>87.5</td>
+              <td>232.0</td>
+              <td>1.8e-60</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ45638.1</td>
+              <td>putative_siderophore_exporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000454/1">BGC0000454</a></td>
+              <td>NRP</td>
+              <td>36.0</td>
+              <td>92.8</td>
+              <td>230.0</td>
+              <td>4e-60</td>
+          </tr>
+    
+          <tr>
+              <td>ACR13598.1</td>
+              <td>putative_enterobactin_exporter_EntS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000451/1">BGC0000451</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>91.0</td>
+              <td>216.0</td>
+              <td>7.8e-56</td>
+          </tr>
+    
+          <tr>
+              <td>AEE65510.1</td>
+              <td>integral_membrane_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000223/1">BGC0000223</a></td>
+              <td>Polyketide:Type II</td>
+              <td>32.0</td>
+              <td>84.5</td>
+              <td>174.0</td>
+              <td>4.4e-43</td>
+          </tr>
+    
+          <tr>
+              <td>WP_006051162.1</td>
+              <td>MFS_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001999/1">BGC0001999</a></td>
+              <td>NRP</td>
+              <td>29.0</td>
+              <td>91.7</td>
+              <td>136.0</td>
+              <td>1.3e-31</td>
+          </tr>
+    
+          <tr>
+              <td>CAC20933.1</td>
+              <td>PimH_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000125/1">BGC0000125</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>88.9</td>
+              <td>74.0</td>
+              <td>6.2e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AQT01380.1</td>
+              <td>SgnH</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001690/1">BGC0001690</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>88.9</td>
+              <td>74.0</td>
+              <td>6.2e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AAO65354.1</td>
+              <td>putative_integral_membrane_efflux_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000236/1">BGC0000236</a></td>
+              <td>Polyketide</td>
+              <td>23.0</td>
+              <td>96.8</td>
+              <td>67.0</td>
+              <td>5.8e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAM78022.1</td>
+              <td>butyrolactone_receptor</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000112/1">BGC0000112</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>46.0</td>
+              <td>95.2</td>
+              <td>165.0</td>
+              <td>9.9e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AHW57765.1</td>
+              <td>PgaR2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000262/1">BGC0000262</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>45.0</td>
+              <td>98.6</td>
+              <td>163.0</td>
+              <td>2.9e-40</td>
+          </tr>
+    
+          <tr>
+              <td>ACO51011.1</td>
+              <td>SabR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000850/1">BGC0000850</a></td>
+              <td>Other</td>
+              <td>41.0</td>
+              <td>98.6</td>
+              <td>153.0</td>
+              <td>3e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AGN74906.1</td>
+              <td>gamma-butyrolactone_receptor</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000459/1">BGC0000459</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Trans-AT type I</td>
+              <td>39.0</td>
+              <td>98.1</td>
+              <td>140.0</td>
+              <td>3.4e-33</td>
+          </tr>
+    
+          <tr>
+              <td>CAB60184.1</td>
+              <td>gamma-butyrolactone_binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000849/1">BGC0000849</a></td>
+              <td>Other:Butyrolactone</td>
+              <td>40.0</td>
+              <td>98.1</td>
+              <td>136.0</td>
+              <td>6.5e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71096.1</td>
+              <td>Lct13</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000238/1">BGC0000238</a></td>
+              <td>Polyketide</td>
+              <td>41.0</td>
+              <td>98.1</td>
+              <td>135.0</td>
+              <td>8.4e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68917.1</td>
+              <td>TetR-like_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001083/1">BGC0001083</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>39.0</td>
+              <td>98.1</td>
+              <td>134.0</td>
+              <td>2.5e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ACO51013.1</td>
+              <td>SabS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000850/1">BGC0000850</a></td>
+              <td>Other</td>
+              <td>33.0</td>
+              <td>92.3</td>
+              <td>98.0</td>
+              <td>1.1e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AEF33088.1</td>
+              <td>TetR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001039/1">BGC0001039</a></td>
+              <td>NRP + Polyketide</td>
+              <td>35.0</td>
+              <td>91.4</td>
+              <td>97.0</td>
+              <td>2.5e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CAC37887.1</td>
+              <td>ScbR2;_Butyrolactone-responsive_repressor_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000038/1">BGC0000038</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>36.0</td>
+              <td>93.8</td>
+              <td>91.0</td>
+              <td>1.4e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68914.1</td>
+              <td>TetR-like_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001083/1">BGC0001083</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>33.0</td>
+              <td>94.3</td>
+              <td>85.0</td>
+              <td>1e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AAM78020.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000112/1">BGC0000112</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>31.0</td>
+              <td>101.4</td>
+              <td>77.0</td>
+              <td>3.6e-14</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71097.1</td>
+              <td>Lct14</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000238/1">BGC0000238</a></td>
+              <td>Polyketide</td>
+              <td>40.0</td>
+              <td>51.7</td>
+              <td>70.0</td>
+              <td>4.4e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ77685.1</td>
+              <td>ChlF1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000036/1">BGC0000036</a></td>
+              <td>Polyketide:Modular type I + Polyketide:Iterative type I + Saccharide:Oligosaccharide</td>
+              <td>36.0</td>
+              <td>52.2</td>
+              <td>53.0</td>
+              <td>4.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BBA66516.1</td>
+              <td>TetR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001495/1">BGC0001495</a></td>
+              <td>Polyketide</td>
+              <td>36.0</td>
+              <td>33.5</td>
+              <td>52.0</td>
+              <td>7.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAV66097.1</td>
+              <td>PltZ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000127/1">BGC0000127</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>37.8</td>
+              <td>49.0</td>
+              <td>6.1e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

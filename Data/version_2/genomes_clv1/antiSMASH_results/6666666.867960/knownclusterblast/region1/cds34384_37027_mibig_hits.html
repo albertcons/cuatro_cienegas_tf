@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ALA09378.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001303/1">BGC0001303</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>96.8</td>
+              <td>196.0</td>
+              <td>1.7e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ABP55201.1</td>
+              <td>protein_of_unknown_function_DUF214</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000142/1">BGC0000142</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>97.0</td>
+              <td>190.0</td>
+              <td>1.6e-47</td>
+          </tr>
+    
+          <tr>
+              <td>ACN80636.1</td>
+              <td>Sio5</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000655/1">BGC0000655</a></td>
+              <td>Terpene</td>
+              <td>26.0</td>
+              <td>98.8</td>
+              <td>162.0</td>
+              <td>3.5e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AOE23598.1</td>
+              <td>FoxTX</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001598/1">BGC0001598</a></td>
+              <td>NRP + Polyketide</td>
+              <td>27.0</td>
+              <td>94.4</td>
+              <td>147.0</td>
+              <td>9e-35</td>
+          </tr>
+    
+          <tr>
+              <td>ANA09434.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001483/1">BGC0001483</a></td>
+              <td>Other</td>
+              <td>25.0</td>
+              <td>91.8</td>
+              <td>116.0</td>
+              <td>2.9e-25</td>
+          </tr>
+    
+          <tr>
+              <td>CAD91213.1</td>
+              <td>putative_ABC_transporter,_Dbv18</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000289/1">BGC0000289</a></td>
+              <td>NRP:Glycopeptide + Saccharide:Hybrid/tailoring</td>
+              <td>26.0</td>
+              <td>87.0</td>
+              <td>91.0</td>
+              <td>1e-17</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

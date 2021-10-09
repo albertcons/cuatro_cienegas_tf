@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAE95580.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000703/1">BGC0000703</a></td>
+              <td>Saccharide</td>
+              <td>64.0</td>
+              <td>96.6</td>
+              <td>351.0</td>
+              <td>1.4e-96</td>
+          </tr>
+    
+          <tr>
+              <td>BBA84064.1</td>
+              <td>NAD-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001916/1">BGC0001916</a></td>
+              <td>Polyketide</td>
+              <td>48.0</td>
+              <td>96.6</td>
+              <td>267.0</td>
+              <td>2.6e-71</td>
+          </tr>
+    
+          <tr>
+              <td>BAT51060.1</td>
+              <td>dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001296/1">BGC0001296</a></td>
+              <td>Polyketide</td>
+              <td>43.0</td>
+              <td>98.6</td>
+              <td>241.0</td>
+              <td>2e-63</td>
+          </tr>
+    
+          <tr>
+              <td>SCO70303.1</td>
+              <td>Imine_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001433/1">BGC0001433</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>43.0</td>
+              <td>98.6</td>
+              <td>235.0</td>
+              <td>1.1e-61</td>
+          </tr>
+    
+          <tr>
+              <td>AKG47111.1</td>
+              <td>RedE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001224/1">BGC0001224</a></td>
+              <td>Other</td>
+              <td>43.0</td>
+              <td>95.9</td>
+              <td>219.0</td>
+              <td>8.2e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ABY83183.1</td>
+              <td>Azi45</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000960/1">BGC0000960</a></td>
+              <td>NRP + Polyketide</td>
+              <td>38.0</td>
+              <td>95.9</td>
+              <td>180.0</td>
+              <td>4.2e-45</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

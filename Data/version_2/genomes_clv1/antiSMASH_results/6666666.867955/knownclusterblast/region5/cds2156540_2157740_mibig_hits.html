@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAF23365.1</td>
+              <td>PhaA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000866/1">BGC0000866</a></td>
+              <td>Other</td>
+              <td>40.0</td>
+              <td>101.0</td>
+              <td>241.0</td>
+              <td>2.7e-63</td>
+          </tr>
+    
+          <tr>
+              <td>ABC37581.1</td>
+              <td>beta-ketothiolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001120/1">BGC0001120</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>37.0</td>
+              <td>101.5</td>
+              <td>235.0</td>
+              <td>2e-61</td>
+          </tr>
+    
+          <tr>
+              <td>ABD65931.1</td>
+              <td>acetyl-CoA_acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000341/1">BGC0000341</a></td>
+              <td>NRP</td>
+              <td>37.0</td>
+              <td>102.3</td>
+              <td>213.0</td>
+              <td>4.7e-55</td>
+          </tr>
+    
+          <tr>
+              <td>AXM42944.1</td>
+              <td>thioesterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001941/1">BGC0001941</a></td>
+              <td>NRP + Polyketide</td>
+              <td>35.0</td>
+              <td>103.5</td>
+              <td>207.0</td>
+              <td>5.7e-53</td>
+          </tr>
+    
+          <tr>
+              <td>AXM43061.1</td>
+              <td>acetyl-CoA_acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001945/1">BGC0001945</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>103.5</td>
+              <td>203.0</td>
+              <td>4.8e-52</td>
+          </tr>
+    
+          <tr>
+              <td>BAA89375.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000864/1">BGC0000864</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>111.8</td>
+              <td>145.0</td>
+              <td>2e-34</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

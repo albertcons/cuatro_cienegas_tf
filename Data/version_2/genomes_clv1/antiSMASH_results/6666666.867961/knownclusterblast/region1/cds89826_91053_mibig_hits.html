@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AJI44172.1</td>
+              <td>ferredoxin_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001193/1">BGC0001193</a></td>
+              <td>NRP</td>
+              <td>52.0</td>
+              <td>91.7</td>
+              <td>342.0</td>
+              <td>8.9e-94</td>
+          </tr>
+    
+          <tr>
+              <td>ALG65312.1</td>
+              <td>Cal24</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001297/1">BGC0001297</a></td>
+              <td>NRP</td>
+              <td>46.0</td>
+              <td>96.3</td>
+              <td>282.0</td>
+              <td>8.3e-76</td>
+          </tr>
+    
+          <tr>
+              <td>BBG06141.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001917/1">BGC0001917</a></td>
+              <td>Polyketide</td>
+              <td>40.0</td>
+              <td>94.1</td>
+              <td>222.0</td>
+              <td>1.7e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ABO15881.1</td>
+              <td>assimilatory_nitrate_reductase_electron_transfer_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000132/1">BGC0000132</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>97.3</td>
+              <td>124.0</td>
+              <td>3.8e-28</td>
+          </tr>
+    
+          <tr>
+              <td>ACH85560.1</td>
+              <td>putative_nitrite_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000283/1">BGC0000283</a></td>
+              <td>Other:Cyclitol</td>
+              <td>33.0</td>
+              <td>67.9</td>
+              <td>106.0</td>
+              <td>8.2e-23</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

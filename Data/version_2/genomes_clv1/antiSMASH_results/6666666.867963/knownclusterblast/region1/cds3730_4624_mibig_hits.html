@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAG18097.1</td>
+              <td>putative_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000658/1">BGC0000658</a></td>
+              <td>Terpene</td>
+              <td>91.0</td>
+              <td>98.7</td>
+              <td>552.0</td>
+              <td>4.1e-157</td>
+          </tr>
+    
+          <tr>
+              <td>ATY69607.1</td>
+              <td>SAM-dependent_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001823/1">BGC0001823</a></td>
+              <td>NRP + Polyketide</td>
+              <td>87.0</td>
+              <td>99.0</td>
+              <td>528.0</td>
+              <td>6.4e-150</td>
+          </tr>
+    
+          <tr>
+              <td>SCN11946.1</td>
+              <td>SAM-dependent_methlyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001580/1">BGC0001580</a></td>
+              <td>Polyketide</td>
+              <td>83.0</td>
+              <td>98.7</td>
+              <td>502.0</td>
+              <td>6.4e-142</td>
+          </tr>
+    
+          <tr>
+              <td>CAM02993.1</td>
+              <td>methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000659/1">BGC0000659</a></td>
+              <td>Terpene</td>
+              <td>63.0</td>
+              <td>92.9</td>
+              <td>352.0</td>
+              <td>8.1e-97</td>
+          </tr>
+    
+          <tr>
+              <td>AEK21532.1</td>
+              <td>SAM-dependent_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000657/1">BGC0000657</a></td>
+              <td>Terpene</td>
+              <td>55.0</td>
+              <td>91.6</td>
+              <td>311.0</td>
+              <td>1.2e-84</td>
+          </tr>
+    
+          <tr>
+              <td>BAF98640.1</td>
+              <td>putative_methyl_transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000651/1">BGC0000651</a></td>
+              <td>Terpene</td>
+              <td>42.0</td>
+              <td>91.9</td>
+              <td>232.0</td>
+              <td>7.2e-61</td>
+          </tr>
+    
+          <tr>
+              <td>AAO65792.1</td>
+              <td>monensin_3-O-methyl_transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000100/1">BGC0000100</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>61.3</td>
+              <td>64.0</td>
+              <td>2.6e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ANZ52455.1</td>
+              <td>MonE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001670/1">BGC0001670</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>61.3</td>
+              <td>64.0</td>
+              <td>2.6e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

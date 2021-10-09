@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABD65931.1</td>
+              <td>acetyl-CoA_acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000341/1">BGC0000341</a></td>
+              <td>NRP</td>
+              <td>98.0</td>
+              <td>100.0</td>
+              <td>796.0</td>
+              <td>2.2e-230</td>
+          </tr>
+    
+          <tr>
+              <td>AXM43061.1</td>
+              <td>acetyl-CoA_acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001945/1">BGC0001945</a></td>
+              <td>NRP</td>
+              <td>37.0</td>
+              <td>103.2</td>
+              <td>244.0</td>
+              <td>2.5e-64</td>
+          </tr>
+    
+          <tr>
+              <td>AXM42944.1</td>
+              <td>thioesterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001941/1">BGC0001941</a></td>
+              <td>NRP + Polyketide</td>
+              <td>37.0</td>
+              <td>103.2</td>
+              <td>238.0</td>
+              <td>2.3e-62</td>
+          </tr>
+    
+          <tr>
+              <td>AAF23365.1</td>
+              <td>PhaA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000866/1">BGC0000866</a></td>
+              <td>Other</td>
+              <td>38.0</td>
+              <td>99.8</td>
+              <td>230.0</td>
+              <td>6.4e-60</td>
+          </tr>
+    
+          <tr>
+              <td>AAG30258.1</td>
+              <td>beta-ketothiolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000867/1">BGC0000867</a></td>
+              <td>Other</td>
+              <td>37.0</td>
+              <td>99.0</td>
+              <td>217.0</td>
+              <td>3.3e-56</td>
+          </tr>
+    
+          <tr>
+              <td>BAA89375.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000864/1">BGC0000864</a></td>
+              <td>Other</td>
+              <td>29.0</td>
+              <td>108.9</td>
+              <td>144.0</td>
+              <td>3.5e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ACO31292.1</td>
+              <td>PtmP2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001898/1">BGC0001898</a></td>
+              <td>Terpene</td>
+              <td>25.0</td>
+              <td>103.0</td>
+              <td>77.0</td>
+              <td>5.3e-14</td>
+          </tr>
+    
+          <tr>
+              <td>ADD83009.1</td>
+              <td>PtnP2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001156/1">BGC0001156</a></td>
+              <td>Terpene</td>
+              <td>26.0</td>
+              <td>103.0</td>
+              <td>77.0</td>
+              <td>6.9e-14</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

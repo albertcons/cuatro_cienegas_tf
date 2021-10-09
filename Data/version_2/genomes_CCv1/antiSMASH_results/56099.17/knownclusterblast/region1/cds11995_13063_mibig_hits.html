@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ATV95636.1</td>
+              <td>NAD-dependent_epimerase/dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001503/1">BGC0001503</a></td>
+              <td>Polyketide</td>
+              <td>59.0</td>
+              <td>91.0</td>
+              <td>352.0</td>
+              <td>9.7e-97</td>
+          </tr>
+    
+          <tr>
+              <td>ABP55146.1</td>
+              <td>NAD-dependent_epimerase/dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000150/1">BGC0000150</a></td>
+              <td>NRP + Polyketide:Enediyne type I</td>
+              <td>53.0</td>
+              <td>95.5</td>
+              <td>305.0</td>
+              <td>8e-83</td>
+          </tr>
+    
+          <tr>
+              <td>ABF89140.1</td>
+              <td>NAD_dependent_epimerase/dehydratase_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000871/1">BGC0000871</a></td>
+              <td>Other:Nucleoside</td>
+              <td>35.0</td>
+              <td>74.9</td>
+              <td>105.0</td>
+              <td>1.6e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ACB46492.1</td>
+              <td>sugar_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000082/1">BGC0000082</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>45.9</td>
+              <td>61.0</td>
+              <td>3.4e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ52694.1</td>
+              <td>Hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001073/1">BGC0001073</a></td>
+              <td>NRP + Polyketide</td>
+              <td>38.0</td>
+              <td>33.5</td>
+              <td>57.0</td>
+              <td>3.8e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABP54673.1</td>
+              <td>dTDP-glucose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000241/1">BGC0000241</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>47.9</td>
+              <td>56.0</td>
+              <td>8.5e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35075.1</td>
+              <td>NAD(P)-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001675/1">BGC0001675</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>71.0</td>
+              <td>50.0</td>
+              <td>7.9e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

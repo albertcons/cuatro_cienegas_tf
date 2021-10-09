@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAB69167.1</td>
+              <td>acyl_carrier_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000271/1">BGC0000271</a></td>
+              <td>Polyketide</td>
+              <td>63.0</td>
+              <td>95.3</td>
+              <td>111.0</td>
+              <td>5.4e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AAG26884.1</td>
+              <td>type-II_polyketide_synthase_acyl_carrier_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000272/1">BGC0000272</a></td>
+              <td>Polyketide</td>
+              <td>59.0</td>
+              <td>94.2</td>
+              <td>100.0</td>
+              <td>1.6e-21</td>
+          </tr>
+    
+          <tr>
+              <td>CAA44382.1</td>
+              <td>Acyl_Carrier_Protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000215/1">BGC0000215</a></td>
+              <td>Polyketide</td>
+              <td>58.0</td>
+              <td>96.5</td>
+              <td>94.0</td>
+              <td>1.2e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AQP25563.1</td>
+              <td>PKS_ACP_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001590/1">BGC0001590</a></td>
+              <td>Polyketide</td>
+              <td>45.0</td>
+              <td>96.5</td>
+              <td>71.0</td>
+              <td>1.1e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

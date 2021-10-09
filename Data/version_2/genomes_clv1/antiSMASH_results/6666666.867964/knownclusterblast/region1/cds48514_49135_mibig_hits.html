@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABS50497.1</td>
+              <td>NapR7</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000652/1">BGC0000652</a></td>
+              <td>Terpene</td>
+              <td>32.0</td>
+              <td>92.2</td>
+              <td>60.0</td>
+              <td>4.4e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ABS50469.1</td>
+              <td>putative_transcription_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001079/1">BGC0001079</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>32.0</td>
+              <td>92.2</td>
+              <td>60.0</td>
+              <td>4.4e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAD37459.1</td>
+              <td>putative_transcriptional_repressor</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000252/1">BGC0000252</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>76.2</td>
+              <td>58.0</td>
+              <td>1.3e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABS50485.1</td>
+              <td>NapR3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000652/1">BGC0000652</a></td>
+              <td>Terpene</td>
+              <td>34.0</td>
+              <td>95.6</td>
+              <td>55.0</td>
+              <td>1.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ABS50457.1</td>
+              <td>putative_transcription_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001079/1">BGC0001079</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>34.0</td>
+              <td>95.6</td>
+              <td>55.0</td>
+              <td>1.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ANZ22994.1</td>
+              <td>ZinR2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001828/1">BGC0001828</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>102.4</td>
+              <td>52.0</td>
+              <td>9.3e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AFB35616.1</td>
+              <td>Transcriptional_regulation</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000935/1">BGC0000935</a></td>
+              <td>Polyketide + Other:Aminocoumarin</td>
+              <td>28.0</td>
+              <td>110.2</td>
+              <td>49.0</td>
+              <td>7.8e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

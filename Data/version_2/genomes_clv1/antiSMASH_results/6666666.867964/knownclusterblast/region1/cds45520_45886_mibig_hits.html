@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAE45692.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000031/1">BGC0000031</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>92.0</td>
+              <td>98.3</td>
+              <td>237.0</td>
+              <td>9.1e-63</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ88625.1</td>
+              <td>putative_aldehyde_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000327/1">BGC0000327</a></td>
+              <td>NRP</td>
+              <td>49.0</td>
+              <td>95.9</td>
+              <td>118.0</td>
+              <td>8.1e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAW03334.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000982/1">BGC0000982</a></td>
+              <td>NRP + Polyketide</td>
+              <td>38.0</td>
+              <td>95.0</td>
+              <td>79.0</td>
+              <td>4.2e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ABY65994.1</td>
+              <td>aldehyde_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001008/1">BGC0001008</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>40.0</td>
+              <td>97.5</td>
+              <td>77.0</td>
+              <td>1.6e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AFL48539.1</td>
+              <td>putative_succinic_semialdehyde_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000084/1">BGC0000084</a></td>
+              <td>Polyketide</td>
+              <td>40.0</td>
+              <td>80.2</td>
+              <td>73.0</td>
+              <td>3e-13</td>
+          </tr>
+    
+          <tr>
+              <td>EDY47105.1</td>
+              <td>aldehyde_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000319/1">BGC0000319</a></td>
+              <td>NRP:Beta-lactam</td>
+              <td>32.0</td>
+              <td>92.6</td>
+              <td>54.0</td>
+              <td>1.9e-07</td>
+          </tr>
+    
+          <tr>
+              <td>XP_011392748.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001281/1">BGC0001281</a></td>
+              <td>Polyketide</td>
+              <td>50.0</td>
+              <td>34.7</td>
+              <td>52.0</td>
+              <td>5.4e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

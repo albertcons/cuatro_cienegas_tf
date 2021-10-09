@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABI91463.1</td>
+              <td>NADH:flavin_oxidoreductase/NADH_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001094/1">BGC0001094</a></td>
+              <td>NRP + Polyketide</td>
+              <td>30.0</td>
+              <td>94.4</td>
+              <td>134.0</td>
+              <td>4.6e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AGO50604.1</td>
+              <td>putative_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000229/1">BGC0000229</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>95.2</td>
+              <td>117.0</td>
+              <td>4.5e-26</td>
+          </tr>
+    
+          <tr>
+              <td>BAV16992.1</td>
+              <td>putative_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001384/1">BGC0001384</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>95.2</td>
+              <td>116.0</td>
+              <td>9.9e-26</td>
+          </tr>
+    
+          <tr>
+              <td>CAH10124.1</td>
+              <td>putative_oxidoreducatse</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000268/1">BGC0000268</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>95.9</td>
+              <td>108.0</td>
+              <td>3.5e-23</td>
+          </tr>
+    
+          <tr>
+              <td>CAC36756.1</td>
+              <td>putative_enoyl_reductase,_MmyE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000914/1">BGC0000914</a></td>
+              <td>Other</td>
+              <td>32.0</td>
+              <td>64.8</td>
+              <td>103.0</td>
+              <td>6.7e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AFO59868.1</td>
+              <td>the_OYE_family_of_flavoprotein_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000175/1">BGC0000175</a></td>
+              <td>Polyketide:Trans-AT type I</td>
+              <td>28.0</td>
+              <td>96.7</td>
+              <td>97.0</td>
+              <td>3.7e-20</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

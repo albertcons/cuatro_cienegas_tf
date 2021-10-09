@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>TXD00017.1</td>
+              <td>cold_shock_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001877/1">BGC0001877</a></td>
+              <td>Polyketide</td>
+              <td>45.0</td>
+              <td>105.0</td>
+              <td>124.0</td>
+              <td>1.3e-28</td>
+          </tr>
+    
+          <tr>
+              <td>QBF51771.1</td>
+              <td>cold-shock_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001856/1">BGC0001856</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>46.0</td>
+              <td>107.1</td>
+              <td>123.0</td>
+              <td>2.2e-28</td>
+          </tr>
+    
+          <tr>
+              <td>BAR73015.1</td>
+              <td>putative_cold-shock_protein_(regulator)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001194/1">BGC0001194</a></td>
+              <td>Polyketide</td>
+              <td>38.0</td>
+              <td>103.5</td>
+              <td>106.0</td>
+              <td>2.8e-23</td>
+          </tr>
+    
+          <tr>
+              <td>ADI58623.1</td>
+              <td>Transcriptional_regulation</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000187/1">BGC0000187</a></td>
+              <td>Polyketide:Type II</td>
+              <td>43.0</td>
+              <td>96.5</td>
+              <td>103.0</td>
+              <td>2.4e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AWR88427.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001522/1">BGC0001522</a></td>
+              <td>Polyketide</td>
+              <td>48.0</td>
+              <td>80.1</td>
+              <td>99.0</td>
+              <td>3.5e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AZF85918.1</td>
+              <td>cold-shock_DNA-binding_domain_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001963/1">BGC0001963</a></td>
+              <td>NRP + Polyketide</td>
+              <td>38.0</td>
+              <td>100.0</td>
+              <td>97.0</td>
+              <td>2.2e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AKA59108.1</td>
+              <td>DNA-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001619/1">BGC0001619</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>101.4</td>
+              <td>87.0</td>
+              <td>2.3e-17</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

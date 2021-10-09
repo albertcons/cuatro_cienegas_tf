@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AFK78067.1</td>
+              <td>XiaA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000666/1">BGC0000666</a></td>
+              <td>Terpene</td>
+              <td>99.0</td>
+              <td>98.6</td>
+              <td>740.0</td>
+              <td>1.7e-213</td>
+          </tr>
+    
+          <tr>
+              <td>APD26283.1</td>
+              <td>XiaA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001726/1">BGC0001726</a></td>
+              <td>NRP + Polyketide</td>
+              <td>99.0</td>
+              <td>98.6</td>
+              <td>740.0</td>
+              <td>1.7e-213</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22336.1</td>
+              <td>Rieske_domain_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000065/1">BGC0000065</a></td>
+              <td>Polyketide:Iterative type I</td>
+              <td>41.0</td>
+              <td>94.2</td>
+              <td>243.0</td>
+              <td>3.8e-64</td>
+          </tr>
+    
+          <tr>
+              <td>AIL50156.1</td>
+              <td>putative_dioxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000213/1">BGC0000213</a></td>
+              <td>Polyketide:Type II</td>
+              <td>33.0</td>
+              <td>57.9</td>
+              <td>85.0</td>
+              <td>1.7e-16</td>
+          </tr>
+    
+          <tr>
+              <td>BAG84251.1</td>
+              <td>putative_oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000257/1">BGC0000257</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>45.1</td>
+              <td>79.0</td>
+              <td>1.6e-14</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

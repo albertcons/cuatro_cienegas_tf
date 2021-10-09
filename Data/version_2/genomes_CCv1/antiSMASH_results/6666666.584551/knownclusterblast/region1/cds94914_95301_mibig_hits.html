@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACU36660.1</td>
+              <td>AMP-dependent_synthetase_and_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000392/1">BGC0000392</a></td>
+              <td>NRP</td>
+              <td>89.0</td>
+              <td>81.2</td>
+              <td>188.0</td>
+              <td>8.8e-48</td>
+          </tr>
+    
+          <tr>
+              <td>CBA63660.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000368/1">BGC0000368</a></td>
+              <td>NRP</td>
+              <td>68.0</td>
+              <td>82.0</td>
+              <td>140.0</td>
+              <td>1.6e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ55904.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000359/1">BGC0000359</a></td>
+              <td>NRP</td>
+              <td>66.0</td>
+              <td>84.4</td>
+              <td>139.0</td>
+              <td>4.7e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AAG31128.1</td>
+              <td>MxcE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001345/1">BGC0001345</a></td>
+              <td>NRP</td>
+              <td>65.0</td>
+              <td>82.0</td>
+              <td>136.0</td>
+              <td>3e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ABS75234.1</td>
+              <td>DhbE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001185/1">BGC0001185</a></td>
+              <td>NRP:NRP siderophore</td>
+              <td>62.0</td>
+              <td>82.0</td>
+              <td>132.0</td>
+              <td>4.4e-31</td>
+          </tr>
+    
+          <tr>
+              <td>CAB15188.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000309/1">BGC0000309</a></td>
+              <td>NRP</td>
+              <td>61.0</td>
+              <td>82.0</td>
+              <td>131.0</td>
+              <td>1.3e-30</td>
+          </tr>
+    
+          <tr>
+              <td>EFL06871.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000300/1">BGC0000300</a></td>
+              <td>NRP</td>
+              <td>59.0</td>
+              <td>82.0</td>
+              <td>128.0</td>
+              <td>1.1e-29</td>
+          </tr>
+    
+          <tr>
+              <td>ABY66018.1</td>
+              <td>CoA_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001008/1">BGC0001008</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>60.0</td>
+              <td>82.0</td>
+              <td>128.0</td>
+              <td>1.1e-29</td>
+          </tr>
+    
+          <tr>
+              <td>CCA53797.1</td>
+              <td>Long-chain-fatty-acid--CoA_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001801/1">BGC0001801</a></td>
+              <td>NRP</td>
+              <td>54.0</td>
+              <td>97.7</td>
+              <td>128.0</td>
+              <td>1.1e-29</td>
+          </tr>
+    
+          <tr>
+              <td>ABU70375.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001890/1">BGC0001890</a></td>
+              <td>NRP</td>
+              <td>58.0</td>
+              <td>81.2</td>
+              <td>128.0</td>
+              <td>1.1e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AEI70243.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000401/1">BGC0000401</a></td>
+              <td>NRP</td>
+              <td>66.0</td>
+              <td>76.6</td>
+              <td>127.0</td>
+              <td>1.8e-29</td>
+          </tr>
+    
+          <tr>
+              <td>BAH33406.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000371/1">BGC0000371</a></td>
+              <td>NRP</td>
+              <td>62.0</td>
+              <td>82.0</td>
+              <td>126.0</td>
+              <td>3.1e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AEF33098.1</td>
+              <td>3-hydroxypicolinic_acid:AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001039/1">BGC0001039</a></td>
+              <td>NRP + Polyketide</td>
+              <td>60.0</td>
+              <td>82.0</td>
+              <td>125.0</td>
+              <td>7e-29</td>
+          </tr>
+    
+          <tr>
+              <td>YP_856992.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001502/1">BGC0001502</a></td>
+              <td>NRP</td>
+              <td>60.0</td>
+              <td>85.9</td>
+              <td>124.0</td>
+              <td>9.1e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AAM77987.1</td>
+              <td>adenylate_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000112/1">BGC0000112</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>58.0</td>
+              <td>82.0</td>
+              <td>117.0</td>
+              <td>1.5e-26</td>
+          </tr>
+    
+          <tr>
+              <td>DT87_RS23320</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001444/1">BGC0001444</a></td>
+              <td>Other</td>
+              <td>56.0</td>
+              <td>82.0</td>
+              <td>117.0</td>
+              <td>1.5e-26</td>
+          </tr>
+    
+          <tr>
+              <td>KDQ70107.1</td>
+              <td>Triostin_synthetase_I</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001538/1">BGC0001538</a></td>
+              <td>NRP + Polyketide</td>
+              <td>56.0</td>
+              <td>82.0</td>
+              <td>117.0</td>
+              <td>1.5e-26</td>
+          </tr>
+    
+          <tr>
+              <td>CAC17498.1</td>
+              <td>putative_AMP-binding_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000324/1">BGC0000324</a></td>
+              <td>NRP</td>
+              <td>54.0</td>
+              <td>82.0</td>
+              <td>117.0</td>
+              <td>1.9e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ATV95617.1</td>
+              <td>CoA_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001503/1">BGC0001503</a></td>
+              <td>Polyketide</td>
+              <td>57.0</td>
+              <td>81.2</td>
+              <td>116.0</td>
+              <td>3.2e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ALE27504.1</td>
+              <td>3-HPA:AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001292/1">BGC0001292</a></td>
+              <td>Other</td>
+              <td>57.0</td>
+              <td>81.2</td>
+              <td>115.0</td>
+              <td>5.5e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ACY02013.1</td>
+              <td>enterobactin_synthase_subunit_E</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000343/1">BGC0000343</a></td>
+              <td>NRP</td>
+              <td>56.0</td>
+              <td>82.0</td>
+              <td>114.0</td>
+              <td>1.2e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ACN64830.1</td>
+              <td>PokM3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001061/1">BGC0001061</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>58.0</td>
+              <td>80.5</td>
+              <td>114.0</td>
+              <td>1.2e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AQZ26587.1</td>
+              <td>obafluorin_dimodular_nonribosomal_peptide_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001710/1">BGC0001710</a></td>
+              <td>NRP</td>
+              <td>56.0</td>
+              <td>81.2</td>
+              <td>114.0</td>
+              <td>1.2e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AAO07759.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000460/1">BGC0000460</a></td>
+              <td>NRP</td>
+              <td>56.0</td>
+              <td>78.1</td>
+              <td>113.0</td>
+              <td>3.6e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ADB92576.1</td>
+              <td>Ccb2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001225/1">BGC0001225</a></td>
+              <td>NRP</td>
+              <td>57.0</td>
+              <td>82.0</td>
+              <td>112.0</td>
+              <td>4.7e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AGE11892.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000366/1">BGC0000366</a></td>
+              <td>NRP</td>
+              <td>57.0</td>
+              <td>81.2</td>
+              <td>111.0</td>
+              <td>8e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AEM06018.2</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000966/1">BGC0000966</a></td>
+              <td>NRP + Polyketide</td>
+              <td>55.0</td>
+              <td>78.1</td>
+              <td>110.0</td>
+              <td>1.8e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AFD30957.1</td>
+              <td>CrmE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000966/1">BGC0000966</a></td>
+              <td>NRP + Polyketide</td>
+              <td>55.0</td>
+              <td>78.1</td>
+              <td>110.0</td>
+              <td>1.8e-24</td>
+          </tr>
+    
+          <tr>
+              <td>EYT83445.1</td>
+              <td>Triostin_synthetase_I</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001213/1">BGC0001213</a></td>
+              <td>Polyketide</td>
+              <td>53.0</td>
+              <td>81.2</td>
+              <td>110.0</td>
+              <td>2.3e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ADE34495.1</td>
+              <td>ssfL1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000269/1">BGC0000269</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>57.0</td>
+              <td>83.6</td>
+              <td>109.0</td>
+              <td>4e-24</td>
+          </tr>
+    
+          <tr>
+              <td>CCC55917.1</td>
+              <td>putative_acyl_CoA_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000973/1">BGC0000973</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>56.0</td>
+              <td>78.1</td>
+              <td>107.0</td>
+              <td>2e-23</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ87594.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001055/1">BGC0001055</a></td>
+              <td>NRP + Polyketide</td>
+              <td>55.0</td>
+              <td>76.6</td>
+              <td>106.0</td>
+              <td>3.4e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AFB35629.1</td>
+              <td>6-MSA_adenylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000935/1">BGC0000935</a></td>
+              <td>Polyketide + Other:Aminocoumarin</td>
+              <td>53.0</td>
+              <td>76.6</td>
+              <td>106.0</td>
+              <td>4.4e-23</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ45636.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000454/1">BGC0000454</a></td>
+              <td>NRP</td>
+              <td>54.0</td>
+              <td>75.0</td>
+              <td>104.0</td>
+              <td>9.8e-23</td>
+          </tr>
+    
+          <tr>
+              <td>CAA73130.1</td>
+              <td>Irp5_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000467/1">BGC0000467</a></td>
+              <td>NRP</td>
+              <td>54.0</td>
+              <td>76.6</td>
+              <td>103.0</td>
+              <td>2.2e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AGN74880.1</td>
+              <td>3-hydroxypicolinic_acid:AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000459/1">BGC0000459</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Trans-AT type I</td>
+              <td>54.0</td>
+              <td>76.6</td>
+              <td>103.0</td>
+              <td>2.8e-22</td>
+          </tr>
+    
+          <tr>
+              <td>BAC87906.1</td>
+              <td>probable_acinetobactin_biosynthesis_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000294/1">BGC0000294</a></td>
+              <td>NRP</td>
+              <td>47.0</td>
+              <td>81.2</td>
+              <td>100.0</td>
+              <td>2.4e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ACR11042.1</td>
+              <td>Enterobactin_synthetase_component_E/2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000451/1">BGC0000451</a></td>
+              <td>NRP</td>
+              <td>49.0</td>
+              <td>82.0</td>
+              <td>100.0</td>
+              <td>2.4e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52187.1</td>
+              <td>acyl-CoA_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000081/1">BGC0000081</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>51.0</td>
+              <td>78.9</td>
+              <td>99.0</td>
+              <td>4.1e-21</td>
+          </tr>
+    
+          <tr>
+              <td>CCP45172.1</td>
+              <td>Bifunctional_enzyme_MbtA:_salicyl-AMP_ligase_(SAL-AMP_ligase)_+_salicyl-S-ArCP_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001021/1">BGC0001021</a></td>
+              <td>NRP + Polyketide</td>
+              <td>49.0</td>
+              <td>81.2</td>
+              <td>92.0</td>
+              <td>6.6e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ADQ74621.1</td>
+              <td>salicylyl-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000921/1">BGC0000921</a></td>
+              <td>Polyketide + NRP + Other:Shikimate-derived</td>
+              <td>39.0</td>
+              <td>81.2</td>
+              <td>90.0</td>
+              <td>2.5e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ34366.1</td>
+              <td>putative_3-hydroxy-quinaldate-AMP-Ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000445/1">BGC0000445</a></td>
+              <td>NRP:Cyclic depsipeptide</td>
+              <td>46.0</td>
+              <td>75.8</td>
+              <td>88.0</td>
+              <td>9.5e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAG69514.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000352/1">BGC0000352</a></td>
+              <td>NRP:NRP siderophore</td>
+              <td>46.0</td>
+              <td>73.4</td>
+              <td>82.0</td>
+              <td>4e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AAO07763.1</td>
+              <td>2,3-dihydroxybenzoate-AMP_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000460/1">BGC0000460</a></td>
+              <td>NRP</td>
+              <td>43.0</td>
+              <td>81.2</td>
+              <td>82.0</td>
+              <td>4e-16</td>
+          </tr>
+    
+          <tr>
+              <td>BAE98151.1</td>
+              <td>putative_AMP-binding_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000339/1">BGC0000339</a></td>
+              <td>NRP</td>
+              <td>43.0</td>
+              <td>88.3</td>
+              <td>81.0</td>
+              <td>1.2e-15</td>
+          </tr>
+    
+          <tr>
+              <td>BAH04171.1</td>
+              <td>AMP-binding_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000450/1">BGC0000450</a></td>
+              <td>NRP</td>
+              <td>41.0</td>
+              <td>88.3</td>
+              <td>81.0</td>
+              <td>1.2e-15</td>
+          </tr>
+    
+          <tr>
+              <td>CAP20363.1</td>
+              <td>equibactin_siderophore_biosynthetic_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000347/1">BGC0000347</a></td>
+              <td>NRP</td>
+              <td>46.0</td>
+              <td>75.8</td>
+              <td>79.0</td>
+              <td>4.4e-15</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

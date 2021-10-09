@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ctg1_orf1268</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001752/1">BGC0001752</a></td>
+              <td>NRP</td>
+              <td>59.0</td>
+              <td>47.6</td>
+              <td>77.0</td>
+              <td>1.4e-14</td>
+          </tr>
+    
+          <tr>
+              <td>ABL74935.1</td>
+              <td>ABC_multi-drug_transport</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001048/1">BGC0001048</a></td>
+              <td>NRP:Glycopeptide + Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>44.0</td>
+              <td>49.0</td>
+              <td>62.0</td>
+              <td>4.8e-10</td>
+          </tr>
+    
+          <tr>
+              <td>CAA07371.1</td>
+              <td>StrW</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000690/1">BGC0000690</a></td>
+              <td>Saccharide</td>
+              <td>40.0</td>
+              <td>46.2</td>
+              <td>55.0</td>
+              <td>7.7e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ANQ31705.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001395/1">BGC0001395</a></td>
+              <td>Other</td>
+              <td>43.0</td>
+              <td>46.9</td>
+              <td>55.0</td>
+              <td>7.7e-08</td>
+          </tr>
+    
+          <tr>
+              <td>WP_052230046.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001188/1">BGC0001188</a></td>
+              <td>RiPP</td>
+              <td>44.0</td>
+              <td>45.5</td>
+              <td>54.0</td>
+              <td>1.7e-07</td>
+          </tr>
+    
+          <tr>
+              <td>WP_003071800.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002009/1">BGC0002009</a></td>
+              <td>Polyketide</td>
+              <td>52.0</td>
+              <td>41.4</td>
+              <td>54.0</td>
+              <td>2.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ88629.1</td>
+              <td>putative_netropsin_resistance_protein_subunit_2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000327/1">BGC0000327</a></td>
+              <td>NRP</td>
+              <td>46.0</td>
+              <td>39.3</td>
+              <td>52.0</td>
+              <td>5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BAU50927.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001379/1">BGC0001379</a></td>
+              <td>NRP</td>
+              <td>48.0</td>
+              <td>42.1</td>
+              <td>52.0</td>
+              <td>5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BAG22745.1</td>
+              <td>putative_ABC-type_multidrug_transport_system_ATPase_and_permease_component</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000724/1">BGC0000724</a></td>
+              <td>Saccharide</td>
+              <td>39.0</td>
+              <td>48.3</td>
+              <td>52.0</td>
+              <td>6.5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ55180.1</td>
+              <td>ABC-type_multidrug_transport_system_ATPase_and_permease_components</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001889/1">BGC0001889</a></td>
+              <td>RiPP</td>
+              <td>37.0</td>
+              <td>57.9</td>
+              <td>52.0</td>
+              <td>8.5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ADC96668.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001076/1">BGC0001076</a></td>
+              <td>Other:Nucleoside</td>
+              <td>43.0</td>
+              <td>43.4</td>
+              <td>51.0</td>
+              <td>1.5e-06</td>
+          </tr>
+    
+          <tr>
+              <td>CAB38879.1</td>
+              <td>putative_ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000315/1">BGC0000315</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>35.0</td>
+              <td>53.1</td>
+              <td>50.0</td>
+              <td>1.9e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AHH99931.1</td>
+              <td>ABC_transporter_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000002/1">BGC0000002</a></td>
+              <td>Polyketide</td>
+              <td>41.0</td>
+              <td>47.6</td>
+              <td>50.0</td>
+              <td>3.2e-06</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ05895.1</td>
+              <td>putative_ABC_multidrug_resistance_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000872/1">BGC0000872</a></td>
+              <td>Other</td>
+              <td>41.0</td>
+              <td>43.4</td>
+              <td>49.0</td>
+              <td>4.2e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AEP18658.1</td>
+              <td>efflux_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000461/1">BGC0000461</a></td>
+              <td>NRP</td>
+              <td>32.0</td>
+              <td>49.7</td>
+              <td>49.0</td>
+              <td>5.5e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ALV82355.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001370/1">BGC0001370</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>53.1</td>
+              <td>48.0</td>
+              <td>9.4e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABO15880.1</td>
+              <td>assimilatory_nitrate_reductase_catalytic_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000132/1">BGC0000132</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>52.7</td>
+              <td>346.0</td>
+              <td>1.6e-94</td>
+          </tr>
+    
+          <tr>
+              <td>ABO15854.1</td>
+              <td>assimilatory_nitrate_reductase_catalytic_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000130/1">BGC0000130</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>52.1</td>
+              <td>328.0</td>
+              <td>5.9e-89</td>
+          </tr>
+    
+          <tr>
+              <td>TXD00031.1</td>
+              <td>cytochrome_P450</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001877/1">BGC0001877</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>43.4</td>
+              <td>201.0</td>
+              <td>8.4e-51</td>
+          </tr>
+    
+          <tr>
+              <td>ARO49582.1</td>
+              <td>molybdopterin_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001441/1">BGC0001441</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>50.9</td>
+              <td>181.0</td>
+              <td>1.2e-44</td>
+          </tr>
+    
+          <tr>
+              <td>BBF25317.1</td>
+              <td>bifunctional_P-450:NADPH-P450_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001923/1">BGC0001923</a></td>
+              <td>Terpene + Polyketide</td>
+              <td>27.0</td>
+              <td>41.8</td>
+              <td>141.0</td>
+              <td>7.9e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AAG27132.1</td>
+              <td>Fum6p</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000062/1">BGC0000062</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>43.9</td>
+              <td>134.0</td>
+              <td>1.6e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ACB12553.1</td>
+              <td>Fum6</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000063/1">BGC0000063</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>44.1</td>
+              <td>126.0</td>
+              <td>2.6e-28</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

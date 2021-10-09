@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAT51062.1</td>
+              <td>flavin_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001296/1">BGC0001296</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>91.8</td>
+              <td>97.0</td>
+              <td>2.2e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AVI57432.1</td>
+              <td>AbmZ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001694/1">BGC0001694</a></td>
+              <td>Polyketide</td>
+              <td>36.0</td>
+              <td>89.0</td>
+              <td>85.0</td>
+              <td>8.7e-17</td>
+          </tr>
+    
+          <tr>
+              <td>ALE27493.1</td>
+              <td>FMN_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001292/1">BGC0001292</a></td>
+              <td>Other</td>
+              <td>37.0</td>
+              <td>70.3</td>
+              <td>63.0</td>
+              <td>3.5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>BAC10680.1</td>
+              <td>putative_NADH_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000821/1">BGC0000821</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>35.0</td>
+              <td>75.3</td>
+              <td>62.0</td>
+              <td>1e-09</td>
+          </tr>
+    
+          <tr>
+              <td>CAC93720.1</td>
+              <td>putative_flavin_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000822/1">BGC0000822</a></td>
+              <td>Alkaloid</td>
+              <td>35.0</td>
+              <td>75.3</td>
+              <td>62.0</td>
+              <td>1e-09</td>
+          </tr>
+    
+          <tr>
+              <td>BAC15756.1</td>
+              <td>flavin_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000823/1">BGC0000823</a></td>
+              <td>Alkaloid</td>
+              <td>35.0</td>
+              <td>75.3</td>
+              <td>62.0</td>
+              <td>1e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

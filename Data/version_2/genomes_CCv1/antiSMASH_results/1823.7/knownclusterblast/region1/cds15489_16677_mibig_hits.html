@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAK33086.1</td>
+              <td>TRI8</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001277/1">BGC0001277</a></td>
+              <td>Terpene</td>
+              <td>29.0</td>
+              <td>99.2</td>
+              <td>149.0</td>
+              <td>1.4e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AAK33077.1</td>
+              <td>Tri8</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001278/1">BGC0001278</a></td>
+              <td>Terpene</td>
+              <td>27.0</td>
+              <td>100.8</td>
+              <td>140.0</td>
+              <td>6.5e-33</td>
+          </tr>
+    
+          <tr>
+              <td>BAX01957.1</td>
+              <td>trichothecene_3-O-esterase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001811/1">BGC0001811</a></td>
+              <td>Terpene</td>
+              <td>28.0</td>
+              <td>105.6</td>
+              <td>137.0</td>
+              <td>4.2e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AAK53574.1</td>
+              <td>TRI8</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000930/1">BGC0000930</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>105.6</td>
+              <td>131.0</td>
+              <td>3e-30</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

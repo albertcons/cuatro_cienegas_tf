@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAE17530.1</td>
+              <td>sugar_O-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000210/1">BGC0000210</a></td>
+              <td>Polyketide:Type II + Saccharide:Oligosaccharide</td>
+              <td>63.0</td>
+              <td>74.4</td>
+              <td>113.0</td>
+              <td>3.4e-25</td>
+          </tr>
+    
+          <tr>
+              <td>CAP12609.1</td>
+              <td>rhamnose_C4&#39;-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000219/1">BGC0000219</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>49.0</td>
+              <td>60.3</td>
+              <td>71.0</td>
+              <td>8.7e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AEP40941.1</td>
+              <td>sugar_O-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000021/1">BGC0000021</a></td>
+              <td>Polyketide</td>
+              <td>43.0</td>
+              <td>86.0</td>
+              <td>67.0</td>
+              <td>2.1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ABB52523.1</td>
+              <td>3-O-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000047/1">BGC0000047</a></td>
+              <td>Polyketide</td>
+              <td>39.0</td>
+              <td>86.0</td>
+              <td>61.0</td>
+              <td>9e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ANC94972.1</td>
+              <td>AlmEIII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001396/1">BGC0001396</a></td>
+              <td>Polyketide</td>
+              <td>39.0</td>
+              <td>86.0</td>
+              <td>61.0</td>
+              <td>1.2e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAS79452.1</td>
+              <td>putative_3&#39;OH-methyltransferase_in_D-mycinose_pathway</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000035/1">BGC0000035</a></td>
+              <td>Polyketide</td>
+              <td>39.0</td>
+              <td>86.0</td>
+              <td>60.0</td>
+              <td>2.6e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAG42854.1</td>
+              <td>SnogL</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000249/1">BGC0000249</a></td>
+              <td>Polyketide</td>
+              <td>40.0</td>
+              <td>86.0</td>
+              <td>59.0</td>
+              <td>5.8e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAG29794.1</td>
+              <td>O-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000833/1">BGC0000833</a></td>
+              <td>Saccharide:Hybrid/tailoring + Other:Aminocoumarin</td>
+              <td>38.0</td>
+              <td>81.8</td>
+              <td>53.0</td>
+              <td>3.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAF67509.1</td>
+              <td>O-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000834/1">BGC0000834</a></td>
+              <td>Saccharide:Hybrid/tailoring + Other:Aminocoumarin</td>
+              <td>38.0</td>
+              <td>81.8</td>
+              <td>52.0</td>
+              <td>4.2e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

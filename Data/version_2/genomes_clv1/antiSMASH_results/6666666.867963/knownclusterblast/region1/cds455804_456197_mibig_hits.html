@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_030578101.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001753/1">BGC0001753</a></td>
+              <td>RiPP</td>
+              <td>91.0</td>
+              <td>78.5</td>
+              <td>195.0</td>
+              <td>7.3e-50</td>
+          </tr>
+    
+          <tr>
+              <td>AGN11673.1</td>
+              <td>BerI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001472/1">BGC0001472</a></td>
+              <td>RiPP</td>
+              <td>62.0</td>
+              <td>80.0</td>
+              <td>132.0</td>
+              <td>5.8e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ACR48330.1</td>
+              <td>NosA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000610/1">BGC0000610</a></td>
+              <td>RiPP:Thiopeptide</td>
+              <td>49.0</td>
+              <td>75.4</td>
+              <td>97.0</td>
+              <td>1.2e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AQM75239.1</td>
+              <td>NosA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001707/1">BGC0001707</a></td>
+              <td>RiPP</td>
+              <td>47.0</td>
+              <td>76.9</td>
+              <td>94.0</td>
+              <td>1.8e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AFB35619.1</td>
+              <td>Hypothetical</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000935/1">BGC0000935</a></td>
+              <td>Polyketide + Other:Aminocoumarin</td>
+              <td>41.0</td>
+              <td>75.4</td>
+              <td>88.0</td>
+              <td>9.6e-18</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

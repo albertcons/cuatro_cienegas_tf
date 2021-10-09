@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>EFG04609.1</td>
+              <td>Putative_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000826/1">BGC0000826</a></td>
+              <td>Alkaloid</td>
+              <td>39.0</td>
+              <td>93.1</td>
+              <td>129.0</td>
+              <td>6.7e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ABC02796.1</td>
+              <td>N-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000809/1">BGC0000809</a></td>
+              <td>Alkaloid</td>
+              <td>38.0</td>
+              <td>51.1</td>
+              <td>59.0</td>
+              <td>8.6e-09</td>
+          </tr>
+    
+          <tr>
+              <td>CBH32791.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000263/1">BGC0000263</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>74.7</td>
+              <td>54.0</td>
+              <td>3.6e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BAO84854.1</td>
+              <td>putative_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000414/1">BGC0000414</a></td>
+              <td>NRP</td>
+              <td>33.0</td>
+              <td>48.5</td>
+              <td>54.0</td>
+              <td>3.6e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CBH32104.1</td>
+              <td>putative_dehydrogenase_and_domain_with_unknown_function</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000211/1">BGC0000211</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>48.9</td>
+              <td>50.0</td>
+              <td>3e-06</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ52673.1</td>
+              <td>putative_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000222/1">BGC0000222</a></td>
+              <td>Polyketide</td>
+              <td>44.0</td>
+              <td>26.2</td>
+              <td>50.0</td>
+              <td>4e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABB90400.1</td>
+              <td>dxrB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000904/1">BGC0000904</a></td>
+              <td>Other</td>
+              <td>54.0</td>
+              <td>98.0</td>
+              <td>381.0</td>
+              <td>1.7e-105</td>
+          </tr>
+    
+          <tr>
+              <td>ATN39912.1</td>
+              <td>MstS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001664/1">BGC0001664</a></td>
+              <td>Terpene</td>
+              <td>46.0</td>
+              <td>93.8</td>
+              <td>306.0</td>
+              <td>5.3e-83</td>
+          </tr>
+    
+          <tr>
+              <td>AHB62770.1</td>
+              <td>1-deoxy-D-xylulose_5-phosphate_reductoisomerase_(IspC,_Dxr)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001126/1">BGC0001126</a></td>
+              <td>Terpene + Alkaloid</td>
+              <td>44.0</td>
+              <td>93.3</td>
+              <td>296.0</td>
+              <td>5.5e-80</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79560.1</td>
+              <td>FimE3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001594/1">BGC0001594</a></td>
+              <td>Alkaloid</td>
+              <td>44.0</td>
+              <td>93.3</td>
+              <td>296.0</td>
+              <td>5.5e-80</td>
+          </tr>
+    
+          <tr>
+              <td>APB62256.1</td>
+              <td>1-deoxy-D-xylulose_5-phosphate_reductoisomerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001612/1">BGC0001612</a></td>
+              <td>Alkaloid</td>
+              <td>44.0</td>
+              <td>93.3</td>
+              <td>296.0</td>
+              <td>5.5e-80</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79593.1</td>
+              <td>FilE3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001501/1">BGC0001501</a></td>
+              <td>Alkaloid</td>
+              <td>44.0</td>
+              <td>93.1</td>
+              <td>295.0</td>
+              <td>9.4e-80</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79614.1</td>
+              <td>FisE3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001595/1">BGC0001595</a></td>
+              <td>Alkaloid</td>
+              <td>44.0</td>
+              <td>93.1</td>
+              <td>293.0</td>
+              <td>4.7e-79</td>
+          </tr>
+    
+          <tr>
+              <td>AHI58844.1</td>
+              <td>1-deoxy-D-xylulose_5-phosphate_reductoisomerase_(IspC,_Dxr)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000668/1">BGC0000668</a></td>
+              <td>Terpene + Alkaloid</td>
+              <td>43.0</td>
+              <td>89.6</td>
+              <td>280.0</td>
+              <td>3.1e-75</td>
+          </tr>
+    
+          <tr>
+              <td>ctg2_5</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002036/1">BGC0002036</a></td>
+              <td>Other</td>
+              <td>45.0</td>
+              <td>94.1</td>
+              <td>244.0</td>
+              <td>2.5e-64</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

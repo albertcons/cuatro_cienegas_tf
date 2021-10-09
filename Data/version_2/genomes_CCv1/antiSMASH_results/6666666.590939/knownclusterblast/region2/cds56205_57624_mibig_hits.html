@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ALR96372.1</td>
+              <td>lanthionine_biosynthesis_cyclase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001289/1">BGC0001289</a></td>
+              <td>RiPP</td>
+              <td>33.0</td>
+              <td>93.4</td>
+              <td>192.0</td>
+              <td>1.3e-48</td>
+          </tr>
+    
+          <tr>
+              <td>ABC94904.1</td>
+              <td>GdmC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000514/1">BGC0000514</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>25.0</td>
+              <td>83.3</td>
+              <td>97.0</td>
+              <td>4.4e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AGL93174.1</td>
+              <td>lanthionine_synthetase_C-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000560/1">BGC0000560</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>24.0</td>
+              <td>89.8</td>
+              <td>77.0</td>
+              <td>8e-14</td>
+          </tr>
+    
+          <tr>
+              <td>ARD24447.1</td>
+              <td>HyiC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001618/1">BGC0001618</a></td>
+              <td>RiPP</td>
+              <td>23.0</td>
+              <td>82.6</td>
+              <td>75.0</td>
+              <td>2.3e-13</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAM77980.1</td>
+              <td>NDP-hexose-4-ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000112/1">BGC0000112</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>73.0</td>
+              <td>85.4</td>
+              <td>363.0</td>
+              <td>2.8e-100</td>
+          </tr>
+    
+          <tr>
+              <td>ADE34492.1</td>
+              <td>ssfS5</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000269/1">BGC0000269</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>42.0</td>
+              <td>101.9</td>
+              <td>174.0</td>
+              <td>3.2e-43</td>
+          </tr>
+    
+          <tr>
+              <td>CBA11562.1</td>
+              <td>NDP-4-keto-6-deoxyhexose_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001046/1">BGC0001046</a></td>
+              <td>NRP + Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>40.0</td>
+              <td>105.8</td>
+              <td>151.0</td>
+              <td>2.2e-36</td>
+          </tr>
+    
+          <tr>
+              <td>AZF85899.1</td>
+              <td>NDP-hexose_4-ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001963/1">BGC0001963</a></td>
+              <td>NRP + Polyketide</td>
+              <td>40.0</td>
+              <td>99.7</td>
+              <td>144.0</td>
+              <td>2e-34</td>
+          </tr>
+    
+          <tr>
+              <td>OWA01607.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001439/1">BGC0001439</a></td>
+              <td>Polyketide + Saccharide:Hybrid/tailoring</td>
+              <td>38.0</td>
+              <td>100.3</td>
+              <td>144.0</td>
+              <td>2.7e-34</td>
+          </tr>
+    
+          <tr>
+              <td>BAC79033.1</td>
+              <td>NDP-4-keto-6-deoxyhexose_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000245/1">BGC0000245</a></td>
+              <td>Polyketide</td>
+              <td>38.0</td>
+              <td>101.9</td>
+              <td>128.0</td>
+              <td>1.5e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AKA59098.1</td>
+              <td>NDP-hexose_4-ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001619/1">BGC0001619</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>101.9</td>
+              <td>123.0</td>
+              <td>6.4e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AAP42863.1</td>
+              <td>NanG4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000105/1">BGC0000105</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>101.9</td>
+              <td>118.0</td>
+              <td>1.6e-26</td>
+          </tr>
+    
+          <tr>
+              <td>QBF51774.1</td>
+              <td>NAD(P)H-dependent_ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001856/1">BGC0001856</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>35.0</td>
+              <td>101.9</td>
+              <td>113.0</td>
+              <td>6.6e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ANQ31706.1</td>
+              <td>UDP-glucose_4-epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001395/1">BGC0001395</a></td>
+              <td>Other</td>
+              <td>30.0</td>
+              <td>99.4</td>
+              <td>64.0</td>
+              <td>2.7e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAM78021.1</td>
+              <td>NDP-hexose-2,3-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000112/1">BGC0000112</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>33.0</td>
+              <td>55.5</td>
+              <td>58.0</td>
+              <td>2.5e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABW87809.1</td>
+              <td>SpeI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000715/1">BGC0000715</a></td>
+              <td>Saccharide</td>
+              <td>34.0</td>
+              <td>59.7</td>
+              <td>53.0</td>
+              <td>6.2e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

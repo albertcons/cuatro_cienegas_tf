@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAL92977.1</td>
+              <td>alkylresorcinol_hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001077/1">BGC0001077</a></td>
+              <td>Terpene + Polyketide</td>
+              <td>65.0</td>
+              <td>97.6</td>
+              <td>451.0</td>
+              <td>1.3e-126</td>
+          </tr>
+    
+          <tr>
+              <td>AEH41792.1</td>
+              <td>HrmN</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000374/1">BGC0000374</a></td>
+              <td>NRP:Cyclic depsipeptide</td>
+              <td>34.0</td>
+              <td>100.3</td>
+              <td>176.0</td>
+              <td>7.8e-44</td>
+          </tr>
+    
+          <tr>
+              <td>WP_091614348.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002023/1">BGC0002023</a></td>
+              <td>RiPP</td>
+              <td>33.0</td>
+              <td>101.1</td>
+              <td>152.0</td>
+              <td>1.6e-36</td>
+          </tr>
+    
+          <tr>
+              <td>CAO98842.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000023/1">BGC0000023</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>29.0</td>
+              <td>98.2</td>
+              <td>116.0</td>
+              <td>1.3e-25</td>
+          </tr>
+    
+          <tr>
+              <td>CCC21133.1</td>
+              <td>putative_ABC_transporter_extracellular_membrane_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000171/1">BGC0000171</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>29.0</td>
+              <td>98.7</td>
+              <td>99.0</td>
+              <td>1.2e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CBJ89767.1</td>
+              <td>Acyl-CoA_dehydrogenase_involved_in_xenocoumacin_synthesis</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001054/1">BGC0001054</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>26.0</td>
+              <td>94.2</td>
+              <td>92.0</td>
+              <td>1.1e-18</td>
+          </tr>
+    
+          <tr>
+              <td>QDQ37884.1</td>
+              <td>AlnT_hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001979/1">BGC0001979</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>97.9</td>
+              <td>75.0</td>
+              <td>1.9e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ABY83172.1</td>
+              <td>Azi34</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000960/1">BGC0000960</a></td>
+              <td>NRP + Polyketide</td>
+              <td>25.0</td>
+              <td>96.3</td>
+              <td>65.0</td>
+              <td>1.9e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

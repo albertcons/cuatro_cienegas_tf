@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AJV88382.1</td>
+              <td>MfnJ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001214/1">BGC0001214</a></td>
+              <td>NRP</td>
+              <td>44.0</td>
+              <td>52.2</td>
+              <td>163.0</td>
+              <td>7.3e-40</td>
+          </tr>
+    
+          <tr>
+              <td>CBZ42137.1</td>
+              <td>putative_negative_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001117/1">BGC0001117</a></td>
+              <td>NRP</td>
+              <td>42.0</td>
+              <td>52.5</td>
+              <td>141.0</td>
+              <td>2.3e-33</td>
+          </tr>
+    
+          <tr>
+              <td>SCO70317.1</td>
+              <td>Putative_transcriptional_repressor</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001433/1">BGC0001433</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>44.0</td>
+              <td>49.3</td>
+              <td>141.0</td>
+              <td>3.9e-33</td>
+          </tr>
+    
+          <tr>
+              <td>WP_019634558.1</td>
+              <td>FMN-binding_negative_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001443/1">BGC0001443</a></td>
+              <td>NRP + Polyketide</td>
+              <td>42.0</td>
+              <td>48.5</td>
+              <td>136.0</td>
+              <td>1.3e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ABV56600.1</td>
+              <td>regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000378/1">BGC0000378</a></td>
+              <td>NRP</td>
+              <td>40.0</td>
+              <td>50.7</td>
+              <td>132.0</td>
+              <td>1.4e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ACY06284.1</td>
+              <td>negative_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001042/1">BGC0001042</a></td>
+              <td>NRP + Polyketide</td>
+              <td>37.0</td>
+              <td>53.2</td>
+              <td>129.0</td>
+              <td>1.5e-29</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

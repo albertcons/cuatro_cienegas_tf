@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACN39015.1</td>
+              <td>putative_nonribosomal_peptide_synthetase_TomB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000448/1">BGC0000448</a></td>
+              <td>NRP</td>
+              <td>33.0</td>
+              <td>54.9</td>
+              <td>76.0</td>
+              <td>8.6e-14</td>
+          </tr>
+    
+          <tr>
+              <td>EOY45602.1</td>
+              <td>non-ribosomal_peptide_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001168/1">BGC0001168</a></td>
+              <td>NRP</td>
+              <td>29.0</td>
+              <td>53.6</td>
+              <td>70.0</td>
+              <td>6.2e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAT12283.1</td>
+              <td>LtxA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000384/1">BGC0000384</a></td>
+              <td>NRP</td>
+              <td>31.0</td>
+              <td>53.6</td>
+              <td>68.0</td>
+              <td>2.3e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ABC35796.1</td>
+              <td>polyketide_synthase,_putative</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001102/1">BGC0001102</a></td>
+              <td>NRP:Beta-lactam + Polyketide:Modular type I</td>
+              <td>26.0</td>
+              <td>87.3</td>
+              <td>66.0</td>
+              <td>8.9e-11</td>
+          </tr>
+    
+          <tr>
+              <td>BAP27942.1</td>
+              <td>nonribosomal_peptide_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001085/1">BGC0001085</a></td>
+              <td>NRP + Terpene</td>
+              <td>31.0</td>
+              <td>81.3</td>
+              <td>66.0</td>
+              <td>1.5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ABY83163.1</td>
+              <td>Azi25</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000960/1">BGC0000960</a></td>
+              <td>NRP + Polyketide</td>
+              <td>31.0</td>
+              <td>53.9</td>
+              <td>61.0</td>
+              <td>2.9e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AOC89001.1</td>
+              <td>putative_nonribosomal_peptide_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001652/1">BGC0001652</a></td>
+              <td>NRP</td>
+              <td>27.0</td>
+              <td>84.2</td>
+              <td>59.0</td>
+              <td>1.4e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

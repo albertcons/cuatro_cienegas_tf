@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CCC21135.1</td>
+              <td>putative_alkanesulfonate_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000171/1">BGC0000171</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>79.0</td>
+              <td>99.7</td>
+              <td>473.0</td>
+              <td>3.1e-133</td>
+          </tr>
+    
+          <tr>
+              <td>BBG91911.1</td>
+              <td>flavin-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001927/1">BGC0001927</a></td>
+              <td>Other</td>
+              <td>61.0</td>
+              <td>94.4</td>
+              <td>335.0</td>
+              <td>7.6e-92</td>
+          </tr>
+    
+          <tr>
+              <td>AAY93412.1</td>
+              <td>methanesulfonate_sulfonatase_MsuD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000413/1">BGC0000413</a></td>
+              <td>NRP</td>
+              <td>58.0</td>
+              <td>90.2</td>
+              <td>302.0</td>
+              <td>7.2e-82</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52167.1</td>
+              <td>monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000081/1">BGC0000081</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>58.0</td>
+              <td>92.7</td>
+              <td>301.0</td>
+              <td>1.2e-81</td>
+          </tr>
+    
+          <tr>
+              <td>AAX31535.1</td>
+              <td>putative_alkane_sulfonate_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000336/1">BGC0000336</a></td>
+              <td>NRP</td>
+              <td>73.0</td>
+              <td>20.9</td>
+              <td>99.0</td>
+              <td>1.2e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CCC21141.1</td>
+              <td>putative_G6PDH_family_F420-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000171/1">BGC0000171</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>30.0</td>
+              <td>38.7</td>
+              <td>50.0</td>
+              <td>4.9e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

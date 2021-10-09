@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAA19960.1</td>
+              <td>putative_serine/threonine_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000551/1">BGC0000551</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>40.0</td>
+              <td>104.3</td>
+              <td>552.0</td>
+              <td>1.2e-156</td>
+          </tr>
+    
+          <tr>
+              <td>CAX48971.1</td>
+              <td>serine/threonine_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000519/1">BGC0000519</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>41.0</td>
+              <td>101.5</td>
+              <td>541.0</td>
+              <td>2.8e-153</td>
+          </tr>
+    
+          <tr>
+              <td>SSHG_03588</td>
+              <td>serine/threonine_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000546/1">BGC0000546</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>42.0</td>
+              <td>100.1</td>
+              <td>540.0</td>
+              <td>4.7e-153</td>
+          </tr>
+    
+          <tr>
+              <td>WP_037629851.1</td>
+              <td>protein_kinase/lanthionine_synthetase_C_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000546/1">BGC0000546</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>42.0</td>
+              <td>100.1</td>
+              <td>540.0</td>
+              <td>4.7e-153</td>
+          </tr>
+    
+          <tr>
+              <td>ACU73103.1</td>
+              <td>serine/threonine_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000501/1">BGC0000501</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>37.0</td>
+              <td>97.7</td>
+              <td>490.0</td>
+              <td>7.3e-138</td>
+          </tr>
+    
+          <tr>
+              <td>BAG19226.1</td>
+              <td>AmfT_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000496/1">BGC0000496</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>39.0</td>
+              <td>101.5</td>
+              <td>486.0</td>
+              <td>8e-137</td>
+          </tr>
+    
+          <tr>
+              <td>CAM03499.1</td>
+              <td>serine/threonine_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000513/1">BGC0000513</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>40.0</td>
+              <td>97.5</td>
+              <td>479.0</td>
+              <td>9.8e-135</td>
+          </tr>
+    
+          <tr>
+              <td>EFL36750.1</td>
+              <td>membrane_translocator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000518/1">BGC0000518</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>39.0</td>
+              <td>99.7</td>
+              <td>479.0</td>
+              <td>1.3e-134</td>
+          </tr>
+    
+          <tr>
+              <td>SSGG_RS0133190</td>
+              <td>lantipeptide_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000553/1">BGC0000553</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>45.0</td>
+              <td>51.9</td>
+              <td>368.0</td>
+              <td>4.2e-101</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

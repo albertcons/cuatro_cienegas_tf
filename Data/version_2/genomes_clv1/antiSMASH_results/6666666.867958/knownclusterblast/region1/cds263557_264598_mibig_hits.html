@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AIT38301.1</td>
+              <td>LstD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000382/1">BGC0000382</a></td>
+              <td>NRP</td>
+              <td>51.0</td>
+              <td>100.6</td>
+              <td>331.0</td>
+              <td>1.3e-90</td>
+          </tr>
+    
+          <tr>
+              <td>AAL01055.1</td>
+              <td>putative_steroid_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000865/1">BGC0000865</a></td>
+              <td>Other</td>
+              <td>31.0</td>
+              <td>94.2</td>
+              <td>156.0</td>
+              <td>1e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AHF22855.1</td>
+              <td>MarK</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000091/1">BGC0000091</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>99.1</td>
+              <td>138.0</td>
+              <td>2.8e-32</td>
+          </tr>
+    
+          <tr>
+              <td>CAA16184.1</td>
+              <td>oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001063/1">BGC0001063</a></td>
+              <td>NRP + Polyketide</td>
+              <td>32.0</td>
+              <td>99.1</td>
+              <td>133.0</td>
+              <td>5.3e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AAS79449.1</td>
+              <td>putative_TDP-glucose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000035/1">BGC0000035</a></td>
+              <td>Polyketide</td>
+              <td>27.0</td>
+              <td>101.4</td>
+              <td>87.0</td>
+              <td>3.3e-17</td>
+          </tr>
+    
+          <tr>
+              <td>BAU50940.1</td>
+              <td>oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001379/1">BGC0001379</a></td>
+              <td>NRP</td>
+              <td>31.0</td>
+              <td>71.1</td>
+              <td>86.0</td>
+              <td>9.7e-17</td>
+          </tr>
+    
+          <tr>
+              <td>ANC94976.1</td>
+              <td>AlmAII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001396/1">BGC0001396</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>57.5</td>
+              <td>74.0</td>
+              <td>5e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ACG60768.1</td>
+              <td>NAD-dependent_sugar_epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001058/1">BGC0001058</a></td>
+              <td>NRP:Glycopeptide + Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>30.0</td>
+              <td>74.3</td>
+              <td>73.0</td>
+              <td>6.5e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69737.1</td>
+              <td>PlaA3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000654/1">BGC0000654</a></td>
+              <td>Terpene + Saccharide:Hybrid/tailoring</td>
+              <td>35.0</td>
+              <td>47.7</td>
+              <td>68.0</td>
+              <td>2.1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AEZ64511.1</td>
+              <td>oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001065/1">BGC0001065</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>53.8</td>
+              <td>67.0</td>
+              <td>6.1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAD89771.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001010/1">BGC0001010</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>29.0</td>
+              <td>71.1</td>
+              <td>66.0</td>
+              <td>1e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAP42865.1</td>
+              <td>NanG2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000105/1">BGC0000105</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>50.0</td>
+              <td>65.0</td>
+              <td>2.3e-10</td>
+          </tr>
+    
+          <tr>
+              <td>CAA09638.1</td>
+              <td>putative_dTDP-glucose-4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000227/1">BGC0000227</a></td>
+              <td>Polyketide:Type II</td>
+              <td>28.0</td>
+              <td>72.0</td>
+              <td>63.0</td>
+              <td>6.7e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ABL74942.1</td>
+              <td>NAD-dependent_sugar_epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001048/1">BGC0001048</a></td>
+              <td>NRP:Glycopeptide + Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>70.8</td>
+              <td>63.0</td>
+              <td>6.7e-10</td>
+          </tr>
+    
+          <tr>
+              <td>CAB65203.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000775/1">BGC0000775</a></td>
+              <td>Saccharide</td>
+              <td>25.0</td>
+              <td>70.2</td>
+              <td>62.0</td>
+              <td>2e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AGO50622.1</td>
+              <td>dNDP-glucose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000229/1">BGC0000229</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>71.4</td>
+              <td>59.0</td>
+              <td>9.7e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ACP19372.1</td>
+              <td>SaqH</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000267/1">BGC0000267</a></td>
+              <td>Polyketide:Type II + Saccharide:Oligosaccharide</td>
+              <td>26.0</td>
+              <td>75.1</td>
+              <td>59.0</td>
+              <td>9.7e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ARO44664.1</td>
+              <td>NDP-glucose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001769/1">BGC0001769</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>36.1</td>
+              <td>56.0</td>
+              <td>8.2e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BAV17011.1</td>
+              <td>putative_dTDP-glucose_4,6_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001384/1">BGC0001384</a></td>
+              <td>Polyketide</td>
+              <td>36.0</td>
+              <td>36.1</td>
+              <td>56.0</td>
+              <td>1.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AEU17892.1</td>
+              <td>putative_hydroxylase/dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001072/1">BGC0001072</a></td>
+              <td>Saccharide + Polyketide:Modular type I + Polyketide:Type II + Other:Aminocoumarin</td>
+              <td>27.0</td>
+              <td>75.7</td>
+              <td>54.0</td>
+              <td>3.1e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35075.1</td>
+              <td>NAD(P)-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001675/1">BGC0001675</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>68.5</td>
+              <td>50.0</td>
+              <td>5.9e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

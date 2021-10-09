@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABP54637.1</td>
+              <td>protoporphyrinogen_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000241/1">BGC0000241</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>59.0</td>
+              <td>96.6</td>
+              <td>534.0</td>
+              <td>1.9e-151</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ61848.1</td>
+              <td>protoporphyrinogen_oxidase,_amine_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000240/1">BGC0000240</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>55.0</td>
+              <td>97.6</td>
+              <td>510.0</td>
+              <td>2.3e-144</td>
+          </tr>
+    
+          <tr>
+              <td>ARD70862.1</td>
+              <td>Protoporphyrinogen_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001693/1">BGC0001693</a></td>
+              <td>Polyketide</td>
+              <td>54.0</td>
+              <td>98.6</td>
+              <td>489.0</td>
+              <td>5.4e-138</td>
+          </tr>
+    
+          <tr>
+              <td>XP_007301848.1</td>
+              <td>FAD/NAD-P-binding_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001617/1">BGC0001617</a></td>
+              <td>Terpene</td>
+              <td>22.0</td>
+              <td>60.7</td>
+              <td>54.0</td>
+              <td>7.6e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

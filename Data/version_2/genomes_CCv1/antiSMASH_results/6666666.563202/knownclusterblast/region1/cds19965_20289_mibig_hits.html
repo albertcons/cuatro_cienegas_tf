@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BBA84053.1</td>
+              <td>transposase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001916/1">BGC0001916</a></td>
+              <td>Polyketide</td>
+              <td>72.0</td>
+              <td>92.5</td>
+              <td>141.0</td>
+              <td>7.9e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ADG27372.1</td>
+              <td>transposase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000296/1">BGC0000296</a></td>
+              <td>NRP</td>
+              <td>63.0</td>
+              <td>86.9</td>
+              <td>120.0</td>
+              <td>1.4e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ACS50120.1</td>
+              <td>putative_transposase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000603/1">BGC0000603</a></td>
+              <td>RiPP:Thiopeptide</td>
+              <td>61.0</td>
+              <td>86.9</td>
+              <td>118.0</td>
+              <td>5.5e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ADG27370.1</td>
+              <td>transposase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000296/1">BGC0000296</a></td>
+              <td>NRP</td>
+              <td>54.0</td>
+              <td>86.0</td>
+              <td>103.0</td>
+              <td>1.8e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ23094.1</td>
+              <td>possible_transposase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000291/1">BGC0000291</a></td>
+              <td>NRP</td>
+              <td>49.0</td>
+              <td>87.9</td>
+              <td>90.0</td>
+              <td>1.6e-18</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ19069.1</td>
+              <td>putative_transposase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000288/1">BGC0000288</a></td>
+              <td>NRP</td>
+              <td>51.0</td>
+              <td>87.9</td>
+              <td>83.0</td>
+              <td>2.5e-16</td>
+          </tr>
+    
+          <tr>
+              <td>TXD00016.1</td>
+              <td>transposase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001877/1">BGC0001877</a></td>
+              <td>Polyketide</td>
+              <td>67.0</td>
+              <td>48.6</td>
+              <td>77.0</td>
+              <td>1.4e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AAS98789.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001001/1">BGC0001001</a></td>
+              <td>NRP + Polyketide</td>
+              <td>45.0</td>
+              <td>86.0</td>
+              <td>66.0</td>
+              <td>2.5e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

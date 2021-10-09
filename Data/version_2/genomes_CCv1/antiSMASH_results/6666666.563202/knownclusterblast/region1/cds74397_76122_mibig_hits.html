@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABA41518.1</td>
+              <td>regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000722/1">BGC0000722</a></td>
+              <td>Polyketide + Other:Cyclitol</td>
+              <td>46.0</td>
+              <td>21.4</td>
+              <td>97.0</td>
+              <td>7e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ACN29724.1</td>
+              <td>two-component_system_sensor_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000814/1">BGC0000814</a></td>
+              <td>Alkaloid</td>
+              <td>24.0</td>
+              <td>83.6</td>
+              <td>74.0</td>
+              <td>6.3e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AXI91559.1</td>
+              <td>FunR6</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001944/1">BGC0001944</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>47.0</td>
+              <td>73.0</td>
+              <td>1.1e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AEF16032.1</td>
+              <td>regulatory_protein_D</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000379/1">BGC0000379</a></td>
+              <td>NRP</td>
+              <td>30.0</td>
+              <td>43.4</td>
+              <td>72.0</td>
+              <td>1.8e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ADB02832.1</td>
+              <td>AzicR1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000202/1">BGC0000202</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>36.9</td>
+              <td>70.0</td>
+              <td>1.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ALG65335.1</td>
+              <td>Cal1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001297/1">BGC0001297</a></td>
+              <td>NRP</td>
+              <td>32.0</td>
+              <td>44.1</td>
+              <td>68.0</td>
+              <td>3.5e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ88179.1</td>
+              <td>putative_two-component_system_sensor_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000151/1">BGC0000151</a></td>
+              <td>Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>31.0</td>
+              <td>36.6</td>
+              <td>64.0</td>
+              <td>5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf17</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000053/1">BGC0000053</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>39.2</td>
+              <td>62.0</td>
+              <td>1.9e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

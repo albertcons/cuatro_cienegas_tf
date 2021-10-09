@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CCA54203.1</td>
+              <td>CmlF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000893/1">BGC0000893</a></td>
+              <td>NRP</td>
+              <td>68.0</td>
+              <td>94.9</td>
+              <td>474.0</td>
+              <td>1.9e-133</td>
+          </tr>
+    
+          <tr>
+              <td>QBF51783.1</td>
+              <td>efflux_permease,_MFS_family</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001856/1">BGC0001856</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>53.0</td>
+              <td>97.4</td>
+              <td>354.0</td>
+              <td>2.2e-97</td>
+          </tr>
+    
+          <tr>
+              <td>AEA29629.1</td>
+              <td>putative_transmembrane_efflux_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000409/1">BGC0000409</a></td>
+              <td>NRP</td>
+              <td>36.0</td>
+              <td>94.6</td>
+              <td>218.0</td>
+              <td>2.4e-56</td>
+          </tr>
+    
+          <tr>
+              <td>ABW71841.1</td>
+              <td>transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000303/1">BGC0000303</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>94.6</td>
+              <td>201.0</td>
+              <td>2.3e-51</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ08168.1</td>
+              <td>putative_major_facilitator_family_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000885/1">BGC0000885</a></td>
+              <td>Other</td>
+              <td>29.0</td>
+              <td>94.4</td>
+              <td>119.0</td>
+              <td>1.2e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AEF16056.1</td>
+              <td>major_facilitator_superfamily_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000953/1">BGC0000953</a></td>
+              <td>Saccharide:Aminoglycoside</td>
+              <td>29.0</td>
+              <td>99.7</td>
+              <td>112.0</td>
+              <td>1.4e-24</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

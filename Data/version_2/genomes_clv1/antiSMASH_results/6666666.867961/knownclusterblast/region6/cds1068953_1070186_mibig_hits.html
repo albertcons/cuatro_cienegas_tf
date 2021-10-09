@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QCT05755.1</td>
+              <td>Tri22</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001983/1">BGC0001983</a></td>
+              <td>Other</td>
+              <td>68.0</td>
+              <td>98.3</td>
+              <td>527.0</td>
+              <td>2.6e-149</td>
+          </tr>
+    
+          <tr>
+              <td>BAW27701.1</td>
+              <td>dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001764/1">BGC0001764</a></td>
+              <td>NRP</td>
+              <td>52.0</td>
+              <td>97.1</td>
+              <td>375.0</td>
+              <td>1.2e-103</td>
+          </tr>
+    
+          <tr>
+              <td>BAP16705.1</td>
+              <td>Acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000376/1">BGC0000376</a></td>
+              <td>NRP</td>
+              <td>43.0</td>
+              <td>78.3</td>
+              <td>221.0</td>
+              <td>3e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AHA12087.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001172/1">BGC0001172</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>38.0</td>
+              <td>77.8</td>
+              <td>175.0</td>
+              <td>2.5e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52203.1</td>
+              <td>enoyl_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000081/1">BGC0000081</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>37.0</td>
+              <td>70.7</td>
+              <td>161.0</td>
+              <td>2.8e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54206.1</td>
+              <td>Pau39</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001731/1">BGC0001731</a></td>
+              <td>Other</td>
+              <td>36.0</td>
+              <td>71.7</td>
+              <td>159.0</td>
+              <td>1.1e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54259.1</td>
+              <td>PauY39</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001732/1">BGC0001732</a></td>
+              <td>Other</td>
+              <td>36.0</td>
+              <td>71.7</td>
+              <td>159.0</td>
+              <td>1.1e-38</td>
+          </tr>
+    
+          <tr>
+              <td>ATG32070.1</td>
+              <td>proline_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001750/1">BGC0001750</a></td>
+              <td>NRP + Polyketide</td>
+              <td>37.0</td>
+              <td>69.0</td>
+              <td>157.0</td>
+              <td>5.3e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AFP87520.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001159/1">BGC0001159</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>36.0</td>
+              <td>69.3</td>
+              <td>155.0</td>
+              <td>1.5e-37</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ34915.1</td>
+              <td>putative_L-prolyl-S-PCP_Dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000986/1">BGC0000986</a></td>
+              <td>NRP + Polyketide</td>
+              <td>36.0</td>
+              <td>69.0</td>
+              <td>155.0</td>
+              <td>2e-37</td>
+          </tr>
+    
+          <tr>
+              <td>CAA16488.1</td>
+              <td>acyl-coa_dehydrogenase_RedW</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001063/1">BGC0001063</a></td>
+              <td>NRP + Polyketide</td>
+              <td>36.0</td>
+              <td>77.3</td>
+              <td>151.0</td>
+              <td>2.9e-36</td>
+          </tr>
+    
+          <tr>
+              <td>CCC55923.1</td>
+              <td>putative_acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000973/1">BGC0000973</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>37.0</td>
+              <td>70.5</td>
+              <td>149.0</td>
+              <td>8.5e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ACO31278.1</td>
+              <td>PtmO4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001898/1">BGC0001898</a></td>
+              <td>Terpene</td>
+              <td>34.0</td>
+              <td>76.6</td>
+              <td>146.0</td>
+              <td>1.2e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AFD30952.1</td>
+              <td>CrmI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000966/1">BGC0000966</a></td>
+              <td>NRP + Polyketide</td>
+              <td>33.0</td>
+              <td>84.6</td>
+              <td>145.0</td>
+              <td>2.1e-34</td>
+          </tr>
+    
+          <tr>
+              <td>WP_107094405.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001537/1">BGC0001537</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>82.4</td>
+              <td>143.0</td>
+              <td>6.1e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ52665.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001073/1">BGC0001073</a></td>
+              <td>NRP + Polyketide</td>
+              <td>37.0</td>
+              <td>68.5</td>
+              <td>142.0</td>
+              <td>1.4e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AXG22421.1</td>
+              <td>prolyl_carrier_protein_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002024/1">BGC0002024</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>71.2</td>
+              <td>141.0</td>
+              <td>2.3e-33</td>
+          </tr>
+    
+          <tr>
+              <td>EFG10341.1</td>
+              <td>Acyl-CoA_dehydrogenase_domain_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000373/1">BGC0000373</a></td>
+              <td>NRP</td>
+              <td>33.0</td>
+              <td>84.6</td>
+              <td>138.0</td>
+              <td>2e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AJI44179.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001193/1">BGC0001193</a></td>
+              <td>NRP</td>
+              <td>32.0</td>
+              <td>79.3</td>
+              <td>138.0</td>
+              <td>2.6e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ABR67753.1</td>
+              <td>CmnJ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000316/1">BGC0000316</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>73.2</td>
+              <td>137.0</td>
+              <td>4.4e-32</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ43082.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000970/1">BGC0000970</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>31.0</td>
+              <td>87.1</td>
+              <td>137.0</td>
+              <td>4.4e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AQX77691.1</td>
+              <td>NocC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001704/1">BGC0001704</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>73.9</td>
+              <td>133.0</td>
+              <td>1.1e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ACN69985.1</td>
+              <td>prolyl_carrier_protein_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000079/1">BGC0000079</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>72.0</td>
+              <td>131.0</td>
+              <td>3.1e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69751.1</td>
+              <td>PlaP3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000654/1">BGC0000654</a></td>
+              <td>Terpene + Saccharide:Hybrid/tailoring</td>
+              <td>33.0</td>
+              <td>71.0</td>
+              <td>127.0</td>
+              <td>5.9e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AEH42483.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000032/1">BGC0000032</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>72.0</td>
+              <td>126.0</td>
+              <td>7.7e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AHA34036.1</td>
+              <td>Bmp3,_Flavin-dependent_prolyl-S-ACP_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000890/1">BGC0000890</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>31.0</td>
+              <td>72.0</td>
+              <td>125.0</td>
+              <td>2.2e-28</td>
+          </tr>
+    
+          <tr>
+              <td>ESP90846.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000891/1">BGC0000891</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>31.0</td>
+              <td>72.0</td>
+              <td>123.0</td>
+              <td>6.5e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AKJ75109.1</td>
+              <td>Bmp3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001464/1">BGC0001464</a></td>
+              <td>Other</td>
+              <td>31.0</td>
+              <td>72.2</td>
+              <td>119.0</td>
+              <td>9.4e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAP92500.1</td>
+              <td>2,3-diaminopropionate_alpha,beta-desaturase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000458/1">BGC0000458</a></td>
+              <td>NRP</td>
+              <td>33.0</td>
+              <td>73.4</td>
+              <td>119.0</td>
+              <td>1.2e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AFU82610.1</td>
+              <td>acyl_CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000998/1">BGC0000998</a></td>
+              <td>NRP + Polyketide</td>
+              <td>31.0</td>
+              <td>70.5</td>
+              <td>119.0</td>
+              <td>1.2e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AME30286.1</td>
+              <td>proline_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001463/1">BGC0001463</a></td>
+              <td>Other</td>
+              <td>31.0</td>
+              <td>72.2</td>
+              <td>118.0</td>
+              <td>3.6e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AXM43062.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001945/1">BGC0001945</a></td>
+              <td>NRP</td>
+              <td>30.0</td>
+              <td>90.0</td>
+              <td>118.0</td>
+              <td>3.6e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ABP57750.1</td>
+              <td>DepF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000993/1">BGC0000993</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Modular type I</td>
+              <td>33.0</td>
+              <td>69.8</td>
+              <td>116.0</td>
+              <td>8e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ABC37307.1</td>
+              <td>acyl-CoA_dehydrogenase_domain_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000964/1">BGC0000964</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Trans-AT type I</td>
+              <td>33.0</td>
+              <td>69.8</td>
+              <td>113.0</td>
+              <td>6.7e-25</td>
+          </tr>
+    
+          <tr>
+              <td>CBF80495.1</td>
+              <td>Acyl-CoA_dehydrogenase_(Eurofung)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000959/1">BGC0000959</a></td>
+              <td>NRP + Polyketide:Iterative type I</td>
+              <td>28.0</td>
+              <td>73.2</td>
+              <td>108.0</td>
+              <td>3.7e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AKA59435.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001202/1">BGC0001202</a></td>
+              <td>NRP + Polyketide</td>
+              <td>29.0</td>
+              <td>86.1</td>
+              <td>70.0</td>
+              <td>8.5e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AIE54215.1</td>
+              <td>Pau48</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001731/1">BGC0001731</a></td>
+              <td>Other</td>
+              <td>69.0</td>
+              <td>99.7</td>
+              <td>922.0</td>
+              <td>4.6e-268</td>
+          </tr>
+    
+          <tr>
+              <td>ABS90487.1</td>
+              <td>putative_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001106/1">BGC0001106</a></td>
+              <td>NRP + Polyketide</td>
+              <td>68.0</td>
+              <td>100.0</td>
+              <td>920.0</td>
+              <td>1.8e-267</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54268.1</td>
+              <td>PauY48</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001732/1">BGC0001732</a></td>
+              <td>Other</td>
+              <td>69.0</td>
+              <td>99.7</td>
+              <td>918.0</td>
+              <td>5.1e-267</td>
+          </tr>
+    
+          <tr>
+              <td>ADZ13533.1</td>
+              <td>YtkA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000466/1">BGC0000466</a></td>
+              <td>NRP</td>
+              <td>41.0</td>
+              <td>104.9</td>
+              <td>438.0</td>
+              <td>2.7e-122</td>
+          </tr>
+    
+          <tr>
+              <td>BAO84851.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000414/1">BGC0000414</a></td>
+              <td>NRP</td>
+              <td>31.0</td>
+              <td>108.5</td>
+              <td>243.0</td>
+              <td>1.3e-63</td>
+          </tr>
+    
+          <tr>
+              <td>BAI23324.1</td>
+              <td>putative_carbonmonoxide_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000949/1">BGC0000949</a></td>
+              <td>NRP</td>
+              <td>29.0</td>
+              <td>103.7</td>
+              <td>182.0</td>
+              <td>2e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AZS52683.1</td>
+              <td>xanthine_dehydrogenase_subunit_D</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001973/1">BGC0001973</a></td>
+              <td>Other</td>
+              <td>29.0</td>
+              <td>110.6</td>
+              <td>180.0</td>
+              <td>1e-44</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ19054.1</td>
+              <td>putative_CO_dehydrogenase_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000288/1">BGC0000288</a></td>
+              <td>NRP</td>
+              <td>29.0</td>
+              <td>103.2</td>
+              <td>173.0</td>
+              <td>1.2e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AKC92640.1</td>
+              <td>putative_CO_dehydrogenase_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001191/1">BGC0001191</a></td>
+              <td>Other</td>
+              <td>27.0</td>
+              <td>103.2</td>
+              <td>159.0</td>
+              <td>1.8e-38</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

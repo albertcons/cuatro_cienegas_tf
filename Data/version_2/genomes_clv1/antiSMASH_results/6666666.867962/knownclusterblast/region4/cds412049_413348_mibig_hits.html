@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAI47662.1</td>
+              <td>putative_phenylacetyl-CoA_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000692/1">BGC0000692</a></td>
+              <td>Saccharide</td>
+              <td>47.0</td>
+              <td>96.8</td>
+              <td>348.0</td>
+              <td>1.3e-95</td>
+          </tr>
+    
+          <tr>
+              <td>AAL06673.1</td>
+              <td>coenzyme_F390_synthase-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000965/1">BGC0000965</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>35.0</td>
+              <td>100.2</td>
+              <td>198.0</td>
+              <td>2.9e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ALU98435.1</td>
+              <td>phenylacetate--CoA_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001397/1">BGC0001397</a></td>
+              <td>NRP + Polyketide</td>
+              <td>35.0</td>
+              <td>100.2</td>
+              <td>198.0</td>
+              <td>2.9e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ANY94443.1</td>
+              <td>coenzyme_F390_synthase-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001584/1">BGC0001584</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>100.2</td>
+              <td>196.0</td>
+              <td>8.3e-50</td>
+          </tr>
+    
+          <tr>
+              <td>AXO35182.1</td>
+              <td>phenylacetate-coenzyme_A_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001848/1">BGC0001848</a></td>
+              <td>Other</td>
+              <td>32.0</td>
+              <td>94.9</td>
+              <td>151.0</td>
+              <td>4e-36</td>
+          </tr>
+    
+          <tr>
+              <td>EWM63054.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000679/1">BGC0000679</a></td>
+              <td>Terpene</td>
+              <td>32.0</td>
+              <td>94.0</td>
+              <td>148.0</td>
+              <td>2e-35</td>
+          </tr>
+    
+          <tr>
+              <td>ABQ04108.1</td>
+              <td>Phenylacetate--CoA_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000838/1">BGC0000838</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>82.4</td>
+              <td>128.0</td>
+              <td>2.8e-29</td>
+          </tr>
+    
+          <tr>
+              <td>WP_030684664.1</td>
+              <td>AMP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001607/1">BGC0001607</a></td>
+              <td>Other</td>
+              <td>29.0</td>
+              <td>97.5</td>
+              <td>121.0</td>
+              <td>3.4e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ADI58647.1</td>
+              <td>5-Aminolevulinate_CoA_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000187/1">BGC0000187</a></td>
+              <td>Polyketide:Type II</td>
+              <td>28.0</td>
+              <td>50.9</td>
+              <td>59.0</td>
+              <td>1.2e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BBA21084.1</td>
+              <td>putative_5-aminolevulinate_CoA-ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001740/1">BGC0001740</a></td>
+              <td>NRP + Polyketide</td>
+              <td>25.0</td>
+              <td>51.2</td>
+              <td>50.0</td>
+              <td>9.6e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

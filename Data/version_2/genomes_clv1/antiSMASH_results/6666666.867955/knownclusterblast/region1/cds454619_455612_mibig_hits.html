@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AXO35201.1</td>
+              <td>mevalonate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001848/1">BGC0001848</a></td>
+              <td>Other</td>
+              <td>40.0</td>
+              <td>101.2</td>
+              <td>200.0</td>
+              <td>5.8e-51</td>
+          </tr>
+    
+          <tr>
+              <td>EWM63035.1</td>
+              <td>mevalonate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000679/1">BGC0000679</a></td>
+              <td>Terpene</td>
+              <td>40.0</td>
+              <td>100.3</td>
+              <td>195.0</td>
+              <td>1.9e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ABS50448.1</td>
+              <td>putative_mevalonate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001079/1">BGC0001079</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>40.0</td>
+              <td>93.9</td>
+              <td>192.0</td>
+              <td>9.2e-49</td>
+          </tr>
+    
+          <tr>
+              <td>CAX48656.1</td>
+              <td>mevalonate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001080/1">BGC0001080</a></td>
+              <td>Other:Phenazine</td>
+              <td>41.0</td>
+              <td>94.2</td>
+              <td>187.0</td>
+              <td>3e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AHW81461.1</td>
+              <td>EpaB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000934/1">BGC0000934</a></td>
+              <td>Other:Phenazine</td>
+              <td>41.0</td>
+              <td>98.5</td>
+              <td>186.0</td>
+              <td>6.6e-47</td>
+          </tr>
+    
+          <tr>
+              <td>BAD86800.1</td>
+              <td>mevalonate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000286/1">BGC0000286</a></td>
+              <td>Polyketide</td>
+              <td>41.0</td>
+              <td>100.0</td>
+              <td>185.0</td>
+              <td>1.5e-46</td>
+          </tr>
+    
+          <tr>
+              <td>BAE78977.1</td>
+              <td>mevalonate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001078/1">BGC0001078</a></td>
+              <td>Terpene + Polyketide</td>
+              <td>43.0</td>
+              <td>92.1</td>
+              <td>183.0</td>
+              <td>5.6e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68894.1</td>
+              <td>mevalonate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001083/1">BGC0001083</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>38.0</td>
+              <td>101.8</td>
+              <td>174.0</td>
+              <td>2.6e-43</td>
+          </tr>
+    
+          <tr>
+              <td>ABS50475.1</td>
+              <td>NapT6</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000652/1">BGC0000652</a></td>
+              <td>Terpene</td>
+              <td>37.0</td>
+              <td>93.9</td>
+              <td>166.0</td>
+              <td>5.4e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AHW81463.1</td>
+              <td>EpaD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000934/1">BGC0000934</a></td>
+              <td>Other:Phenazine</td>
+              <td>28.0</td>
+              <td>102.1</td>
+              <td>49.0</td>
+              <td>9.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AXO35199.1</td>
+              <td>phosphomevalonate_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001848/1">BGC0001848</a></td>
+              <td>Other</td>
+              <td>27.0</td>
+              <td>91.2</td>
+              <td>49.0</td>
+              <td>9.6e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>
