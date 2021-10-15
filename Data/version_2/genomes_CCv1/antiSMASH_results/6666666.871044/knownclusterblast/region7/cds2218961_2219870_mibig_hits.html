@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAM77980.1</td>
+              <td>NDP-hexose-4-ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000112/1">BGC0000112</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>66.0</td>
+              <td>61.9</td>
+              <td>223.0</td>
+              <td>5.8e-58</td>
+          </tr>
+    
+          <tr>
+              <td>AKD43520.1</td>
+              <td>NDP-4-keto-6-deoxyhexose_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001409/1">BGC0001409</a></td>
+              <td>Polyketide</td>
+              <td>36.0</td>
+              <td>98.7</td>
+              <td>117.0</td>
+              <td>4.5e-26</td>
+          </tr>
+    
+          <tr>
+              <td>BAV17012.1</td>
+              <td>NDP-hexose_4-ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001384/1">BGC0001384</a></td>
+              <td>Polyketide</td>
+              <td>42.0</td>
+              <td>64.9</td>
+              <td>107.0</td>
+              <td>3.6e-23</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71130.1</td>
+              <td>Lct47</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000238/1">BGC0000238</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>102.0</td>
+              <td>105.0</td>
+              <td>1.8e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ARO44667.1</td>
+              <td>NDP-hexose_4-ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001769/1">BGC0001769</a></td>
+              <td>Polyketide</td>
+              <td>41.0</td>
+              <td>62.9</td>
+              <td>104.0</td>
+              <td>3.9e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CBA11562.1</td>
+              <td>NDP-4-keto-6-deoxyhexose_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001046/1">BGC0001046</a></td>
+              <td>NRP + Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>43.0</td>
+              <td>64.2</td>
+              <td>100.0</td>
+              <td>4.3e-21</td>
+          </tr>
+    
+          <tr>
+              <td>BAC79033.1</td>
+              <td>NDP-4-keto-6-deoxyhexose_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000245/1">BGC0000245</a></td>
+              <td>Polyketide</td>
+              <td>42.0</td>
+              <td>63.9</td>
+              <td>88.0</td>
+              <td>2.2e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAF72549.1</td>
+              <td>NDP-hexose_4-ketoreductase_UrdZ3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000278/1">BGC0000278</a></td>
+              <td>Polyketide</td>
+              <td>27.0</td>
+              <td>105.3</td>
+              <td>74.0</td>
+              <td>3.3e-13</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

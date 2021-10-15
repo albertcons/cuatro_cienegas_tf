@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ARD70862.1</td>
+              <td>Protoporphyrinogen_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001693/1">BGC0001693</a></td>
+              <td>Polyketide</td>
+              <td>50.0</td>
+              <td>75.4</td>
+              <td>175.0</td>
+              <td>9e-44</td>
+          </tr>
+    
+          <tr>
+              <td>ABP54637.1</td>
+              <td>protoporphyrinogen_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000241/1">BGC0000241</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>48.0</td>
+              <td>77.7</td>
+              <td>171.0</td>
+              <td>2.2e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ61848.1</td>
+              <td>protoporphyrinogen_oxidase,_amine_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000240/1">BGC0000240</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>46.0</td>
+              <td>80.5</td>
+              <td>163.0</td>
+              <td>6e-40</td>
+          </tr>
+    
+          <tr>
+              <td>EFL06862.1</td>
+              <td>amine_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000300/1">BGC0000300</a></td>
+              <td>NRP</td>
+              <td>46.0</td>
+              <td>27.3</td>
+              <td>57.0</td>
+              <td>3.6e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABD24400.1</td>
+              <td>phytoene_desaturase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000644/1">BGC0000644</a></td>
+              <td>Terpene</td>
+              <td>50.0</td>
+              <td>26.6</td>
+              <td>54.0</td>
+              <td>3e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAU93814.2</td>
+              <td>monoamine_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000054/1">BGC0000054</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>71.5</td>
+              <td>49.0</td>
+              <td>9.7e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ABD59212.1</td>
+              <td>InkO</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000813/1">BGC0000813</a></td>
+              <td>Alkaloid</td>
+              <td>45.0</td>
+              <td>33.2</td>
+              <td>49.0</td>
+              <td>9.7e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ACN29719.1</td>
+              <td>L-amino_acid_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000814/1">BGC0000814</a></td>
+              <td>Alkaloid</td>
+              <td>45.0</td>
+              <td>33.2</td>
+              <td>49.0</td>
+              <td>9.7e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AWC08647.1</td>
+              <td>putative_4-guanidinobutyramide_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001932/1">BGC0001932</a></td>
+              <td>Polyketide</td>
+              <td>49.0</td>
+              <td>98.5</td>
+              <td>245.0</td>
+              <td>9.6e-65</td>
+          </tr>
+    
+          <tr>
+              <td>ARM20294.1</td>
+              <td>4-guanidinobutyramide_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001523/1">BGC0001523</a></td>
+              <td>Polyketide</td>
+              <td>49.0</td>
+              <td>95.5</td>
+              <td>241.0</td>
+              <td>1.8e-63</td>
+          </tr>
+    
+          <tr>
+              <td>AUO16418.1</td>
+              <td>4-guanidinobutyramide_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001700/1">BGC0001700</a></td>
+              <td>Polyketide</td>
+              <td>47.0</td>
+              <td>95.5</td>
+              <td>230.0</td>
+              <td>2.4e-60</td>
+          </tr>
+    
+          <tr>
+              <td>WP_030684650.1</td>
+              <td>carbon-nitrogen_hydrolase_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001607/1">BGC0001607</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>90.2</td>
+              <td>72.0</td>
+              <td>8.5e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AXM42955.1</td>
+              <td>amide_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001941/1">BGC0001941</a></td>
+              <td>NRP + Polyketide</td>
+              <td>33.0</td>
+              <td>64.9</td>
+              <td>63.0</td>
+              <td>5.2e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>
