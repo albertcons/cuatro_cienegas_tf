@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AKA54637.1</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001216/1">BGC0001216</a></td>
+              <td>NRP + Polyketide</td>
+              <td>36.0</td>
+              <td>97.3</td>
+              <td>119.0</td>
+              <td>7.7e-27</td>
+          </tr>
+    
+          <tr>
+              <td>CAG14976.1</td>
+              <td>putative_3-keto-acyl_carrier_protein_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000253/1">BGC0000253</a></td>
+              <td>Polyketide:Type II</td>
+              <td>39.0</td>
+              <td>96.1</td>
+              <td>118.0</td>
+              <td>2.2e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AUI41032.1</td>
+              <td>3-oxoacyl-(acyl-carrier_protein)_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001512/1">BGC0001512</a></td>
+              <td>Polyketide</td>
+              <td>36.0</td>
+              <td>98.1</td>
+              <td>116.0</td>
+              <td>5e-26</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ52708.1</td>
+              <td>putative_3-ketoacyl-ACP_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000222/1">BGC0000222</a></td>
+              <td>Polyketide</td>
+              <td>39.0</td>
+              <td>95.7</td>
+              <td>116.0</td>
+              <td>8.5e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AGO50615.1</td>
+              <td>oxygenase-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000229/1">BGC0000229</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>36.0</td>
+              <td>102.3</td>
+              <td>114.0</td>
+              <td>1.9e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68923.1</td>
+              <td>oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001083/1">BGC0001083</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>39.0</td>
+              <td>99.6</td>
+              <td>114.0</td>
+              <td>1.9e-25</td>
+          </tr>
+    
+          <tr>
+              <td>WP_010639249.1</td>
+              <td>SDR_family_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000958/1">BGC0000958</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Modular type I</td>
+              <td>35.0</td>
+              <td>97.3</td>
+              <td>114.0</td>
+              <td>2.5e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ARO44645.1</td>
+              <td>monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001769/1">BGC0001769</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>103.1</td>
+              <td>114.0</td>
+              <td>2.5e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AEG64681.1</td>
+              <td>2-deoxy-D-gluconate_3-dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000379/1">BGC0000379</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>103.1</td>
+              <td>113.0</td>
+              <td>7.2e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AJI44188.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001193/1">BGC0001193</a></td>
+              <td>NRP</td>
+              <td>37.0</td>
+              <td>96.9</td>
+              <td>112.0</td>
+              <td>9.4e-25</td>
+          </tr>
+    
+          <tr>
+              <td>BAV17004.1</td>
+              <td>putative_oxygenase-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001384/1">BGC0001384</a></td>
+              <td>Polyketide</td>
+              <td>36.0</td>
+              <td>103.1</td>
+              <td>111.0</td>
+              <td>1.6e-24</td>
+          </tr>
+    
+          <tr>
+              <td>CAC37883.1</td>
+              <td>CpkI;_Nicotinamide-dependent_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000038/1">BGC0000038</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>35.0</td>
+              <td>100.0</td>
+              <td>109.0</td>
+              <td>1e-23</td>
+          </tr>
+    
+          <tr>
+              <td>ADI71448.1</td>
+              <td>putative_oxygenase-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000203/1">BGC0000203</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>101.2</td>
+              <td>108.0</td>
+              <td>1.4e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AAX57196.2</td>
+              <td>auricin_polyketide_oxygenase-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000201/1">BGC0000201</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>101.9</td>
+              <td>108.0</td>
+              <td>1.8e-23</td>
+          </tr>
+    
+          <tr>
+              <td>antaM</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001455/1">BGC0001455</a></td>
+              <td>NRP + Polyketide</td>
+              <td>35.0</td>
+              <td>99.6</td>
+              <td>108.0</td>
+              <td>2.3e-23</td>
+          </tr>
+    
+          <tr>
+              <td>QDG00821.1</td>
+              <td>oxygenase-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002028/1">BGC0002028</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>101.2</td>
+              <td>107.0</td>
+              <td>4e-23</td>
+          </tr>
+    
+          <tr>
+              <td>EHM27510.1</td>
+              <td>monooxygenase_FAD-binding</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000235/1">BGC0000235</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>101.9</td>
+              <td>105.0</td>
+              <td>1.1e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69757.1</td>
+              <td>PlaU</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000654/1">BGC0000654</a></td>
+              <td>Terpene + Saccharide:Hybrid/tailoring</td>
+              <td>37.0</td>
+              <td>96.1</td>
+              <td>105.0</td>
+              <td>1.5e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAL15586.1</td>
+              <td>Sim8</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000270/1">BGC0000270</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>99.6</td>
+              <td>104.0</td>
+              <td>2.6e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CAD18969.1</td>
+              <td>putative_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000847/1">BGC0000847</a></td>
+              <td>Other:Non-NRP beta-lactam</td>
+              <td>39.0</td>
+              <td>103.1</td>
+              <td>104.0</td>
+              <td>2.6e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAK06790.1</td>
+              <td>putative_reductase_SimA9</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001072/1">BGC0001072</a></td>
+              <td>Saccharide + Polyketide:Modular type I + Polyketide:Type II + Other:Aminocoumarin</td>
+              <td>34.0</td>
+              <td>99.6</td>
+              <td>104.0</td>
+              <td>2.6e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAT12286.1</td>
+              <td>LtxD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000384/1">BGC0000384</a></td>
+              <td>NRP</td>
+              <td>32.0</td>
+              <td>96.1</td>
+              <td>103.0</td>
+              <td>4.4e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ACP19359.1</td>
+              <td>SaqN</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000267/1">BGC0000267</a></td>
+              <td>Polyketide:Type II + Saccharide:Oligosaccharide</td>
+              <td>35.0</td>
+              <td>98.8</td>
+              <td>102.0</td>
+              <td>7.5e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ08912.1</td>
+              <td>putative_3-ketoacyl-ACP_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000224/1">BGC0000224</a></td>
+              <td>Polyketide:Type II</td>
+              <td>36.0</td>
+              <td>95.3</td>
+              <td>102.0</td>
+              <td>9.7e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ADG86311.1</td>
+              <td>3-ketoacyl_ACP-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000190/1">BGC0000190</a></td>
+              <td>Polyketide</td>
+              <td>36.0</td>
+              <td>95.3</td>
+              <td>102.0</td>
+              <td>1.3e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ABM21753.1</td>
+              <td>PdmG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000256/1">BGC0000256</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>95.3</td>
+              <td>102.0</td>
+              <td>1.3e-21</td>
+          </tr>
+    
+          <tr>
+              <td>CAH10112.1</td>
+              <td>putative_oxidase-reducatse</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000268/1">BGC0000268</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>101.6</td>
+              <td>101.0</td>
+              <td>2.8e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AIL50168.1</td>
+              <td>putative_ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000213/1">BGC0000213</a></td>
+              <td>Polyketide:Type II</td>
+              <td>35.0</td>
+              <td>93.4</td>
+              <td>99.0</td>
+              <td>1.1e-20</td>
+          </tr>
+    
+          <tr>
+              <td>BBA31812.1</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001797/1">BGC0001797</a></td>
+              <td>RiPP</td>
+              <td>37.0</td>
+              <td>102.3</td>
+              <td>98.0</td>
+              <td>1.8e-20</td>
+          </tr>
+    
+          <tr>
+              <td>SCN11974.1</td>
+              <td>short-chain_dehydrogenase/reductase_SDR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001580/1">BGC0001580</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>96.1</td>
+              <td>97.0</td>
+              <td>2.4e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ACH85578.1</td>
+              <td>CetF1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000283/1">BGC0000283</a></td>
+              <td>Other:Cyclitol</td>
+              <td>34.0</td>
+              <td>102.3</td>
+              <td>97.0</td>
+              <td>3.1e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AWM72915.1</td>
+              <td>3-oxoacyl-ACP_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001719/1">BGC0001719</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>96.1</td>
+              <td>97.0</td>
+              <td>4.1e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AAP13848.2</td>
+              <td>C5-ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000093/1">BGC0000093</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>102.3</td>
+              <td>96.0</td>
+              <td>5.3e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54248.1</td>
+              <td>PauY28</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001732/1">BGC0001732</a></td>
+              <td>Other</td>
+              <td>35.0</td>
+              <td>98.1</td>
+              <td>96.0</td>
+              <td>5.3e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AAD13552.1</td>
+              <td>bifunctional_reductase_+_aromatase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000239/1">BGC0000239</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>32.0</td>
+              <td>100.8</td>
+              <td>95.0</td>
+              <td>1.6e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54195.1</td>
+              <td>Pau28</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001731/1">BGC0001731</a></td>
+              <td>Other</td>
+              <td>34.0</td>
+              <td>98.1</td>
+              <td>94.0</td>
+              <td>2e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAA07765.1</td>
+              <td>ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000246/1">BGC0000246</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>95.7</td>
+              <td>94.0</td>
+              <td>3.5e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAK50780.1</td>
+              <td>ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000247/1">BGC0000247</a></td>
+              <td>Polyketide:Type II + Saccharide:Oligosaccharide</td>
+              <td>35.0</td>
+              <td>95.7</td>
+              <td>94.0</td>
+              <td>3.5e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAD91239.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000289/1">BGC0000289</a></td>
+              <td>NRP:Glycopeptide + Saccharide:Hybrid/tailoring</td>
+              <td>32.0</td>
+              <td>101.9</td>
+              <td>92.0</td>
+              <td>1.3e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ64702.1</td>
+              <td>probable_glucose_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000087/1">BGC0000087</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>99.2</td>
+              <td>91.0</td>
+              <td>1.7e-18</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71123.1</td>
+              <td>Lct40</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000238/1">BGC0000238</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>98.1</td>
+              <td>91.0</td>
+              <td>2.2e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46721.1</td>
+              <td>ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001179/1">BGC0001179</a></td>
+              <td>Polyketide:Type II</td>
+              <td>33.0</td>
+              <td>96.1</td>
+              <td>91.0</td>
+              <td>2.2e-18</td>
+          </tr>
+    
+          <tr>
+              <td>BAO98807.1</td>
+              <td>putative_ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001002/1">BGC0001002</a></td>
+              <td>NRP + Polyketide</td>
+              <td>32.0</td>
+              <td>98.1</td>
+              <td>91.0</td>
+              <td>2.9e-18</td>
+          </tr>
+    
+          <tr>
+              <td>ACU36662.1</td>
+              <td>short-chain_dehydrogenase/reductase_SDR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000392/1">BGC0000392</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>98.8</td>
+              <td>89.0</td>
+              <td>1.1e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAL15603.1</td>
+              <td>SimJ1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000270/1">BGC0000270</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>98.1</td>
+              <td>88.0</td>
+              <td>1.5e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAG34187.1</td>
+              <td>SimJ1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000835/1">BGC0000835</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>98.1</td>
+              <td>88.0</td>
+              <td>1.5e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAK06807.1</td>
+              <td>putative_3-keto-acyl-reductase_SimD2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001072/1">BGC0001072</a></td>
+              <td>Saccharide + Polyketide:Modular type I + Polyketide:Type II + Other:Aminocoumarin</td>
+              <td>34.0</td>
+              <td>98.1</td>
+              <td>88.0</td>
+              <td>1.5e-17</td>
+          </tr>
+    
+          <tr>
+              <td>OWA01602.1</td>
+              <td>short-chain_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001439/1">BGC0001439</a></td>
+              <td>Polyketide + Saccharide:Hybrid/tailoring</td>
+              <td>31.0</td>
+              <td>97.3</td>
+              <td>87.0</td>
+              <td>3.2e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AFO59869.1</td>
+              <td>ChxH</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000175/1">BGC0000175</a></td>
+              <td>Polyketide:Trans-AT type I</td>
+              <td>35.0</td>
+              <td>99.6</td>
+              <td>86.0</td>
+              <td>9.4e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AKD43505.1</td>
+              <td>Ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001409/1">BGC0001409</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>95.7</td>
+              <td>83.0</td>
+              <td>4.7e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46696.1</td>
+              <td>ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001177/1">BGC0001177</a></td>
+              <td>Polyketide:Type II</td>
+              <td>32.0</td>
+              <td>101.2</td>
+              <td>82.0</td>
+              <td>8e-16</td>
+          </tr>
+    
+          <tr>
+              <td>ACN64844.1</td>
+              <td>PokT1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001061/1">BGC0001061</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>30.0</td>
+              <td>95.7</td>
+              <td>81.0</td>
+              <td>2.3e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AAM12932.1</td>
+              <td>MupS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000182/1">BGC0000182</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Trans-AT type I</td>
+              <td>30.0</td>
+              <td>93.8</td>
+              <td>81.0</td>
+              <td>3e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ABI75108.1</td>
+              <td>short-chain_alcohol_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000928/1">BGC0000928</a></td>
+              <td>Other</td>
+              <td>34.0</td>
+              <td>90.7</td>
+              <td>81.0</td>
+              <td>3e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AAM33685.1</td>
+              <td>putative_bifunctional_cyclase/3-oxoacyl-ACP_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000230/1">BGC0000230</a></td>
+              <td>Polyketide:Type II</td>
+              <td>32.0</td>
+              <td>96.5</td>
+              <td>80.0</td>
+              <td>4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ACU71635.1</td>
+              <td>b-ketotyrosyl-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001154/1">BGC0001154</a></td>
+              <td>Other</td>
+              <td>32.0</td>
+              <td>97.3</td>
+              <td>80.0</td>
+              <td>4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AAN65226.1</td>
+              <td>b-ketotyrosyl-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000832/1">BGC0000832</a></td>
+              <td>Saccharide:Hybrid/tailoring + Other:Aminocoumarin</td>
+              <td>32.0</td>
+              <td>96.5</td>
+              <td>79.0</td>
+              <td>1.2e-14</td>
+          </tr>
+    
+          <tr>
+              <td>ABI75134.1</td>
+              <td>short-chain_alcohol_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000887/1">BGC0000887</a></td>
+              <td>Alkaloid</td>
+              <td>33.0</td>
+              <td>88.7</td>
+              <td>79.0</td>
+              <td>1.2e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AAF67503.1</td>
+              <td>b-ketotyrosyl-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000834/1">BGC0000834</a></td>
+              <td>Saccharide:Hybrid/tailoring + Other:Aminocoumarin</td>
+              <td>31.0</td>
+              <td>96.5</td>
+              <td>75.0</td>
+              <td>1.3e-13</td>
+          </tr>
+    
+          <tr>
+              <td>CAM34373.1</td>
+              <td>putative_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000242/1">BGC0000242</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>99.2</td>
+              <td>73.0</td>
+              <td>4.8e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AAG03070.2</td>
+              <td>RubF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000266/1">BGC0000266</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>98.8</td>
+              <td>72.0</td>
+              <td>8.3e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AXI91535.1</td>
+              <td>FunA5</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001944/1">BGC0001944</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>95.3</td>
+              <td>71.0</td>
+              <td>1.8e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAG29782.1</td>
+              <td>b-ketotyrosyl-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000833/1">BGC0000833</a></td>
+              <td>Saccharide:Hybrid/tailoring + Other:Aminocoumarin</td>
+              <td>32.0</td>
+              <td>96.1</td>
+              <td>71.0</td>
+              <td>2.4e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CAG23976.1</td>
+              <td>3-oxoacyl-(acyl_carrier_protein)_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000176/1">BGC0000176</a></td>
+              <td>Polyketide + NRP</td>
+              <td>29.0</td>
+              <td>94.6</td>
+              <td>71.0</td>
+              <td>3.1e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAF81238.1</td>
+              <td>putative_beta-ketoacyl_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000243/1">BGC0000243</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>101.2</td>
+              <td>71.0</td>
+              <td>3.1e-12</td>
+          </tr>
+    
+          <tr>
+              <td>WP_040253449.1</td>
+              <td>SDR_family_NAD(P)-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001596/1">BGC0001596</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>102.3</td>
+              <td>69.0</td>
+              <td>9.1e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ78333.1</td>
+              <td>OxyJ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000254/1">BGC0000254</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>100.0</td>
+              <td>68.0</td>
+              <td>2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>EAA36366.3</td>
+              <td>short-chain_dehydrogenase/reductase_SDR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001697/1">BGC0001697</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>99.2</td>
+              <td>68.0</td>
+              <td>2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ADI71446.1</td>
+              <td>putative_ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000203/1">BGC0000203</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>100.8</td>
+              <td>65.0</td>
+              <td>1.7e-10</td>
+          </tr>
+    
+          <tr>
+              <td>QCX41935.1</td>
+              <td>AmcA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001958/1">BGC0001958</a></td>
+              <td>Other</td>
+              <td>29.0</td>
+              <td>99.2</td>
+              <td>65.0</td>
+              <td>1.7e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ANY57882.1</td>
+              <td>PenD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001372/1">BGC0001372</a></td>
+              <td>Terpene</td>
+              <td>28.0</td>
+              <td>99.6</td>
+              <td>61.0</td>
+              <td>2.5e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ACY06294.1</td>
+              <td>short-chain_dehydrogenase/reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001042/1">BGC0001042</a></td>
+              <td>NRP + Polyketide</td>
+              <td>30.0</td>
+              <td>96.9</td>
+              <td>60.0</td>
+              <td>4.2e-09</td>
+          </tr>
+    
+          <tr>
+              <td>EDY47129.1</td>
+              <td>clavaldehyde_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000845/1">BGC0000845</a></td>
+              <td>Other:Non-NRP beta-lactam</td>
+              <td>29.0</td>
+              <td>88.3</td>
+              <td>57.0</td>
+              <td>2.7e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABM63537.1</td>
+              <td>BryA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000174/1">BGC0000174</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>38.1</td>
+              <td>56.0</td>
+              <td>6.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22303.1</td>
+              <td>putative_short-chain_dehydrogenase/reductase_SDR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000279/1">BGC0000279</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>86.0</td>
+              <td>55.0</td>
+              <td>1.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>WP_042799405.1</td>
+              <td>SDR_family_NAD(P)-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001283/1">BGC0001283</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>87.2</td>
+              <td>53.0</td>
+              <td>6.8e-07</td>
+          </tr>
+    
+          <tr>
+              <td>XP_003044553.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001768/1">BGC0001768</a></td>
+              <td>NRP</td>
+              <td>28.0</td>
+              <td>101.2</td>
+              <td>50.0</td>
+              <td>3.4e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

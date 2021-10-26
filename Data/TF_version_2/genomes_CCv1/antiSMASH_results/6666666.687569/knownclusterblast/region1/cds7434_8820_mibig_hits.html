@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BBC15205.1</td>
+              <td>TfuA-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001696/1">BGC0001696</a></td>
+              <td>RiPP</td>
+              <td>46.0</td>
+              <td>50.3</td>
+              <td>171.0</td>
+              <td>3.1e-42</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ00799.1</td>
+              <td>TfuA-like_core_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001802/1">BGC0001802</a></td>
+              <td>RiPP</td>
+              <td>46.0</td>
+              <td>47.7</td>
+              <td>165.0</td>
+              <td>2.9e-40</td>
+          </tr>
+    
+          <tr>
+              <td>BAN83924.1</td>
+              <td>TfuA-like_core_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001803/1">BGC0001803</a></td>
+              <td>RiPP</td>
+              <td>43.0</td>
+              <td>46.6</td>
+              <td>151.0</td>
+              <td>4.3e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_2</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001849/1">BGC0001849</a></td>
+              <td>RiPP</td>
+              <td>43.0</td>
+              <td>50.5</td>
+              <td>141.0</td>
+              <td>4.4e-33</td>
+          </tr>
+    
+          <tr>
+              <td>PYC67538.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001473/1">BGC0001473</a></td>
+              <td>RiPP:Thiopeptide</td>
+              <td>36.0</td>
+              <td>61.2</td>
+              <td>136.0</td>
+              <td>1.4e-31</td>
+          </tr>
+    
+          <tr>
+              <td>PYC80226.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001474/1">BGC0001474</a></td>
+              <td>RiPP:Thiopeptide</td>
+              <td>37.0</td>
+              <td>52.3</td>
+              <td>129.0</td>
+              <td>1.7e-29</td>
+          </tr>
+    
+          <tr>
+              <td>WP_091614392.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002023/1">BGC0002023</a></td>
+              <td>RiPP</td>
+              <td>39.0</td>
+              <td>46.0</td>
+              <td>115.0</td>
+              <td>2e-25</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

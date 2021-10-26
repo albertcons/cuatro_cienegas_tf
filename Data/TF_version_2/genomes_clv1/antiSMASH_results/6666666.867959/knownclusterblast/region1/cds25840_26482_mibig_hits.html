@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAV57465.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001912/1">BGC0001912</a></td>
+              <td>NRP</td>
+              <td>81.0</td>
+              <td>100.0</td>
+              <td>365.0</td>
+              <td>5.1e-101</td>
+          </tr>
+    
+          <tr>
+              <td>WP_051093176.1</td>
+              <td>PadR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001558/1">BGC0001558</a></td>
+              <td>Polyketide</td>
+              <td>79.0</td>
+              <td>92.0</td>
+              <td>330.0</td>
+              <td>1.8e-90</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ00743.1</td>
+              <td>CytR4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001568/1">BGC0001568</a></td>
+              <td>Polyketide</td>
+              <td>78.0</td>
+              <td>92.0</td>
+              <td>327.0</td>
+              <td>1.5e-89</td>
+          </tr>
+    
+          <tr>
+              <td>ABC00736.1</td>
+              <td>CosS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000214/1">BGC0000214</a></td>
+              <td>Polyketide</td>
+              <td>49.0</td>
+              <td>87.8</td>
+              <td>166.0</td>
+              <td>3.5e-41</td>
+          </tr>
+    
+          <tr>
+              <td>KDN80061.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001074/1">BGC0001074</a></td>
+              <td>Saccharide + Polyketide</td>
+              <td>49.0</td>
+              <td>87.8</td>
+              <td>166.0</td>
+              <td>3.5e-41</td>
+          </tr>
+    
+          <tr>
+              <td>WP_018891744.1</td>
+              <td>PadR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001558/1">BGC0001558</a></td>
+              <td>Polyketide</td>
+              <td>47.0</td>
+              <td>87.8</td>
+              <td>161.0</td>
+              <td>1.5e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ00758.1</td>
+              <td>PadR-like_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001568/1">BGC0001568</a></td>
+              <td>Polyketide</td>
+              <td>47.0</td>
+              <td>87.8</td>
+              <td>161.0</td>
+              <td>1.5e-39</td>
+          </tr>
+    
+          <tr>
+              <td>BAB72058.1</td>
+              <td>AclS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000191/1">BGC0000191</a></td>
+              <td>Polyketide</td>
+              <td>44.0</td>
+              <td>87.3</td>
+              <td>149.0</td>
+              <td>7.5e-36</td>
+          </tr>
+    
+          <tr>
+              <td>EDY42519.2</td>
+              <td>transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000212/1">BGC0000212</a></td>
+              <td>Polyketide:Type II</td>
+              <td>43.0</td>
+              <td>93.4</td>
+              <td>137.0</td>
+              <td>3e-32</td>
+          </tr>
+    
+          <tr>
+              <td>RAT94094.1</td>
+              <td>PadR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001469/1">BGC0001469</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>58.7</td>
+              <td>57.0</td>
+              <td>2.3e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

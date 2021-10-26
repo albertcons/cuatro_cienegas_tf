@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>DAC74145.1</td>
+              <td>methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002019/1">BGC0002019</a></td>
+              <td>Terpene</td>
+              <td>63.0</td>
+              <td>98.8</td>
+              <td>314.0</td>
+              <td>2.1e-85</td>
+          </tr>
+    
+          <tr>
+              <td>AKQ99281.1</td>
+              <td>methyltransferase_type_11</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001484/1">BGC0001484</a></td>
+              <td>Other</td>
+              <td>59.0</td>
+              <td>98.4</td>
+              <td>302.0</td>
+              <td>4.8e-82</td>
+          </tr>
+    
+          <tr>
+              <td>CBZ42134.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001117/1">BGC0001117</a></td>
+              <td>NRP</td>
+              <td>59.0</td>
+              <td>100.0</td>
+              <td>298.0</td>
+              <td>9.1e-81</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69747.1</td>
+              <td>PlaM2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000654/1">BGC0000654</a></td>
+              <td>Terpene + Saccharide:Hybrid/tailoring</td>
+              <td>57.0</td>
+              <td>97.6</td>
+              <td>286.0</td>
+              <td>3.6e-77</td>
+          </tr>
+    
+          <tr>
+              <td>ABX00628.1</td>
+              <td>Sli1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000907/1">BGC0000907</a></td>
+              <td>Other</td>
+              <td>88.0</td>
+              <td>59.1</td>
+              <td>272.0</td>
+              <td>9.2e-73</td>
+          </tr>
+    
+          <tr>
+              <td>AIG79231.1</td>
+              <td>Methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000419/1">BGC0000419</a></td>
+              <td>Saccharide + NRP:Glycopeptide</td>
+              <td>54.0</td>
+              <td>101.2</td>
+              <td>267.0</td>
+              <td>2.3e-71</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69765.1</td>
+              <td>PlaM3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000654/1">BGC0000654</a></td>
+              <td>Terpene + Saccharide:Hybrid/tailoring</td>
+              <td>53.0</td>
+              <td>102.4</td>
+              <td>266.0</td>
+              <td>3.9e-71</td>
+          </tr>
+    
+          <tr>
+              <td>AIE77069.1</td>
+              <td>methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000418/1">BGC0000418</a></td>
+              <td>NRP</td>
+              <td>53.0</td>
+              <td>101.2</td>
+              <td>265.0</td>
+              <td>1.1e-70</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ19063.1</td>
+              <td>carboxyl_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000288/1">BGC0000288</a></td>
+              <td>NRP</td>
+              <td>29.0</td>
+              <td>92.5</td>
+              <td>64.0</td>
+              <td>3.8e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

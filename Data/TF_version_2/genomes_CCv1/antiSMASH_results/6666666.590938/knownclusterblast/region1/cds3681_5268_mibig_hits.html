@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAG23655.1</td>
+              <td>putative_beta-carotene_desaturase/methylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000664/1">BGC0000664</a></td>
+              <td>Terpene</td>
+              <td>73.0</td>
+              <td>97.2</td>
+              <td>720.0</td>
+              <td>2e-207</td>
+          </tr>
+    
+          <tr>
+              <td>crtaU</td>
+              <td>isorenieratene_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001456/1">BGC0001456</a></td>
+              <td>Terpene</td>
+              <td>72.0</td>
+              <td>99.2</td>
+              <td>720.0</td>
+              <td>2e-207</td>
+          </tr>
+    
+          <tr>
+              <td>AAG28703.1</td>
+              <td>CrtU</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000649/1">BGC0000649</a></td>
+              <td>Terpene</td>
+              <td>72.0</td>
+              <td>97.2</td>
+              <td>716.0</td>
+              <td>3.8e-206</td>
+          </tr>
+    
+          <tr>
+              <td>BAB69140.1</td>
+              <td>phytoene_desaturase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000633/1">BGC0000633</a></td>
+              <td>Terpene</td>
+              <td>72.0</td>
+              <td>94.3</td>
+              <td>683.0</td>
+              <td>2.1e-196</td>
+          </tr>
+    
+          <tr>
+              <td>AGS67382.1</td>
+              <td>beta-carotene_desaturase/methylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001227/1">BGC0001227</a></td>
+              <td>Terpene</td>
+              <td>68.0</td>
+              <td>96.8</td>
+              <td>663.0</td>
+              <td>3.8e-190</td>
+          </tr>
+    
+          <tr>
+              <td>ASA76649.1</td>
+              <td>isorenierate_synthase_like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001751/1">BGC0001751</a></td>
+              <td>NRP + Polyketide</td>
+              <td>52.0</td>
+              <td>93.6</td>
+              <td>456.0</td>
+              <td>5.5e-128</td>
+          </tr>
+    
+          <tr>
+              <td>AAF65586.1</td>
+              <td>betacarotene_desaturase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000636/1">BGC0000636</a></td>
+              <td>Terpene</td>
+              <td>50.0</td>
+              <td>100.0</td>
+              <td>440.0</td>
+              <td>3.1e-123</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22341.1</td>
+              <td>oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000065/1">BGC0000065</a></td>
+              <td>Polyketide:Iterative type I</td>
+              <td>32.0</td>
+              <td>53.0</td>
+              <td>53.0</td>
+              <td>1.4e-06</td>
+          </tr>
+    
+          <tr>
+              <td>CAA79958.1</td>
+              <td>hydroxyneurosporene_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000648/1">BGC0000648</a></td>
+              <td>Terpene</td>
+              <td>29.0</td>
+              <td>59.5</td>
+              <td>51.0</td>
+              <td>5.3e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

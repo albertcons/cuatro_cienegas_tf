@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABX24479.1</td>
+              <td>putative_flavin-containing_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000877/1">BGC0000877</a></td>
+              <td>Other</td>
+              <td>47.0</td>
+              <td>98.9</td>
+              <td>402.0</td>
+              <td>1.1e-111</td>
+          </tr>
+    
+          <tr>
+              <td>AAS47561.1</td>
+              <td>putative_FAD-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001108/1">BGC0001108</a></td>
+              <td>Polyketide:Trans-AT type I</td>
+              <td>35.0</td>
+              <td>83.6</td>
+              <td>223.0</td>
+              <td>5.2e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf7</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001109/1">BGC0001109</a></td>
+              <td>NRP + Polyketide</td>
+              <td>35.0</td>
+              <td>83.6</td>
+              <td>223.0</td>
+              <td>5.2e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ABK32261.1</td>
+              <td>AmbI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000014/1">BGC0000014</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>83.0</td>
+              <td>204.0</td>
+              <td>3.2e-52</td>
+          </tr>
+    
+          <tr>
+              <td>AFX60310.1</td>
+              <td>flavin-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001031/1">BGC0001031</a></td>
+              <td>NRP + Polyketide</td>
+              <td>30.0</td>
+              <td>94.5</td>
+              <td>194.0</td>
+              <td>4.4e-49</td>
+          </tr>
+    
+          <tr>
+              <td>AFX60333.1</td>
+              <td>flavin-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001032/1">BGC0001032</a></td>
+              <td>NRP + Polyketide</td>
+              <td>30.0</td>
+              <td>94.8</td>
+              <td>192.0</td>
+              <td>1.3e-48</td>
+          </tr>
+    
+          <tr>
+              <td>WP_003598536.1</td>
+              <td>SidA/IucD/PvdA_family_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001991/1">BGC0001991</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>94.3</td>
+              <td>186.0</td>
+              <td>1.2e-46</td>
+          </tr>
+    
+          <tr>
+              <td>ESP90848.1</td>
+              <td>putative_flavoprotein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000891/1">BGC0000891</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>31.0</td>
+              <td>88.0</td>
+              <td>163.0</td>
+              <td>1.1e-39</td>
+          </tr>
+    
+          <tr>
+              <td>WP_013663195.1</td>
+              <td>SidA/IucD/PvdA_family_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001465/1">BGC0001465</a></td>
+              <td>Other</td>
+              <td>29.0</td>
+              <td>93.4</td>
+              <td>157.0</td>
+              <td>4.5e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AHA34038.1</td>
+              <td>Bmp5,_Flavin-dependent_single-component_p-hydroxybenzoate_brominase/decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000890/1">BGC0000890</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>31.0</td>
+              <td>89.7</td>
+              <td>157.0</td>
+              <td>5.9e-38</td>
+          </tr>
+    
+          <tr>
+              <td>ABK32294.1</td>
+              <td>JerO</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000080/1">BGC0000080</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>83.8</td>
+              <td>145.0</td>
+              <td>1.8e-34</td>
+          </tr>
+    
+          <tr>
+              <td>EED49424.1</td>
+              <td>dimethylaniline_monooxygenase,_putative</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000627/1">BGC0000627</a></td>
+              <td>RiPP:Thiopeptide</td>
+              <td>25.0</td>
+              <td>37.8</td>
+              <td>62.0</td>
+              <td>2.6e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

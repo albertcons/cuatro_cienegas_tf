@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAG18097.1</td>
+              <td>putative_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000658/1">BGC0000658</a></td>
+              <td>Terpene</td>
+              <td>85.0</td>
+              <td>97.7</td>
+              <td>516.0</td>
+              <td>2.5e-146</td>
+          </tr>
+    
+          <tr>
+              <td>ATY69607.1</td>
+              <td>SAM-dependent_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001823/1">BGC0001823</a></td>
+              <td>NRP + Polyketide</td>
+              <td>84.0</td>
+              <td>98.0</td>
+              <td>512.0</td>
+              <td>6.2e-145</td>
+          </tr>
+    
+          <tr>
+              <td>SCN11946.1</td>
+              <td>SAM-dependent_methlyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001580/1">BGC0001580</a></td>
+              <td>Polyketide</td>
+              <td>82.0</td>
+              <td>97.7</td>
+              <td>503.0</td>
+              <td>1.7e-142</td>
+          </tr>
+    
+          <tr>
+              <td>CAM02993.1</td>
+              <td>methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000659/1">BGC0000659</a></td>
+              <td>Terpene</td>
+              <td>63.0</td>
+              <td>92.0</td>
+              <td>359.0</td>
+              <td>3.9e-99</td>
+          </tr>
+    
+          <tr>
+              <td>AEK21532.1</td>
+              <td>SAM-dependent_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000657/1">BGC0000657</a></td>
+              <td>Terpene</td>
+              <td>55.0</td>
+              <td>91.0</td>
+              <td>321.0</td>
+              <td>2e-87</td>
+          </tr>
+    
+          <tr>
+              <td>BAF98640.1</td>
+              <td>putative_methyl_transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000651/1">BGC0000651</a></td>
+              <td>Terpene</td>
+              <td>41.0</td>
+              <td>91.3</td>
+              <td>229.0</td>
+              <td>6.1e-60</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

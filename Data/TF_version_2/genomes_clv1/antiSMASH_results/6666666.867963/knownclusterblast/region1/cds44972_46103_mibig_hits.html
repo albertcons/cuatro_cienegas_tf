@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AMX23334.1</td>
+              <td>FAD-dependent_urate_hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001500/1">BGC0001500</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>100.8</td>
+              <td>118.0</td>
+              <td>3.3e-26</td>
+          </tr>
+    
+          <tr>
+              <td>WP_038234862.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001873/1">BGC0001873</a></td>
+              <td>NRP:Lipopeptide</td>
+              <td>28.0</td>
+              <td>93.4</td>
+              <td>95.0</td>
+              <td>2.3e-19</td>
+          </tr>
+    
+          <tr>
+              <td>EJP62795.1</td>
+              <td>FAD_binding_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001720/1">BGC0001720</a></td>
+              <td>Polyketide</td>
+              <td>27.0</td>
+              <td>98.1</td>
+              <td>92.0</td>
+              <td>1.9e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AFW04593.1</td>
+              <td>FAD-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001783/1">BGC0001783</a></td>
+              <td>Other</td>
+              <td>30.0</td>
+              <td>105.9</td>
+              <td>83.0</td>
+              <td>6.8e-16</td>
+          </tr>
+    
+          <tr>
+              <td>CAP12596.1</td>
+              <td>TcmB2_oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000219/1">BGC0000219</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>29.0</td>
+              <td>102.4</td>
+              <td>82.0</td>
+              <td>2e-15</td>
+          </tr>
+    
+          <tr>
+              <td>BAM84049.1</td>
+              <td>FAD-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001260/1">BGC0001260</a></td>
+              <td>Terpene</td>
+              <td>25.0</td>
+              <td>92.6</td>
+              <td>73.0</td>
+              <td>9.3e-13</td>
+          </tr>
+    
+          <tr>
+              <td>EED18000.1</td>
+              <td>FAD_oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000154/1">BGC0000154</a></td>
+              <td>Polyketide:Iterative type I</td>
+              <td>23.0</td>
+              <td>92.8</td>
+              <td>52.0</td>
+              <td>1.7e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

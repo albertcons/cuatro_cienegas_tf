@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAE17536.1</td>
+              <td>oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000210/1">BGC0000210</a></td>
+              <td>Polyketide:Type II + Saccharide:Oligosaccharide</td>
+              <td>80.0</td>
+              <td>56.5</td>
+              <td>64.0</td>
+              <td>6e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ADE34499.1</td>
+              <td>ssfO1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000269/1">BGC0000269</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>68.0</td>
+              <td>55.1</td>
+              <td>56.0</td>
+              <td>2.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AGZ15446.1</td>
+              <td>putative_polyketide_oxygenase/hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001036/1">BGC0001036</a></td>
+              <td>NRP + Polyketide</td>
+              <td>64.0</td>
+              <td>56.5</td>
+              <td>56.0</td>
+              <td>2.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ78342.1</td>
+              <td>OxyS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000254/1">BGC0000254</a></td>
+              <td>Polyketide</td>
+              <td>65.0</td>
+              <td>53.6</td>
+              <td>54.0</td>
+              <td>8.2e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AOZ61203.1</td>
+              <td>oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001762/1">BGC0001762</a></td>
+              <td>Alkaloid</td>
+              <td>65.0</td>
+              <td>53.6</td>
+              <td>52.0</td>
+              <td>2.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAG30198.1</td>
+              <td>oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000261/1">BGC0000261</a></td>
+              <td>Polyketide</td>
+              <td>56.0</td>
+              <td>56.5</td>
+              <td>50.0</td>
+              <td>9e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAO65343.1</td>
+              <td>oxygenase-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000236/1">BGC0000236</a></td>
+              <td>Polyketide</td>
+              <td>65.0</td>
+              <td>49.3</td>
+              <td>48.0</td>
+              <td>4.5e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AGI99493.1</td>
+              <td>FAD-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001004/1">BGC0001004</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>57.0</td>
+              <td>53.6</td>
+              <td>48.0</td>
+              <td>4.5e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AGC09488.1</td>
+              <td>LobA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001183/1">BGC0001183</a></td>
+              <td>Polyketide</td>
+              <td>57.0</td>
+              <td>53.6</td>
+              <td>48.0</td>
+              <td>4.5e-06</td>
+          </tr>
+    
+          <tr>
+              <td>BAV16997.1</td>
+              <td>putative_oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001384/1">BGC0001384</a></td>
+              <td>Polyketide</td>
+              <td>59.0</td>
+              <td>56.5</td>
+              <td>48.0</td>
+              <td>4.5e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ARO44651.1</td>
+              <td>monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001769/1">BGC0001769</a></td>
+              <td>Polyketide</td>
+              <td>59.0</td>
+              <td>56.5</td>
+              <td>48.0</td>
+              <td>4.5e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ACB46484.1</td>
+              <td>FAD-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000082/1">BGC0000082</a></td>
+              <td>Polyketide</td>
+              <td>51.0</td>
+              <td>56.5</td>
+              <td>48.0</td>
+              <td>5.8e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

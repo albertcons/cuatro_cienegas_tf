@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BBD17761.1</td>
+              <td>non-ribosomal_peptide_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001919/1">BGC0001919</a></td>
+              <td>NRP + Polyketide</td>
+              <td>43.0</td>
+              <td>41.3</td>
+              <td>70.0</td>
+              <td>3.1e-12</td>
+          </tr>
+    
+          <tr>
+              <td>QBG38782.1</td>
+              <td>Atr21</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001975/1">BGC0001975</a></td>
+              <td>NRP</td>
+              <td>46.0</td>
+              <td>41.3</td>
+              <td>68.0</td>
+              <td>1.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>BAX64247.1</td>
+              <td>NRPS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001623/1">BGC0001623</a></td>
+              <td>NRP + Polyketide</td>
+              <td>47.0</td>
+              <td>29.1</td>
+              <td>65.0</td>
+              <td>1e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ALK27916.1</td>
+              <td>non-ribosomal_peptide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001233/1">BGC0001233</a></td>
+              <td>NRP</td>
+              <td>42.0</td>
+              <td>31.6</td>
+              <td>57.0</td>
+              <td>3.6e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AGS77310.1</td>
+              <td>NRPS_module_7</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001178/1">BGC0001178</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>34.0</td>
+              <td>38.8</td>
+              <td>56.0</td>
+              <td>8e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AAM80536.1</td>
+              <td>StaD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000290/1">BGC0000290</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>40.0</td>
+              <td>29.1</td>
+              <td>54.0</td>
+              <td>2.3e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAC48362.1</td>
+              <td>peptide_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000311/1">BGC0000311</a></td>
+              <td>NRP</td>
+              <td>40.0</td>
+              <td>29.1</td>
+              <td>54.0</td>
+              <td>2.3e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAD91211.1</td>
+              <td>putative_non-ribosomal_peptide_synthetase,_module_7</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000289/1">BGC0000289</a></td>
+              <td>NRP:Glycopeptide + Saccharide:Hybrid/tailoring</td>
+              <td>32.0</td>
+              <td>39.8</td>
+              <td>50.0</td>
+              <td>2.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>OLZ52456.1</td>
+              <td>non-ribosomal_peptide_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001462/1">BGC0001462</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>33.0</td>
+              <td>30.6</td>
+              <td>49.0</td>
+              <td>9.7e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAA60451.1</td>
+              <td>regulator_of_antibiotic_transport_complexes</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001040/1">BGC0001040</a></td>
+              <td>NRP + Polyketide</td>
+              <td>46.0</td>
+              <td>96.5</td>
+              <td>151.0</td>
+              <td>1.4e-36</td>
+          </tr>
+    
+          <tr>
+              <td>AUI41036.1</td>
+              <td>TetR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001512/1">BGC0001512</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>85.9</td>
+              <td>103.0</td>
+              <td>4.4e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAL78056.1</td>
+              <td>ORFE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000285/1">BGC0000285</a></td>
+              <td>Polyketide:Type III + Saccharide:Oligosaccharide</td>
+              <td>35.0</td>
+              <td>89.9</td>
+              <td>97.0</td>
+              <td>3.2e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AUI41021.1</td>
+              <td>transcriptional_regulator_TetR_family</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001512/1">BGC0001512</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>94.0</td>
+              <td>91.0</td>
+              <td>1.7e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AHB38494.1</td>
+              <td>TetR-like_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000346/1">BGC0000346</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>38.0</td>
+              <td>79.9</td>
+              <td>77.0</td>
+              <td>2e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AAN85544.1</td>
+              <td>putative_tetR-family_transcriptional_regulartory</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001101/1">BGC0001101</a></td>
+              <td>NRP + Polyketide:Modular type I + Polyketide:Trans-AT type I</td>
+              <td>33.0</td>
+              <td>81.9</td>
+              <td>72.0</td>
+              <td>8.4e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AOE23567.1</td>
+              <td>FoxRI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001598/1">BGC0001598</a></td>
+              <td>NRP + Polyketide</td>
+              <td>31.0</td>
+              <td>77.9</td>
+              <td>51.0</td>
+              <td>2e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ANY10582.1</td>
+              <td>putative_regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001773/1">BGC0001773</a></td>
+              <td>Polyketide</td>
+              <td>25.0</td>
+              <td>104.7</td>
+              <td>83.0</td>
+              <td>1.8e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AVI26395.1</td>
+              <td>nonribosomal_peptide_synthase-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001800/1">BGC0001800</a></td>
+              <td>NRP + Polyketide</td>
+              <td>24.0</td>
+              <td>46.2</td>
+              <td>77.0</td>
+              <td>1.3e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AGI62210.1</td>
+              <td>transcriptional_regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001335/1">BGC0001335</a></td>
+              <td>Alkaloid</td>
+              <td>25.0</td>
+              <td>104.7</td>
+              <td>75.0</td>
+              <td>4.8e-13</td>
+          </tr>
+    
+          <tr>
+              <td>BAN83929.1</td>
+              <td>putative_LuxR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001803/1">BGC0001803</a></td>
+              <td>RiPP</td>
+              <td>27.0</td>
+              <td>93.8</td>
+              <td>73.0</td>
+              <td>1.8e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ABC02804.1</td>
+              <td>putative_regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000809/1">BGC0000809</a></td>
+              <td>Alkaloid</td>
+              <td>24.0</td>
+              <td>40.4</td>
+              <td>72.0</td>
+              <td>5.3e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CAF33326.1</td>
+              <td>putative_regulator,_NeoR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000709/1">BGC0000709</a></td>
+              <td>Saccharide</td>
+              <td>27.0</td>
+              <td>54.9</td>
+              <td>71.0</td>
+              <td>1.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAH58704.1</td>
+              <td>putative_LuxR_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000711/1">BGC0000711</a></td>
+              <td>Saccharide</td>
+              <td>27.0</td>
+              <td>54.9</td>
+              <td>71.0</td>
+              <td>1.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AAM54096.1</td>
+              <td>transcriptional_activator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000020/1">BGC0000020</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>41.4</td>
+              <td>67.0</td>
+              <td>1.3e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AQZ37105.1</td>
+              <td>transcriptional_activator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001511/1">BGC0001511</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>41.7</td>
+              <td>65.0</td>
+              <td>5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>WP_084702271.1</td>
+              <td>AAA_family_ATPase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002011/1">BGC0002011</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>41.6</td>
+              <td>61.0</td>
+              <td>1.2e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ATY46596.1</td>
+              <td>SARP_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001666/1">BGC0001666</a></td>
+              <td>Polyketide</td>
+              <td>25.0</td>
+              <td>42.0</td>
+              <td>58.0</td>
+              <td>8e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABX24503.1</td>
+              <td>pathway-specific_regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000877/1">BGC0000877</a></td>
+              <td>Other</td>
+              <td>24.0</td>
+              <td>64.3</td>
+              <td>57.0</td>
+              <td>1e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACM79820.1</td>
+              <td>ZmaU</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001059/1">BGC0001059</a></td>
+              <td>NRP + Polyketide</td>
+              <td>44.0</td>
+              <td>92.8</td>
+              <td>279.0</td>
+              <td>7.5e-75</td>
+          </tr>
+    
+          <tr>
+              <td>CAA60476.1</td>
+              <td>cystathione_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001040/1">BGC0001040</a></td>
+              <td>NRP + Polyketide</td>
+              <td>62.0</td>
+              <td>61.6</td>
+              <td>254.0</td>
+              <td>2.6e-67</td>
+          </tr>
+    
+          <tr>
+              <td>ABD29258.1</td>
+              <td>conserved_hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000943/1">BGC0000943</a></td>
+              <td>Other</td>
+              <td>39.0</td>
+              <td>80.8</td>
+              <td>204.0</td>
+              <td>3.1e-52</td>
+          </tr>
+    
+          <tr>
+              <td>AQX14447.1</td>
+              <td>SbnA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001671/1">BGC0001671</a></td>
+              <td>NRP</td>
+              <td>39.0</td>
+              <td>85.6</td>
+              <td>203.0</td>
+              <td>5.2e-52</td>
+          </tr>
+    
+          <tr>
+              <td>BAX64245.1</td>
+              <td>cysteine_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001623/1">BGC0001623</a></td>
+              <td>NRP + Polyketide</td>
+              <td>39.0</td>
+              <td>89.5</td>
+              <td>188.0</td>
+              <td>2.3e-47</td>
+          </tr>
+    
+          <tr>
+              <td>ABR67745.1</td>
+              <td>CmnB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000316/1">BGC0000316</a></td>
+              <td>NRP</td>
+              <td>37.0</td>
+              <td>94.6</td>
+              <td>186.0</td>
+              <td>8.7e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AFV25494.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000469/1">BGC0000469</a></td>
+              <td>RiPP:Bottromycin</td>
+              <td>32.0</td>
+              <td>88.3</td>
+              <td>132.0</td>
+              <td>1.1e-30</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

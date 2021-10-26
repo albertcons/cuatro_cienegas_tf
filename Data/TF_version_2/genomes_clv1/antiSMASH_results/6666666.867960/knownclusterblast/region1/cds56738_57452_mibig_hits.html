@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_003948935.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001792/1">BGC0001792</a></td>
+              <td>NRP</td>
+              <td>98.0</td>
+              <td>100.0</td>
+              <td>428.0</td>
+              <td>5.5e-120</td>
+          </tr>
+    
+          <tr>
+              <td>AEZ64535.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001065/1">BGC0001065</a></td>
+              <td>Polyketide</td>
+              <td>65.0</td>
+              <td>91.1</td>
+              <td>263.0</td>
+              <td>3e-70</td>
+          </tr>
+    
+          <tr>
+              <td>QCE20594.1</td>
+              <td>transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001961/1">BGC0001961</a></td>
+              <td>NRP</td>
+              <td>40.0</td>
+              <td>89.5</td>
+              <td>116.0</td>
+              <td>7.8e-26</td>
+          </tr>
+    
+          <tr>
+              <td>CAD91243.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000289/1">BGC0000289</a></td>
+              <td>NRP:Glycopeptide + Saccharide:Hybrid/tailoring</td>
+              <td>35.0</td>
+              <td>87.8</td>
+              <td>96.0</td>
+              <td>4.9e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AEZ64537.1</td>
+              <td>glycine_betaine_ABC_transport_system_permease_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001065/1">BGC0001065</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>82.7</td>
+              <td>87.0</td>
+              <td>3.9e-17</td>
+          </tr>
+    
+          <tr>
+              <td>CAD91241.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000289/1">BGC0000289</a></td>
+              <td>NRP:Glycopeptide + Saccharide:Hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>82.3</td>
+              <td>86.0</td>
+              <td>6.7e-17</td>
+          </tr>
+    
+          <tr>
+              <td>WP_003948934.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001792/1">BGC0001792</a></td>
+              <td>NRP</td>
+              <td>31.0</td>
+              <td>88.6</td>
+              <td>65.0</td>
+              <td>1.2e-10</td>
+          </tr>
+    
+          <tr>
+              <td>QCE20593.1</td>
+              <td>transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001961/1">BGC0001961</a></td>
+              <td>NRP</td>
+              <td>28.0</td>
+              <td>73.0</td>
+              <td>64.0</td>
+              <td>3.5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AMD57703.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001765/1">BGC0001765</a></td>
+              <td>Saccharide</td>
+              <td>22.0</td>
+              <td>81.0</td>
+              <td>58.0</td>
+              <td>1.5e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

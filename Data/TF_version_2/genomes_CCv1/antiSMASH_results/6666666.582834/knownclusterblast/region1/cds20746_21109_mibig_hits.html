@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADO85580.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000653/1">BGC0000653</a></td>
+              <td>Terpene</td>
+              <td>58.0</td>
+              <td>65.8</td>
+              <td>86.0</td>
+              <td>3.4e-17</td>
+          </tr>
+    
+          <tr>
+              <td>BAX64256.1</td>
+              <td>alanine_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001623/1">BGC0001623</a></td>
+              <td>NRP + Polyketide</td>
+              <td>56.0</td>
+              <td>65.8</td>
+              <td>83.0</td>
+              <td>2.9e-16</td>
+          </tr>
+    
+          <tr>
+              <td>EFE73307.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000431/1">BGC0000431</a></td>
+              <td>NRP:Cyclic depsipeptide</td>
+              <td>54.0</td>
+              <td>66.7</td>
+              <td>80.0</td>
+              <td>1.8e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AYJ71718.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001942/1">BGC0001942</a></td>
+              <td>NRP + Polyketide</td>
+              <td>51.0</td>
+              <td>76.7</td>
+              <td>75.0</td>
+              <td>7.8e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AOZ21314.1</td>
+              <td>SulG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001790/1">BGC0001790</a></td>
+              <td>NRP</td>
+              <td>65.0</td>
+              <td>40.0</td>
+              <td>57.0</td>
+              <td>1.3e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

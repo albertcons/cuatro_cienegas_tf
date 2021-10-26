@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAH55660.1</td>
+              <td>putative_copper_transporting_P-type_ATPase_efflux_pump</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000259/1">BGC0000259</a></td>
+              <td>Polyketide</td>
+              <td>36.0</td>
+              <td>84.2</td>
+              <td>295.0</td>
+              <td>1.7e-79</td>
+          </tr>
+    
+          <tr>
+              <td>CAH10184.1</td>
+              <td>ChaT5_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000207/1">BGC0000207</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>91.6</td>
+              <td>260.0</td>
+              <td>6.1e-69</td>
+          </tr>
+    
+          <tr>
+              <td>AAY28209.1</td>
+              <td>unknown</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000074/1">BGC0000074</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>100.1</td>
+              <td>233.0</td>
+              <td>1e-60</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ46699.1</td>
+              <td>putative_heavy_metal_translocating_P-type_ATPase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000969/1">BGC0000969</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Modular type I</td>
+              <td>32.0</td>
+              <td>71.3</td>
+              <td>225.0</td>
+              <td>2.8e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ADA82595.1</td>
+              <td>transport_ATPase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001110/1">BGC0001110</a></td>
+              <td>NRP + Polyketide:Trans-AT type I</td>
+              <td>31.0</td>
+              <td>64.6</td>
+              <td>198.0</td>
+              <td>3.7e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ABX24509.1</td>
+              <td>cation-transporting_ATPase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000877/1">BGC0000877</a></td>
+              <td>Other</td>
+              <td>35.0</td>
+              <td>26.2</td>
+              <td>101.0</td>
+              <td>4.7e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ACH85563.1</td>
+              <td>putative_ATPase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000283/1">BGC0000283</a></td>
+              <td>Other:Cyclitol</td>
+              <td>26.0</td>
+              <td>72.8</td>
+              <td>94.0</td>
+              <td>5.7e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ABX24506.1</td>
+              <td>ATPase_E1-E2_type</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000877/1">BGC0000877</a></td>
+              <td>Other</td>
+              <td>29.0</td>
+              <td>26.8</td>
+              <td>76.0</td>
+              <td>2.8e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ABB90287.1</td>
+              <td>Ca2+_ATPase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001057/1">BGC0001057</a></td>
+              <td>NRP + Polyketide</td>
+              <td>30.0</td>
+              <td>25.8</td>
+              <td>70.0</td>
+              <td>1.2e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

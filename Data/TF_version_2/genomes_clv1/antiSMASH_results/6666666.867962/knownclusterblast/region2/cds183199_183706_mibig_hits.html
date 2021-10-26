@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QBG38775.1</td>
+              <td>Atr14</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001975/1">BGC0001975</a></td>
+              <td>NRP</td>
+              <td>68.0</td>
+              <td>88.1</td>
+              <td>209.0</td>
+              <td>3.7e-54</td>
+          </tr>
+    
+          <tr>
+              <td>AEA30268.1</td>
+              <td>putative_3-hydroxyacyl-ACP_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000429/1">BGC0000429</a></td>
+              <td>Polyketide + NRP:Cyclic depsipeptide</td>
+              <td>56.0</td>
+              <td>92.3</td>
+              <td>178.0</td>
+              <td>1.2e-44</td>
+          </tr>
+    
+          <tr>
+              <td>ALG65300.1</td>
+              <td>Cal36</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001297/1">BGC0001297</a></td>
+              <td>NRP</td>
+              <td>49.0</td>
+              <td>97.0</td>
+              <td>151.0</td>
+              <td>1.2e-36</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52174.1</td>
+              <td>dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000081/1">BGC0000081</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>40.0</td>
+              <td>87.5</td>
+              <td>102.0</td>
+              <td>8.3e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ANY57966.1</td>
+              <td>MtcG_beta-hydroxyacyl-ACP_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001369/1">BGC0001369</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>86.3</td>
+              <td>70.0</td>
+              <td>2.7e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

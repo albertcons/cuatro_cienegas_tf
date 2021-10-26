@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AGU42433.1</td>
+              <td>Orf25</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000842/1">BGC0000842</a></td>
+              <td>Other:Non-NRP beta-lactam</td>
+              <td>29.0</td>
+              <td>74.2</td>
+              <td>93.0</td>
+              <td>1.4e-18</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020636805.1</td>
+              <td>S8_family_serine_peptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002011/1">BGC0002011</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>65.3</td>
+              <td>93.0</td>
+              <td>1.4e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AAL01067.1</td>
+              <td>alkaline_serine_protease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000865/1">BGC0000865</a></td>
+              <td>Other</td>
+              <td>33.0</td>
+              <td>36.2</td>
+              <td>89.0</td>
+              <td>1.5e-17</td>
+          </tr>
+    
+          <tr>
+              <td>WP_003976359.1</td>
+              <td>S8_family_serine_peptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000596/1">BGC0000596</a></td>
+              <td>RiPP</td>
+              <td>28.0</td>
+              <td>73.7</td>
+              <td>71.0</td>
+              <td>5.6e-12</td>
+          </tr>
+    
+          <tr>
+              <td>NP_626689.1</td>
+              <td>peptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000595/1">BGC0000595</a></td>
+              <td>RiPP</td>
+              <td>28.0</td>
+              <td>73.7</td>
+              <td>70.0</td>
+              <td>1.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AAN85481.1</td>
+              <td>subtilisin-like_secreted_protease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001101/1">BGC0001101</a></td>
+              <td>NRP + Polyketide:Modular type I + Polyketide:Trans-AT type I</td>
+              <td>26.0</td>
+              <td>68.3</td>
+              <td>69.0</td>
+              <td>1.6e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

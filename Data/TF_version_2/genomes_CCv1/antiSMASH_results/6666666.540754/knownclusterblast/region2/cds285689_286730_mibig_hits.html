@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AFW04579.1</td>
+              <td>flavodoxin_reductase_Hmp</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001783/1">BGC0001783</a></td>
+              <td>Other</td>
+              <td>55.0</td>
+              <td>65.3</td>
+              <td>236.0</td>
+              <td>5.8e-62</td>
+          </tr>
+    
+          <tr>
+              <td>BBD17751.1</td>
+              <td>epoxidase_complex_component</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001918/1">BGC0001918</a></td>
+              <td>NRP + Polyketide</td>
+              <td>35.0</td>
+              <td>102.0</td>
+              <td>165.0</td>
+              <td>2.1e-40</td>
+          </tr>
+    
+          <tr>
+              <td>AWX24494.1</td>
+              <td>phenylacetate-CoA_oxygenase/reductase_subunit_PaaK</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001695/1">BGC0001695</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>103.8</td>
+              <td>154.0</td>
+              <td>2.9e-37</td>
+          </tr>
+    
+          <tr>
+              <td>antaL</td>
+              <td>phenylacetate-CoA_oxigenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001455/1">BGC0001455</a></td>
+              <td>NRP + Polyketide</td>
+              <td>35.0</td>
+              <td>107.2</td>
+              <td>149.0</td>
+              <td>9.3e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22352.1</td>
+              <td>oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000065/1">BGC0000065</a></td>
+              <td>Polyketide:Iterative type I</td>
+              <td>32.0</td>
+              <td>93.1</td>
+              <td>105.0</td>
+              <td>2e-22</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

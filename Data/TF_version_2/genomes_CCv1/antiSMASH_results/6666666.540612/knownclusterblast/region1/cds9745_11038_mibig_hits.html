@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAI59984.1</td>
+              <td>putative_transcriptional_regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000700/1">BGC0000700</a></td>
+              <td>Saccharide</td>
+              <td>79.0</td>
+              <td>101.2</td>
+              <td>667.0</td>
+              <td>1.3e-191</td>
+          </tr>
+    
+          <tr>
+              <td>EFG08002.1</td>
+              <td>Putative_transcriptional_regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000843/1">BGC0000843</a></td>
+              <td>Other:Non-NRP beta-lactam</td>
+              <td>70.0</td>
+              <td>99.5</td>
+              <td>550.0</td>
+              <td>1.7e-156</td>
+          </tr>
+    
+          <tr>
+              <td>AAY93373.1</td>
+              <td>transcriptional_regulator,_GntR_family/aminotransferase,_classes_I_and_II_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000413/1">BGC0000413</a></td>
+              <td>NRP</td>
+              <td>38.0</td>
+              <td>100.9</td>
+              <td>233.0</td>
+              <td>8e-61</td>
+          </tr>
+    
+          <tr>
+              <td>EFQ61005.1</td>
+              <td>transcriptional_regulator,_GntR_family</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001488/1">BGC0001488</a></td>
+              <td>Other</td>
+              <td>25.0</td>
+              <td>107.2</td>
+              <td>112.0</td>
+              <td>1.6e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AQV04223.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001793/1">BGC0001793</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>58.2</td>
+              <td>65.0</td>
+              <td>2.2e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ALV82350.1</td>
+              <td>salicylate_hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001370/1">BGC0001370</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>99.7</td>
+              <td>185.0</td>
+              <td>1.3e-46</td>
+          </tr>
+    
+          <tr>
+              <td>CAB38889.1</td>
+              <td>Hexenoyl-S-ACP_Monooxygenase_(hcmO)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000315/1">BGC0000315</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>33.0</td>
+              <td>104.6</td>
+              <td>180.0</td>
+              <td>4.1e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AWF83809.1</td>
+              <td>Tropone_2-monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001935/1">BGC0001935</a></td>
+              <td>Other</td>
+              <td>34.0</td>
+              <td>94.1</td>
+              <td>153.0</td>
+              <td>5.3e-37</td>
+          </tr>
+    
+          <tr>
+              <td>ALA99209.1</td>
+              <td>CreL</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001295/1">BGC0001295</a></td>
+              <td>Other</td>
+              <td>30.0</td>
+              <td>96.0</td>
+              <td>143.0</td>
+              <td>5.5e-34</td>
+          </tr>
+    
+          <tr>
+              <td>CDF96615.1</td>
+              <td>FAD-dependent_Baeyer—Villiger_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001149/1">BGC0001149</a></td>
+              <td>NRP:Lipopeptide + Saccharide:Hybrid/tailoring</td>
+              <td>32.0</td>
+              <td>94.6</td>
+              <td>131.0</td>
+              <td>2.2e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AXO35220.1</td>
+              <td>FAD-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001848/1">BGC0001848</a></td>
+              <td>Other</td>
+              <td>31.0</td>
+              <td>94.6</td>
+              <td>124.0</td>
+              <td>3.5e-28</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ52625.1</td>
+              <td>FAD-dependent_mono_oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001066/1">BGC0001066</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>29.0</td>
+              <td>95.7</td>
+              <td>122.0</td>
+              <td>1.3e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ACB47064.1</td>
+              <td>FAD-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001060/1">BGC0001060</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>93.3</td>
+              <td>115.0</td>
+              <td>2.1e-25</td>
+          </tr>
+    
+          <tr>
+              <td>EED18000.1</td>
+              <td>FAD_oxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000154/1">BGC0000154</a></td>
+              <td>Polyketide:Iterative type I</td>
+              <td>28.0</td>
+              <td>90.0</td>
+              <td>110.0</td>
+              <td>6.7e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54184.1</td>
+              <td>Pau17</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001731/1">BGC0001731</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>96.2</td>
+              <td>109.0</td>
+              <td>1.1e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54237.1</td>
+              <td>PauY17</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001732/1">BGC0001732</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>96.2</td>
+              <td>107.0</td>
+              <td>4.4e-23</td>
+          </tr>
+    
+          <tr>
+              <td>KKP00965.1</td>
+              <td>FAD_dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001901/1">BGC0001901</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>101.3</td>
+              <td>105.0</td>
+              <td>2.2e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAP85357.1</td>
+              <td>putative_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000233/1">BGC0000233</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>95.1</td>
+              <td>103.0</td>
+              <td>8.2e-22</td>
+          </tr>
+    
+          <tr>
+              <td>DAB41644.1</td>
+              <td>FAD-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001777/1">BGC0001777</a></td>
+              <td>Terpene</td>
+              <td>26.0</td>
+              <td>103.0</td>
+              <td>103.0</td>
+              <td>8.2e-22</td>
+          </tr>
+    
+          <tr>
+              <td>PHM31511.1</td>
+              <td>FMN-dependent_Baeyer-Villiger_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001868/1">BGC0001868</a></td>
+              <td>Other:Phenazine</td>
+              <td>26.0</td>
+              <td>97.3</td>
+              <td>103.0</td>
+              <td>8.2e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AWM95796.1</td>
+              <td>salicylate_hydroxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001827/1">BGC0001827</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>95.1</td>
+              <td>98.0</td>
+              <td>2.6e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ALJ99865.1</td>
+              <td>FlsP</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001904/1">BGC0001904</a></td>
+              <td>Polyketide</td>
+              <td>27.0</td>
+              <td>97.0</td>
+              <td>94.0</td>
+              <td>2.9e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ82549.1</td>
+              <td>FscO</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000061/1">BGC0000061</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>100.8</td>
+              <td>94.0</td>
+              <td>3.8e-19</td>
+          </tr>
+    
+          <tr>
+              <td>BBD84643.1</td>
+              <td>putative_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001775/1">BGC0001775</a></td>
+              <td>Terpene</td>
+              <td>26.0</td>
+              <td>90.6</td>
+              <td>94.0</td>
+              <td>3.8e-19</td>
+          </tr>
+    
+          <tr>
+              <td>BAM84049.1</td>
+              <td>FAD-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001260/1">BGC0001260</a></td>
+              <td>Terpene</td>
+              <td>26.0</td>
+              <td>98.9</td>
+              <td>92.0</td>
+              <td>1.9e-18</td>
+          </tr>
+    
+          <tr>
+              <td>BBG28488.1</td>
+              <td>flavin-dependent_monooxygenase_CdmI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001926/1">BGC0001926</a></td>
+              <td>Polyketide</td>
+              <td>25.0</td>
+              <td>101.9</td>
+              <td>92.0</td>
+              <td>1.9e-18</td>
+          </tr>
+    
+          <tr>
+              <td>BAW27605.1</td>
+              <td>putative_flavin-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001547/1">BGC0001547</a></td>
+              <td>Terpene</td>
+              <td>27.0</td>
+              <td>90.8</td>
+              <td>89.0</td>
+              <td>1.2e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AEE65479.1</td>
+              <td>oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000223/1">BGC0000223</a></td>
+              <td>Polyketide:Type II</td>
+              <td>24.0</td>
+              <td>94.1</td>
+              <td>88.0</td>
+              <td>2.1e-17</td>
+          </tr>
+    
+          <tr>
+              <td>PKY07891.1</td>
+              <td>FAD_binding_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001544/1">BGC0001544</a></td>
+              <td>NRP + Polyketide</td>
+              <td>25.0</td>
+              <td>101.1</td>
+              <td>87.0</td>
+              <td>6.1e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAK11530.1</td>
+              <td>PaxM</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001082/1">BGC0001082</a></td>
+              <td>Terpene</td>
+              <td>25.0</td>
+              <td>92.7</td>
+              <td>86.0</td>
+              <td>1e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AGZ20480.1</td>
+              <td>FAD-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001776/1">BGC0001776</a></td>
+              <td>Terpene</td>
+              <td>26.0</td>
+              <td>91.6</td>
+              <td>84.0</td>
+              <td>3e-16</td>
+          </tr>
+    
+          <tr>
+              <td>PKX88477.1</td>
+              <td>FAD/NAD(P)-binding_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001708/1">BGC0001708</a></td>
+              <td>Polyketide + Terpene</td>
+              <td>24.0</td>
+              <td>105.4</td>
+              <td>80.0</td>
+              <td>7.5e-15</td>
+          </tr>
+    
+          <tr>
+              <td>EAL89233.1</td>
+              <td>FAD-dependent_monooxygenase_(PaxM),_putative</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000129/1">BGC0000129</a></td>
+              <td>Polyketide</td>
+              <td>23.0</td>
+              <td>90.6</td>
+              <td>76.0</td>
+              <td>1.4e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ART41213.1</td>
+              <td>AdrH</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001508/1">BGC0001508</a></td>
+              <td>Polyketide</td>
+              <td>23.0</td>
+              <td>98.4</td>
+              <td>74.0</td>
+              <td>4.1e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ANY57883.1</td>
+              <td>PenE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001372/1">BGC0001372</a></td>
+              <td>Terpene</td>
+              <td>26.0</td>
+              <td>91.6</td>
+              <td>71.0</td>
+              <td>3.5e-12</td>
+          </tr>
+    
+          <tr>
+              <td>BAV69307.1</td>
+              <td>PrhF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001729/1">BGC0001729</a></td>
+              <td>Polyketide + Terpene</td>
+              <td>23.0</td>
+              <td>105.7</td>
+              <td>69.0</td>
+              <td>1.7e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AGO65986.1</td>
+              <td>putative_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000992/1">BGC0000992</a></td>
+              <td>NRP + Polyketide</td>
+              <td>25.0</td>
+              <td>92.5</td>
+              <td>68.0</td>
+              <td>2.9e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CCT67992.1</td>
+              <td>bikaverin_cluster-monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000030/1">BGC0000030</a></td>
+              <td>Polyketide</td>
+              <td>25.0</td>
+              <td>91.4</td>
+              <td>67.0</td>
+              <td>5e-11</td>
+          </tr>
+    
+          <tr>
+              <td>EAU29811.1</td>
+              <td>predicted_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001400/1">BGC0001400</a></td>
+              <td>Polyketide</td>
+              <td>25.0</td>
+              <td>107.3</td>
+              <td>67.0</td>
+              <td>5e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AWM95786.1</td>
+              <td>FAD-dependent_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001827/1">BGC0001827</a></td>
+              <td>Polyketide</td>
+              <td>22.0</td>
+              <td>87.9</td>
+              <td>63.0</td>
+              <td>9.4e-10</td>
+          </tr>
+    
+          <tr>
+              <td>EAQ84784.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001219/1">BGC0001219</a></td>
+              <td>Polyketide</td>
+              <td>25.0</td>
+              <td>101.1</td>
+              <td>61.0</td>
+              <td>4.7e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

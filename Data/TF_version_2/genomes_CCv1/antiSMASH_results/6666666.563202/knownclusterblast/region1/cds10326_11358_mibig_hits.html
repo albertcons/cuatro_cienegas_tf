@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AHF22850.1</td>
+              <td>MarP</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000091/1">BGC0000091</a></td>
+              <td>Polyketide</td>
+              <td>72.0</td>
+              <td>96.5</td>
+              <td>450.0</td>
+              <td>2.5e-126</td>
+          </tr>
+    
+          <tr>
+              <td>ATY72540.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001574/1">BGC0001574</a></td>
+              <td>NRP</td>
+              <td>68.0</td>
+              <td>98.0</td>
+              <td>428.0</td>
+              <td>7.9e-120</td>
+          </tr>
+    
+          <tr>
+              <td>CAA16179.1</td>
+              <td>3-oxoacyl-[acyl-carrier-protein]_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001063/1">BGC0001063</a></td>
+              <td>NRP + Polyketide</td>
+              <td>68.0</td>
+              <td>96.5</td>
+              <td>412.0</td>
+              <td>7.7e-115</td>
+          </tr>
+    
+          <tr>
+              <td>CUX96951.1</td>
+              <td>TmcD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001829/1">BGC0001829</a></td>
+              <td>NRP + Polyketide</td>
+              <td>63.0</td>
+              <td>99.1</td>
+              <td>395.0</td>
+              <td>9.7e-110</td>
+          </tr>
+    
+          <tr>
+              <td>AHB38506.1</td>
+              <td>ketosynthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000345/1">BGC0000345</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>61.0</td>
+              <td>99.7</td>
+              <td>378.0</td>
+              <td>1.2e-104</td>
+          </tr>
+    
+          <tr>
+              <td>ALL53319.1</td>
+              <td>putative_3-oxoacyl-ACP_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001903/1">BGC0001903</a></td>
+              <td>Other</td>
+              <td>64.0</td>
+              <td>95.0</td>
+              <td>377.0</td>
+              <td>2.1e-104</td>
+          </tr>
+    
+          <tr>
+              <td>AJS09382.1</td>
+              <td>Ketoacyl-acyl_carrier_protein_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001150/1">BGC0001150</a></td>
+              <td>Polyketide:Type II + Polyketide:Type III</td>
+              <td>62.0</td>
+              <td>95.0</td>
+              <td>376.0</td>
+              <td>6.1e-104</td>
+          </tr>
+    
+          <tr>
+              <td>CAC36759.1</td>
+              <td>putative_acyl_carrier_protein_synthase,_MmyC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000914/1">BGC0000914</a></td>
+              <td>Other</td>
+              <td>61.0</td>
+              <td>94.8</td>
+              <td>362.0</td>
+              <td>9.1e-100</td>
+          </tr>
+    
+          <tr>
+              <td>BAG84261.1</td>
+              <td>putative_3-oxoacyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000257/1">BGC0000257</a></td>
+              <td>Polyketide</td>
+              <td>58.0</td>
+              <td>99.4</td>
+              <td>347.0</td>
+              <td>3e-95</td>
+          </tr>
+    
+          <tr>
+              <td>ARO49567.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001440/1">BGC0001440</a></td>
+              <td>Other</td>
+              <td>57.0</td>
+              <td>94.2</td>
+              <td>338.0</td>
+              <td>1.1e-92</td>
+          </tr>
+    
+          <tr>
+              <td>CAB38890.1</td>
+              <td>3-Oxoacyl-[acyl_carrier_protein]_synthase_III_(fabH4)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000315/1">BGC0000315</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>58.0</td>
+              <td>94.2</td>
+              <td>337.0</td>
+              <td>2.4e-92</td>
+          </tr>
+    
+          <tr>
+              <td>ALV82391.1</td>
+              <td>3-oxoacyl-[acyl_carrier_protein]_synthase,_KASIII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001370/1">BGC0001370</a></td>
+              <td>NRP</td>
+              <td>57.0</td>
+              <td>94.2</td>
+              <td>330.0</td>
+              <td>3.8e-90</td>
+          </tr>
+    
+          <tr>
+              <td>CAX48662.1</td>
+              <td>3-oxoacyl-[acyl-carrier-protein]_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001080/1">BGC0001080</a></td>
+              <td>Other:Phenazine</td>
+              <td>44.0</td>
+              <td>94.2</td>
+              <td>223.0</td>
+              <td>3.9e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ANR02544.1</td>
+              <td>LodC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001648/1">BGC0001648</a></td>
+              <td>Polyketide</td>
+              <td>44.0</td>
+              <td>95.0</td>
+              <td>219.0</td>
+              <td>7.3e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf2</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000053/1">BGC0000053</a></td>
+              <td>Polyketide</td>
+              <td>43.0</td>
+              <td>95.0</td>
+              <td>215.0</td>
+              <td>1.1e-55</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68888.1</td>
+              <td>ketoacyl-ACP_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001083/1">BGC0001083</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>42.0</td>
+              <td>93.6</td>
+              <td>212.0</td>
+              <td>8.9e-55</td>
+          </tr>
+    
+          <tr>
+              <td>BAU79603.1</td>
+              <td>3-oxoacyl-[acyl-carrier-protein]_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001810/1">BGC0001810</a></td>
+              <td>Polyketide</td>
+              <td>43.0</td>
+              <td>95.0</td>
+              <td>212.0</td>
+              <td>8.9e-55</td>
+          </tr>
+    
+          <tr>
+              <td>AEZ53944.1</td>
+              <td>putative_3-oxoacyl-(acyl-carrier-protein_)_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000144/1">BGC0000144</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>41.0</td>
+              <td>95.0</td>
+              <td>212.0</td>
+              <td>1.2e-54</td>
+          </tr>
+    
+          <tr>
+              <td>BAQ21936.1</td>
+              <td>putative_3-oxoacyl-(acyl_carrier_protein)_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001204/1">BGC0001204</a></td>
+              <td>Polyketide</td>
+              <td>42.0</td>
+              <td>94.2</td>
+              <td>208.0</td>
+              <td>2.2e-53</td>
+          </tr>
+    
+          <tr>
+              <td>CCP20057.1</td>
+              <td>divS_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001119/1">BGC0001119</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>41.0</td>
+              <td>94.5</td>
+              <td>205.0</td>
+              <td>1.9e-52</td>
+          </tr>
+    
+          <tr>
+              <td>BAD86806.1</td>
+              <td>putative_3-oxoacyl-[acyl-carrier-protein]</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000286/1">BGC0000286</a></td>
+              <td>Polyketide</td>
+              <td>40.0</td>
+              <td>94.5</td>
+              <td>204.0</td>
+              <td>2.4e-52</td>
+          </tr>
+    
+          <tr>
+              <td>AXO35212.1</td>
+              <td>3-oxoacyl-[acyl-carrier-protein]_synthase_KASIII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001848/1">BGC0001848</a></td>
+              <td>Other</td>
+              <td>44.0</td>
+              <td>94.5</td>
+              <td>204.0</td>
+              <td>2.4e-52</td>
+          </tr>
+    
+          <tr>
+              <td>RZB16703.1</td>
+              <td>ketoacyl-ACP_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001850/1">BGC0001850</a></td>
+              <td>Other:Shikimate-derived</td>
+              <td>41.0</td>
+              <td>93.3</td>
+              <td>201.0</td>
+              <td>1.6e-51</td>
+          </tr>
+    
+          <tr>
+              <td>BAE78983.1</td>
+              <td>putative_3-oxoacyl-[acyl-carrier-protein]</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001078/1">BGC0001078</a></td>
+              <td>Terpene + Polyketide</td>
+              <td>41.0</td>
+              <td>94.2</td>
+              <td>201.0</td>
+              <td>2.7e-51</td>
+          </tr>
+    
+          <tr>
+              <td>ADI58634.1</td>
+              <td>Asukamycin_ketosynthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000187/1">BGC0000187</a></td>
+              <td>Polyketide:Type II</td>
+              <td>41.0</td>
+              <td>95.6</td>
+              <td>199.0</td>
+              <td>1e-50</td>
+          </tr>
+    
+          <tr>
+              <td>AWS21284.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001934/1">BGC0001934</a></td>
+              <td>Polyketide</td>
+              <td>43.0</td>
+              <td>95.3</td>
+              <td>199.0</td>
+              <td>1e-50</td>
+          </tr>
+    
+          <tr>
+              <td>AZY92010.1</td>
+              <td>putative_3-oxoacyl-(acyl-carrier-protein)_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002022/1">BGC0002022</a></td>
+              <td>Polyketide</td>
+              <td>43.0</td>
+              <td>95.3</td>
+              <td>199.0</td>
+              <td>1e-50</td>
+          </tr>
+    
+          <tr>
+              <td>AYV61414.1</td>
+              <td>acetoacetyl-CoA_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001965/1">BGC0001965</a></td>
+              <td>Other</td>
+              <td>43.0</td>
+              <td>94.5</td>
+              <td>197.0</td>
+              <td>3e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ALJ49929.1</td>
+              <td>TtmQ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001236/1">BGC0001236</a></td>
+              <td>Polyketide</td>
+              <td>42.0</td>
+              <td>86.9</td>
+              <td>195.0</td>
+              <td>1.5e-49</td>
+          </tr>
+    
+          <tr>
+              <td>BAK64634.1</td>
+              <td>putative_3-oxoacyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000135/1">BGC0000135</a></td>
+              <td>Polyketide</td>
+              <td>42.0</td>
+              <td>94.8</td>
+              <td>193.0</td>
+              <td>7.3e-49</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ52704.1</td>
+              <td>putative_3-oxoacyl-ACP_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000222/1">BGC0000222</a></td>
+              <td>Polyketide</td>
+              <td>39.0</td>
+              <td>95.9</td>
+              <td>192.0</td>
+              <td>1.2e-48</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ08929.1</td>
+              <td>putative_3-keto-acyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000224/1">BGC0000224</a></td>
+              <td>Polyketide:Type II</td>
+              <td>41.0</td>
+              <td>95.9</td>
+              <td>191.0</td>
+              <td>2.8e-48</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35046.1</td>
+              <td>beta-ketoacyl_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001675/1">BGC0001675</a></td>
+              <td>Polyketide</td>
+              <td>41.0</td>
+              <td>98.8</td>
+              <td>190.0</td>
+              <td>3.6e-48</td>
+          </tr>
+    
+          <tr>
+              <td>CBW54661.1</td>
+              <td>3-oxo-acyl_(ACP)_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000971/1">BGC0000971</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>42.0</td>
+              <td>95.6</td>
+              <td>189.0</td>
+              <td>1.1e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35033.1</td>
+              <td>ketoacyl-ACP_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001675/1">BGC0001675</a></td>
+              <td>Polyketide</td>
+              <td>39.0</td>
+              <td>96.5</td>
+              <td>185.0</td>
+              <td>1.2e-46</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf534</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001199/1">BGC0001199</a></td>
+              <td>Polyketide</td>
+              <td>39.0</td>
+              <td>95.6</td>
+              <td>185.0</td>
+              <td>2e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AAG04388.1</td>
+              <td>3-oxoacyl-[acyl-carrier-protein]_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000922/1">BGC0000922</a></td>
+              <td>Other</td>
+              <td>37.0</td>
+              <td>95.9</td>
+              <td>180.0</td>
+              <td>3.8e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AEE65482.1</td>
+              <td>3-oxoacyl-(acyl_carrier_protein)_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000223/1">BGC0000223</a></td>
+              <td>Polyketide:Type II</td>
+              <td>37.0</td>
+              <td>96.5</td>
+              <td>179.0</td>
+              <td>1.1e-44</td>
+          </tr>
+    
+          <tr>
+              <td>SCO70331.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001433/1">BGC0001433</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>39.0</td>
+              <td>94.2</td>
+              <td>177.0</td>
+              <td>3.2e-44</td>
+          </tr>
+    
+          <tr>
+              <td>ARG41921.1</td>
+              <td>IstR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001622/1">BGC0001622</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>99.7</td>
+              <td>168.0</td>
+              <td>1.5e-41</td>
+          </tr>
+    
+          <tr>
+              <td>ACI88883.1</td>
+              <td>AlnI_starter_unit_ketoacyl_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000195/1">BGC0000195</a></td>
+              <td>Polyketide:Type II</td>
+              <td>36.0</td>
+              <td>95.9</td>
+              <td>166.0</td>
+              <td>7.3e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AEW19766.1</td>
+              <td>beta-ketoacyl-acyl-carrier-protein_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001651/1">BGC0001651</a></td>
+              <td>Other</td>
+              <td>33.0</td>
+              <td>97.4</td>
+              <td>136.0</td>
+              <td>6.2e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35045.1</td>
+              <td>3-oxoacyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001675/1">BGC0001675</a></td>
+              <td>Polyketide</td>
+              <td>36.0</td>
+              <td>83.7</td>
+              <td>119.0</td>
+              <td>1.3e-26</td>
+          </tr>
+    
+          <tr>
+              <td>BAQ25501.1</td>
+              <td>ketoacyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001288/1">BGC0001288</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>92.4</td>
+              <td>113.0</td>
+              <td>7.4e-25</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

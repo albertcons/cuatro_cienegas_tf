@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAF81720.1</td>
+              <td>putative_regulatory_protein_EncE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000220/1">BGC0000220</a></td>
+              <td>Polyketide:Type II</td>
+              <td>97.0</td>
+              <td>100.0</td>
+              <td>243.0</td>
+              <td>1.8e-64</td>
+          </tr>
+    
+          <tr>
+              <td>AEZ64552.1</td>
+              <td>Merr_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001065/1">BGC0001065</a></td>
+              <td>Polyketide</td>
+              <td>63.0</td>
+              <td>100.0</td>
+              <td>153.0</td>
+              <td>3.2e-37</td>
+          </tr>
+    
+          <tr>
+              <td>ONK09693.1</td>
+              <td>Nodulation_protein_NolA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001647/1">BGC0001647</a></td>
+              <td>Polyketide</td>
+              <td>45.0</td>
+              <td>49.6</td>
+              <td>64.0</td>
+              <td>1.1e-10</td>
+          </tr>
+    
+          <tr>
+              <td>BAV57437.1</td>
+              <td>MerR-family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001912/1">BGC0001912</a></td>
+              <td>NRP</td>
+              <td>33.0</td>
+              <td>83.2</td>
+              <td>59.0</td>
+              <td>4.8e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ARG41904.1</td>
+              <td>IstA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001622/1">BGC0001622</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>88.5</td>
+              <td>51.0</td>
+              <td>1.3e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAX31544.1</td>
+              <td>putative_cysteine_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000336/1">BGC0000336</a></td>
+              <td>NRP</td>
+              <td>62.0</td>
+              <td>92.5</td>
+              <td>415.0</td>
+              <td>7e-116</td>
+          </tr>
+    
+          <tr>
+              <td>BAE95584.1</td>
+              <td>putative_cysteine_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000703/1">BGC0000703</a></td>
+              <td>Saccharide</td>
+              <td>61.0</td>
+              <td>92.5</td>
+              <td>392.0</td>
+              <td>6.4e-109</td>
+          </tr>
+    
+          <tr>
+              <td>CAM56767.1</td>
+              <td>DabA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000354/1">BGC0000354</a></td>
+              <td>NRP</td>
+              <td>32.0</td>
+              <td>99.4</td>
+              <td>133.0</td>
+              <td>5.3e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AEG64686.1</td>
+              <td>diaminobutyric_acid_synthase_A</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000379/1">BGC0000379</a></td>
+              <td>NRP</td>
+              <td>30.0</td>
+              <td>95.7</td>
+              <td>130.0</td>
+              <td>5.9e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ARU08088.1</td>
+              <td>mlcS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001448/1">BGC0001448</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>31.0</td>
+              <td>95.7</td>
+              <td>123.0</td>
+              <td>9.4e-28</td>
+          </tr>
+    
+          <tr>
+              <td>CAN89659.1</td>
+              <td>putative_pyridoxal-phosphate_dependent_enzyme</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001070/1">BGC0001070</a></td>
+              <td>NRP + Polyketide:Modular type I + Polyketide:Trans-AT type I</td>
+              <td>32.0</td>
+              <td>87.4</td>
+              <td>119.0</td>
+              <td>1e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ACM79820.1</td>
+              <td>ZmaU</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001059/1">BGC0001059</a></td>
+              <td>NRP + Polyketide</td>
+              <td>27.0</td>
+              <td>78.7</td>
+              <td>90.0</td>
+              <td>5.2e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAA60476.1</td>
+              <td>cystathione_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001040/1">BGC0001040</a></td>
+              <td>NRP + Polyketide</td>
+              <td>32.0</td>
+              <td>50.3</td>
+              <td>67.0</td>
+              <td>3.6e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

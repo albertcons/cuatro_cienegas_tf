@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABY66003.1</td>
+              <td>type_II_PCP_domain_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001008/1">BGC0001008</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>50.0</td>
+              <td>73.3</td>
+              <td>66.0</td>
+              <td>2.1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ANY94449.1</td>
+              <td>type_II_PCP</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001584/1">BGC0001584</a></td>
+              <td>Polyketide</td>
+              <td>46.0</td>
+              <td>86.7</td>
+              <td>66.0</td>
+              <td>3.5e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AAL06679.1</td>
+              <td>type_II_PCP</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000965/1">BGC0000965</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>44.0</td>
+              <td>81.1</td>
+              <td>64.0</td>
+              <td>1e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ALU98441.1</td>
+              <td>phosphopantetheine-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001397/1">BGC0001397</a></td>
+              <td>NRP + Polyketide</td>
+              <td>44.0</td>
+              <td>81.1</td>
+              <td>64.0</td>
+              <td>1e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52209.1</td>
+              <td>NRPS_peptidyl-carrier_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000081/1">BGC0000081</a></td>
+              <td>Polyketide:Iterative type I + Polyketide:Enediyne type I</td>
+              <td>45.0</td>
+              <td>86.7</td>
+              <td>64.0</td>
+              <td>1.3e-10</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ14039.1</td>
+              <td>peptide_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000406/1">BGC0000406</a></td>
+              <td>NRP</td>
+              <td>46.0</td>
+              <td>97.8</td>
+              <td>58.0</td>
+              <td>5.6e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ABV56587.1</td>
+              <td>KtzG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000378/1">BGC0000378</a></td>
+              <td>NRP</td>
+              <td>35.0</td>
+              <td>80.0</td>
+              <td>51.0</td>
+              <td>9e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AFK57220.1</td>
+              <td>DidI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000985/1">BGC0000985</a></td>
+              <td>Polyketide + NRP:Cyclic depsipeptide</td>
+              <td>37.0</td>
+              <td>77.8</td>
+              <td>51.0</td>
+              <td>9e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ALK27915.1</td>
+              <td>non-ribosomal_peptide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001233/1">BGC0001233</a></td>
+              <td>NRP</td>
+              <td>37.0</td>
+              <td>82.2</td>
+              <td>49.0</td>
+              <td>3.4e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

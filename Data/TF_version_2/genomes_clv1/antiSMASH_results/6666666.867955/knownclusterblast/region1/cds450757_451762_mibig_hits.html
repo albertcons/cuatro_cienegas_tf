@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CCA53801.1</td>
+              <td>Transport_ATP-binding_protein_CydC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001801/1">BGC0001801</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>87.4</td>
+              <td>136.0</td>
+              <td>1e-31</td>
+          </tr>
+    
+          <tr>
+              <td>EYT83451.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001213/1">BGC0001213</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>81.4</td>
+              <td>127.0</td>
+              <td>3.7e-29</td>
+          </tr>
+    
+          <tr>
+              <td>ABS50188.1</td>
+              <td>putative_ABC_transporter_permease/ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000410/1">BGC0000410</a></td>
+              <td>NRP</td>
+              <td>28.0</td>
+              <td>71.9</td>
+              <td>102.0</td>
+              <td>1.3e-21</td>
+          </tr>
+    
+          <tr>
+              <td>CAC17506.1</td>
+              <td>putative_ABC_transporter_ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000324/1">BGC0000324</a></td>
+              <td>NRP</td>
+              <td>26.0</td>
+              <td>86.2</td>
+              <td>96.0</td>
+              <td>9.1e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ87588.1</td>
+              <td>putative_inner_membrane_ABC-transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001055/1">BGC0001055</a></td>
+              <td>NRP + Polyketide</td>
+              <td>25.0</td>
+              <td>83.5</td>
+              <td>68.0</td>
+              <td>2e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

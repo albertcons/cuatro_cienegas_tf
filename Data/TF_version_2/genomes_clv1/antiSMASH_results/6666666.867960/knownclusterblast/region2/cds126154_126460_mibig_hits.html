@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACN80635.1</td>
+              <td>Sio4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000655/1">BGC0000655</a></td>
+              <td>Terpene</td>
+              <td>71.0</td>
+              <td>98.0</td>
+              <td>143.0</td>
+              <td>2e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AOE23597.1</td>
+              <td>FoxTIX</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001598/1">BGC0001598</a></td>
+              <td>NRP + Polyketide</td>
+              <td>60.0</td>
+              <td>98.0</td>
+              <td>124.0</td>
+              <td>9.4e-29</td>
+          </tr>
+    
+          <tr>
+              <td>ANH11417.1</td>
+              <td>SceV</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001908/1">BGC0001908</a></td>
+              <td>Polyketide</td>
+              <td>54.0</td>
+              <td>99.0</td>
+              <td>106.0</td>
+              <td>3.5e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AWR88426.1</td>
+              <td>putative_ABC_transporter_ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001522/1">BGC0001522</a></td>
+              <td>Polyketide</td>
+              <td>54.0</td>
+              <td>88.1</td>
+              <td>99.0</td>
+              <td>4.2e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ALA09377.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001303/1">BGC0001303</a></td>
+              <td>Polyketide</td>
+              <td>54.0</td>
+              <td>88.1</td>
+              <td>94.0</td>
+              <td>1.4e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ABP55202.1</td>
+              <td>ABC_transporter_related</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000142/1">BGC0000142</a></td>
+              <td>Polyketide</td>
+              <td>54.0</td>
+              <td>88.1</td>
+              <td>92.0</td>
+              <td>4e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ACR33057.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000495/1">BGC0000495</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>48.0</td>
+              <td>88.1</td>
+              <td>92.0</td>
+              <td>5.2e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAD91214.1</td>
+              <td>putative_ABC_transporter,_Dbv19</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000289/1">BGC0000289</a></td>
+              <td>NRP:Glycopeptide + Saccharide:Hybrid/tailoring</td>
+              <td>60.0</td>
+              <td>72.3</td>
+              <td>86.0</td>
+              <td>3.7e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AKP45406.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001413/1">BGC0001413</a></td>
+              <td>NRP</td>
+              <td>38.0</td>
+              <td>85.1</td>
+              <td>66.0</td>
+              <td>2.3e-11</td>
+          </tr>
+    
+          <tr>
+              <td>BAG84245.1</td>
+              <td>putative_ABC-transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000257/1">BGC0000257</a></td>
+              <td>Polyketide</td>
+              <td>45.0</td>
+              <td>72.3</td>
+              <td>64.0</td>
+              <td>1.2e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AQP25584.1</td>
+              <td>glutamate_ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001590/1">BGC0001590</a></td>
+              <td>Polyketide</td>
+              <td>44.0</td>
+              <td>101.0</td>
+              <td>64.0</td>
+              <td>1.5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ARE67845.1</td>
+              <td>AbsF4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001492/1">BGC0001492</a></td>
+              <td>Polyketide</td>
+              <td>38.0</td>
+              <td>75.2</td>
+              <td>52.0</td>
+              <td>5.9e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AOT85870.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001789/1">BGC0001789</a></td>
+              <td>RiPP</td>
+              <td>38.0</td>
+              <td>73.3</td>
+              <td>48.0</td>
+              <td>8.6e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

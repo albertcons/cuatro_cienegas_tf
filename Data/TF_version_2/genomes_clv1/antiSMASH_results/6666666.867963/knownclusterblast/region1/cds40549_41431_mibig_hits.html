@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_020275089.1</td>
+              <td>LLM_class_F420-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002012/1">BGC0002012</a></td>
+              <td>Polyketide</td>
+              <td>44.0</td>
+              <td>82.9</td>
+              <td>193.0</td>
+              <td>6.2e-49</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ19083.1</td>
+              <td>putative_luciferase_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000288/1">BGC0000288</a></td>
+              <td>NRP</td>
+              <td>45.0</td>
+              <td>69.6</td>
+              <td>139.0</td>
+              <td>6.3e-33</td>
+          </tr>
+    
+          <tr>
+              <td>SCN11958.1</td>
+              <td>F420-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001580/1">BGC0001580</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>77.8</td>
+              <td>124.0</td>
+              <td>3.6e-28</td>
+          </tr>
+    
+          <tr>
+              <td>BBG06555.1</td>
+              <td>luciferase_like_enzyme</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001925/1">BGC0001925</a></td>
+              <td>Alkaloid</td>
+              <td>37.0</td>
+              <td>70.0</td>
+              <td>120.0</td>
+              <td>5.1e-27</td>
+          </tr>
+    
+          <tr>
+              <td>CQR60484.1</td>
+              <td>Rif-orf11_homologue,_Flavin-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001287/1">BGC0001287</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>63.1</td>
+              <td>108.0</td>
+              <td>2e-23</td>
+          </tr>
+    
+          <tr>
+              <td>CAE45677.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000031/1">BGC0000031</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>32.0</td>
+              <td>85.7</td>
+              <td>99.0</td>
+              <td>7.2e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ALV82315.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001533/1">BGC0001533</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>85.7</td>
+              <td>99.0</td>
+              <td>7.2e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AAC01735.3</td>
+              <td>putative_flavin-dependent_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000136/1">BGC0000136</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>62.8</td>
+              <td>93.0</td>
+              <td>5.2e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AHH99946.1</td>
+              <td>F420_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000002/1">BGC0000002</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>59.0</td>
+              <td>81.0</td>
+              <td>2e-15</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

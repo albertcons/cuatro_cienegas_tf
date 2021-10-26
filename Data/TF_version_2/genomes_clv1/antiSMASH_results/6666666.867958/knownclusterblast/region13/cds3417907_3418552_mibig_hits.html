@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AVH76826.1</td>
+              <td>TetR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001669/1">BGC0001669</a></td>
+              <td>RiPP</td>
+              <td>40.0</td>
+              <td>95.8</td>
+              <td>140.0</td>
+              <td>2.7e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ACO51013.1</td>
+              <td>SabS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000850/1">BGC0000850</a></td>
+              <td>Other</td>
+              <td>34.0</td>
+              <td>99.1</td>
+              <td>112.0</td>
+              <td>7.8e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AHW57765.1</td>
+              <td>PgaR2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000262/1">BGC0000262</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>88.8</td>
+              <td>111.0</td>
+              <td>1.7e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ACO51011.1</td>
+              <td>SabR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000850/1">BGC0000850</a></td>
+              <td>Other</td>
+              <td>35.0</td>
+              <td>89.3</td>
+              <td>110.0</td>
+              <td>3e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AGN74906.1</td>
+              <td>gamma-butyrolactone_receptor</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000459/1">BGC0000459</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Trans-AT type I</td>
+              <td>34.0</td>
+              <td>93.0</td>
+              <td>106.0</td>
+              <td>5.6e-23</td>
+          </tr>
+    
+          <tr>
+              <td>CAB60184.1</td>
+              <td>gamma-butyrolactone_binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000849/1">BGC0000849</a></td>
+              <td>Other:Butyrolactone</td>
+              <td>34.0</td>
+              <td>91.6</td>
+              <td>102.0</td>
+              <td>6.2e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68917.1</td>
+              <td>TetR-like_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001083/1">BGC0001083</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>35.0</td>
+              <td>91.6</td>
+              <td>102.0</td>
+              <td>8.1e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CAC36768.1</td>
+              <td>putative_2-Alkyl-4-hydroxymethylfuran-3-carboxylic_acid-dependent_transcriptional_regulator_(TetR-family),_MmfR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000914/1">BGC0000914</a></td>
+              <td>Other</td>
+              <td>32.0</td>
+              <td>86.4</td>
+              <td>97.0</td>
+              <td>2.6e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71097.1</td>
+              <td>Lct14</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000238/1">BGC0000238</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>52.3</td>
+              <td>54.0</td>
+              <td>1.9e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

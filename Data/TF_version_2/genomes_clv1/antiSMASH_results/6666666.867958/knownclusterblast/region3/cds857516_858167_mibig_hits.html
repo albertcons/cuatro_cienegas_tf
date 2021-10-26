@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CBL93725.1</td>
+              <td>3-oxoacid_CoA-transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000360/1">BGC0000360</a></td>
+              <td>NRP</td>
+              <td>74.0</td>
+              <td>95.4</td>
+              <td>308.0</td>
+              <td>9.8e-84</td>
+          </tr>
+    
+          <tr>
+              <td>AAK53493.1</td>
+              <td>beta-subunit_of_putative_3-oxoacid_CoA-transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000774/1">BGC0000774</a></td>
+              <td>Saccharide:Lipopolysaccharide</td>
+              <td>63.0</td>
+              <td>95.8</td>
+              <td>260.0</td>
+              <td>3.1e-69</td>
+          </tr>
+    
+          <tr>
+              <td>ABS74184.1</td>
+              <td>ScoB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001090/1">BGC0001090</a></td>
+              <td>Polyketide + NRP:Lipopeptide</td>
+              <td>60.0</td>
+              <td>90.7</td>
+              <td>242.0</td>
+              <td>5.1e-64</td>
+          </tr>
+    
+          <tr>
+              <td>BAB69695.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001098/1">BGC0001098</a></td>
+              <td>NRP + Polyketide</td>
+              <td>60.0</td>
+              <td>90.7</td>
+              <td>242.0</td>
+              <td>5.1e-64</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

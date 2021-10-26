@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AFB35637.1</td>
+              <td>6-acetyl-PCA_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000935/1">BGC0000935</a></td>
+              <td>Polyketide + Other:Aminocoumarin</td>
+              <td>43.0</td>
+              <td>92.1</td>
+              <td>59.0</td>
+              <td>4.3e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAM70349.1</td>
+              <td>CalS12</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000033/1">BGC0000033</a></td>
+              <td>Polyketide</td>
+              <td>50.0</td>
+              <td>60.7</td>
+              <td>56.0</td>
+              <td>2.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BBE36476.1</td>
+              <td>dTDP-2,3-ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001922/1">BGC0001922</a></td>
+              <td>Polyketide</td>
+              <td>45.0</td>
+              <td>62.9</td>
+              <td>52.0</td>
+              <td>4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ACB46464.1</td>
+              <td>unknown</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000082/1">BGC0000082</a></td>
+              <td>Polyketide</td>
+              <td>45.0</td>
+              <td>67.4</td>
+              <td>51.0</td>
+              <td>6.8e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AGI99477.1</td>
+              <td>aldo/keto_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001004/1">BGC0001004</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>41.0</td>
+              <td>65.2</td>
+              <td>51.0</td>
+              <td>8.9e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AGC09504.1</td>
+              <td>LobA6</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001183/1">BGC0001183</a></td>
+              <td>Polyketide</td>
+              <td>41.0</td>
+              <td>65.2</td>
+              <td>51.0</td>
+              <td>8.9e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

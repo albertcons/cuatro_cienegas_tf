@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>EFG10351.1</td>
+              <td>AmphRI-like_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000373/1">BGC0000373</a></td>
+              <td>NRP</td>
+              <td>57.0</td>
+              <td>62.5</td>
+              <td>255.0</td>
+              <td>1.1e-67</td>
+          </tr>
+    
+          <tr>
+              <td>AGS77334.1</td>
+              <td>LuxR-like_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001178/1">BGC0001178</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>31.0</td>
+              <td>52.5</td>
+              <td>81.0</td>
+              <td>4.7e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ADC79646.1</td>
+              <td>TamH</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001052/1">BGC0001052</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>36.0</td>
+              <td>38.8</td>
+              <td>74.0</td>
+              <td>3.4e-13</td>
+          </tr>
+    
+          <tr>
+              <td>CAG15028.1</td>
+              <td>LuxR_regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000441/1">BGC0000441</a></td>
+              <td>NRP</td>
+              <td>30.0</td>
+              <td>60.0</td>
+              <td>73.0</td>
+              <td>9.8e-13</td>
+          </tr>
+    
+          <tr>
+              <td>TXD00037.1</td>
+              <td>AAA_family_ATPase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001877/1">BGC0001877</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>54.5</td>
+              <td>72.0</td>
+              <td>1.3e-12</td>
+          </tr>
+    
+          <tr>
+              <td>QBF51750.1</td>
+              <td>LuxR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001856/1">BGC0001856</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>37.0</td>
+              <td>39.8</td>
+              <td>71.0</td>
+              <td>2.9e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAM88362.1</td>
+              <td>NbmM</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000899/1">BGC0000899</a></td>
+              <td>Other</td>
+              <td>30.0</td>
+              <td>66.0</td>
+              <td>65.0</td>
+              <td>2.1e-10</td>
+          </tr>
+    
+          <tr>
+              <td>BAF85834.1</td>
+              <td>transcriptional_regulatory_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000109/1">BGC0000109</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>56.5</td>
+              <td>58.0</td>
+              <td>2.5e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

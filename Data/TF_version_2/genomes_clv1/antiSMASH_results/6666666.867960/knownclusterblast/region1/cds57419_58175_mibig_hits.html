@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AXI91560.1</td>
+              <td>FunT2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001944/1">BGC0001944</a></td>
+              <td>Polyketide</td>
+              <td>27.0</td>
+              <td>102.8</td>
+              <td>88.0</td>
+              <td>1.9e-17</td>
+          </tr>
+    
+          <tr>
+              <td>QBF51772.1</td>
+              <td>ABC_transporter_permease_component</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001856/1">BGC0001856</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>26.0</td>
+              <td>93.6</td>
+              <td>72.0</td>
+              <td>1.4e-12</td>
+          </tr>
+    
+          <tr>
+              <td>WP_084693229.1</td>
+              <td>ABC_transporter_permease_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001364/1">BGC0001364</a></td>
+              <td>RiPP</td>
+              <td>27.0</td>
+              <td>80.1</td>
+              <td>70.0</td>
+              <td>5.2e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AZF85927.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001963/1">BGC0001963</a></td>
+              <td>NRP + Polyketide</td>
+              <td>24.0</td>
+              <td>98.4</td>
+              <td>68.0</td>
+              <td>2e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AEA03262.1</td>
+              <td>bifunctional_lantibiotic_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000563/1">BGC0000563</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>70.0</td>
+              <td>105.7</td>
+              <td>1228.0</td>
+              <td>0.0</td>
+          </tr>
+    
+          <tr>
+              <td>AIW58891.1</td>
+              <td>putative_serine/threonine_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001582/1">BGC0001582</a></td>
+              <td>NRP</td>
+              <td>43.0</td>
+              <td>89.1</td>
+              <td>544.0</td>
+              <td>3.4e-154</td>
+          </tr>
+    
+          <tr>
+              <td>AAP03109.1</td>
+              <td>putative_serine/threonine_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000874/1">BGC0000874</a></td>
+              <td>Other</td>
+              <td>44.0</td>
+              <td>101.0</td>
+              <td>528.0</td>
+              <td>2.5e-149</td>
+          </tr>
+    
+          <tr>
+              <td>AFO59873.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000175/1">BGC0000175</a></td>
+              <td>Polyketide:Trans-AT type I</td>
+              <td>31.0</td>
+              <td>98.7</td>
+              <td>252.0</td>
+              <td>2.6e-66</td>
+          </tr>
+    
+          <tr>
+              <td>CBL93711.1</td>
+              <td>Serine/threonine_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000360/1">BGC0000360</a></td>
+              <td>NRP</td>
+              <td>28.0</td>
+              <td>36.4</td>
+              <td>82.0</td>
+              <td>3.6e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ACR33053.1</td>
+              <td>actagardine_modification_enzyme</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000495/1">BGC0000495</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>34.0</td>
+              <td>23.9</td>
+              <td>60.0</td>
+              <td>1.9e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

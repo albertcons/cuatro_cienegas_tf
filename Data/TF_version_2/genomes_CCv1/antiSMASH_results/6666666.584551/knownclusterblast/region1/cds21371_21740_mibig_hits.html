@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAI59988.1</td>
+              <td>putative_tyrosinase_co-factor_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000700/1">BGC0000700</a></td>
+              <td>Saccharide</td>
+              <td>71.0</td>
+              <td>68.9</td>
+              <td>108.0</td>
+              <td>6.4e-24</td>
+          </tr>
+    
+          <tr>
+              <td>BAG17357.1</td>
+              <td>putative_tyrosinase_co-factor_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000911/1">BGC0000911</a></td>
+              <td>Other</td>
+              <td>44.0</td>
+              <td>88.5</td>
+              <td>71.0</td>
+              <td>1.1e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CAB92267.1</td>
+              <td>tyrosinase_co-factor</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000910/1">BGC0000910</a></td>
+              <td>Other</td>
+              <td>52.0</td>
+              <td>67.2</td>
+              <td>70.0</td>
+              <td>1.9e-12</td>
+          </tr>
+    
+          <tr>
+              <td>BAB69181.1</td>
+              <td>putative_tyrosinase_co-factor_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000909/1">BGC0000909</a></td>
+              <td>Other</td>
+              <td>56.0</td>
+              <td>57.4</td>
+              <td>67.0</td>
+              <td>2.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>BAM73632.1</td>
+              <td>copper_chaperon</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000889/1">BGC0000889</a></td>
+              <td>Other</td>
+              <td>52.0</td>
+              <td>42.6</td>
+              <td>56.0</td>
+              <td>3.8e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AVI10273.1</td>
+              <td>copper_chaperon</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002029/1">BGC0002029</a></td>
+              <td>Other</td>
+              <td>52.0</td>
+              <td>42.6</td>
+              <td>56.0</td>
+              <td>3.8e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BAG21074.1</td>
+              <td>copper_chaperon</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000662/1">BGC0000662</a></td>
+              <td>Terpene</td>
+              <td>47.0</td>
+              <td>55.7</td>
+              <td>56.0</td>
+              <td>5e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ08173.1</td>
+              <td>copper_chaperon</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000885/1">BGC0000885</a></td>
+              <td>Other</td>
+              <td>46.0</td>
+              <td>54.1</td>
+              <td>54.0</td>
+              <td>1.4e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

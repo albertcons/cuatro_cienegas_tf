@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADI10107.1</td>
+              <td>type_II_lanthionine_synthetase_and_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001229/1">BGC0001229</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>27.0</td>
+              <td>92.7</td>
+              <td>182.0</td>
+              <td>3.6e-45</td>
+          </tr>
+    
+          <tr>
+              <td>BAB04171.1</td>
+              <td>Class_II_lantibiotic_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000517/1">BGC0000517</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>23.0</td>
+              <td>101.3</td>
+              <td>175.0</td>
+              <td>4.4e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AVH76809.1</td>
+              <td>LanM</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001669/1">BGC0001669</a></td>
+              <td>RiPP</td>
+              <td>29.0</td>
+              <td>91.9</td>
+              <td>173.0</td>
+              <td>1.7e-42</td>
+          </tr>
+    
+          <tr>
+              <td>CAN02024.1</td>
+              <td>putative_lantibiotic_modifying_enzyme</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000528/1">BGC0000528</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>29.0</td>
+              <td>95.4</td>
+              <td>168.0</td>
+              <td>5.4e-41</td>
+          </tr>
+    
+          <tr>
+              <td>WP_010071701.1</td>
+              <td>type_2_lantipeptide_synthetase_LanM</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000554/1">BGC0000554</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>28.0</td>
+              <td>95.2</td>
+              <td>161.0</td>
+              <td>8.6e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ANP43736.1</td>
+              <td>ThsM2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001391/1">BGC0001391</a></td>
+              <td>RiPP</td>
+              <td>22.0</td>
+              <td>101.3</td>
+              <td>152.0</td>
+              <td>3e-36</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

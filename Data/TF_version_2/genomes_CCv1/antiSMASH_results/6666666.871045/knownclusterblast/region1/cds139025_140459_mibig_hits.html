@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>TXL86014.1</td>
+              <td>rRNA_cytosine-C5-methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002034/1">BGC0002034</a></td>
+              <td>Other</td>
+              <td>87.0</td>
+              <td>99.8</td>
+              <td>843.0</td>
+              <td>1.9e-244</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ42345.1</td>
+              <td>hypothetical_Sun-family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000273/1">BGC0000273</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>80.0</td>
+              <td>101.0</td>
+              <td>774.0</td>
+              <td>8.2e-224</td>
+          </tr>
+    
+          <tr>
+              <td>ADI71472.1</td>
+              <td>putative_tRNA/rRNA_cytosine-C5-methylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000203/1">BGC0000203</a></td>
+              <td>Polyketide</td>
+              <td>51.0</td>
+              <td>102.3</td>
+              <td>445.0</td>
+              <td>1.5e-124</td>
+          </tr>
+    
+          <tr>
+              <td>AFU82626.1</td>
+              <td>rRNA_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000998/1">BGC0000998</a></td>
+              <td>NRP + Polyketide</td>
+              <td>29.0</td>
+              <td>47.4</td>
+              <td>59.0</td>
+              <td>1.8e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

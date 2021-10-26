@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABJ90148.1</td>
+              <td>MoeC4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000805/1">BGC0000805</a></td>
+              <td>Saccharide</td>
+              <td>69.0</td>
+              <td>100.5</td>
+              <td>557.0</td>
+              <td>2.2e-158</td>
+          </tr>
+    
+          <tr>
+              <td>ADC79615.1</td>
+              <td>BafZ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000028/1">BGC0000028</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>71.0</td>
+              <td>101.0</td>
+              <td>549.0</td>
+              <td>4.7e-156</td>
+          </tr>
+    
+          <tr>
+              <td>ADI58646.1</td>
+              <td>2-Oxoamine_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000187/1">BGC0000187</a></td>
+              <td>Polyketide:Type II</td>
+              <td>67.0</td>
+              <td>101.0</td>
+              <td>543.0</td>
+              <td>3.3e-154</td>
+          </tr>
+    
+          <tr>
+              <td>AIL50190.1</td>
+              <td>putative_5-aminolevulinate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000213/1">BGC0000213</a></td>
+              <td>Polyketide:Type II</td>
+              <td>66.0</td>
+              <td>101.0</td>
+              <td>535.0</td>
+              <td>9.1e-152</td>
+          </tr>
+    
+          <tr>
+              <td>BBA21083.1</td>
+              <td>putative_5-aminolevulinate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001740/1">BGC0001740</a></td>
+              <td>NRP + Polyketide</td>
+              <td>67.0</td>
+              <td>101.0</td>
+              <td>530.0</td>
+              <td>2.9e-150</td>
+          </tr>
+    
+          <tr>
+              <td>AAX98209.1</td>
+              <td>5-aminolevulinate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000052/1">BGC0000052</a></td>
+              <td>Polyketide</td>
+              <td>67.0</td>
+              <td>96.7</td>
+              <td>523.0</td>
+              <td>2.7e-148</td>
+          </tr>
+    
+          <tr>
+              <td>AGY30678.1</td>
+              <td>Ann2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001298/1">BGC0001298</a></td>
+              <td>Polyketide</td>
+              <td>66.0</td>
+              <td>96.7</td>
+              <td>511.0</td>
+              <td>1.4e-144</td>
+          </tr>
+    
+          <tr>
+              <td>CRI73789.1</td>
+              <td>glycine_acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001215/1">BGC0001215</a></td>
+              <td>NRP</td>
+              <td>39.0</td>
+              <td>89.4</td>
+              <td>236.0</td>
+              <td>6.7e-62</td>
+          </tr>
+    
+          <tr>
+              <td>CAA16181.1</td>
+              <td>putative_8-amino-7-oxononanoate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001063/1">BGC0001063</a></td>
+              <td>NRP + Polyketide</td>
+              <td>35.0</td>
+              <td>91.7</td>
+              <td>212.0</td>
+              <td>1e-54</td>
+          </tr>
+    
+          <tr>
+              <td>AHF22852.1</td>
+              <td>MarN</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000091/1">BGC0000091</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>89.7</td>
+              <td>210.0</td>
+              <td>5.1e-54</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69080.1</td>
+              <td>putative_HBM_synthase/aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000260/1">BGC0000260</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>84.9</td>
+              <td>207.0</td>
+              <td>3.3e-53</td>
+          </tr>
+    
+          <tr>
+              <td>CAH55653.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000259/1">BGC0000259</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>88.2</td>
+              <td>201.0</td>
+              <td>1.8e-51</td>
+          </tr>
+    
+          <tr>
+              <td>CAH55636.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000258/1">BGC0000258</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>88.2</td>
+              <td>200.0</td>
+              <td>5.3e-51</td>
+          </tr>
+    
+          <tr>
+              <td>CAH08161.1</td>
+              <td>putative_8-amino-7-oxononanoate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000948/1">BGC0000948</a></td>
+              <td>Other</td>
+              <td>33.0</td>
+              <td>85.7</td>
+              <td>196.0</td>
+              <td>5.9e-50</td>
+          </tr>
+    
+          <tr>
+              <td>BAG84248.1</td>
+              <td>putative_polyketide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000257/1">BGC0000257</a></td>
+              <td>Polyketide</td>
+              <td>34.0</td>
+              <td>89.4</td>
+              <td>168.0</td>
+              <td>2.2e-41</td>
+          </tr>
+    
+          <tr>
+              <td>CAA16183.1</td>
+              <td>polyketide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001063/1">BGC0001063</a></td>
+              <td>NRP + Polyketide</td>
+              <td>33.0</td>
+              <td>89.4</td>
+              <td>167.0</td>
+              <td>3.8e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AHF22854.1</td>
+              <td>MarL</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000091/1">BGC0000091</a></td>
+              <td>Polyketide</td>
+              <td>33.0</td>
+              <td>86.4</td>
+              <td>154.0</td>
+              <td>4.4e-37</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

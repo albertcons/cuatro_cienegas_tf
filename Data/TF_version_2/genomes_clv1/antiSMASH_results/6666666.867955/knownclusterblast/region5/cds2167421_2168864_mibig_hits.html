@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AEZ53939.1</td>
+              <td>putative_glucose-6-phosphate_1-dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000144/1">BGC0000144</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>35.0</td>
+              <td>101.2</td>
+              <td>228.0</td>
+              <td>2.2e-59</td>
+          </tr>
+    
+          <tr>
+              <td>ADC45555.1</td>
+              <td>sugar_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000093/1">BGC0000093</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>94.8</td>
+              <td>196.0</td>
+              <td>1.2e-49</td>
+          </tr>
+    
+          <tr>
+              <td>EED57519.1</td>
+              <td>MFS_glucose_transporter,_putative</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001446/1">BGC0001446</a></td>
+              <td>Polyketide:Iterative type I</td>
+              <td>29.0</td>
+              <td>98.1</td>
+              <td>146.0</td>
+              <td>8.4e-35</td>
+          </tr>
+    
+          <tr>
+              <td>XP_023094066.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001996/1">BGC0001996</a></td>
+              <td>Other</td>
+              <td>26.0</td>
+              <td>99.8</td>
+              <td>104.0</td>
+              <td>6.2e-22</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

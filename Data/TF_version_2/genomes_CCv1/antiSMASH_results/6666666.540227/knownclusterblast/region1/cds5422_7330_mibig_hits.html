@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAU98044.1</td>
+              <td>Bayer_Billiger_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001386/1">BGC0001386</a></td>
+              <td>Polyketide</td>
+              <td>58.0</td>
+              <td>100.9</td>
+              <td>757.0</td>
+              <td>2.3e-218</td>
+          </tr>
+    
+          <tr>
+              <td>APR73640.1</td>
+              <td>Baeyer-Villiger_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001625/1">BGC0001625</a></td>
+              <td>Polyketide</td>
+              <td>58.0</td>
+              <td>99.5</td>
+              <td>751.0</td>
+              <td>1.3e-216</td>
+          </tr>
+    
+          <tr>
+              <td>PHM31510.1</td>
+              <td>FMN-dependent_N-oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001868/1">BGC0001868</a></td>
+              <td>Other:Phenazine</td>
+              <td>31.0</td>
+              <td>79.1</td>
+              <td>200.0</td>
+              <td>1.1e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ATZ45178.1</td>
+              <td>Bcboa2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001892/1">BGC0001892</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>64.7</td>
+              <td>199.0</td>
+              <td>1.9e-50</td>
+          </tr>
+    
+          <tr>
+              <td>RWQ92170.1</td>
+              <td>cyclohexanone_1,2-monooxygenase-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002030/1">BGC0002030</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>82.2</td>
+              <td>179.0</td>
+              <td>2e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AVY05513.1</td>
+              <td>Baeyer-Villiger_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001571/1">BGC0001571</a></td>
+              <td>Terpene</td>
+              <td>27.0</td>
+              <td>79.7</td>
+              <td>175.0</td>
+              <td>2.9e-43</td>
+          </tr>
+    
+          <tr>
+              <td>ADO85575.1</td>
+              <td>PntE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000653/1">BGC0000653</a></td>
+              <td>Terpene</td>
+              <td>31.0</td>
+              <td>68.3</td>
+              <td>163.0</td>
+              <td>1.1e-39</td>
+          </tr>
+    
+          <tr>
+              <td>BAV69312.1</td>
+              <td>PrhK</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001729/1">BGC0001729</a></td>
+              <td>Polyketide + Terpene</td>
+              <td>26.0</td>
+              <td>70.4</td>
+              <td>142.0</td>
+              <td>2.1e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AHA34038.1</td>
+              <td>Bmp5,_Flavin-dependent_single-component_p-hydroxybenzoate_brominase/decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000890/1">BGC0000890</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>25.0</td>
+              <td>35.9</td>
+              <td>92.0</td>
+              <td>2.5e-18</td>
+          </tr>
+    
+          <tr>
+              <td>WP_013663195.1</td>
+              <td>SidA/IucD/PvdA_family_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001465/1">BGC0001465</a></td>
+              <td>Other</td>
+              <td>27.0</td>
+              <td>36.2</td>
+              <td>91.0</td>
+              <td>4.2e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AQX77682.1</td>
+              <td>NocE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001704/1">BGC0001704</a></td>
+              <td>Other</td>
+              <td>26.0</td>
+              <td>35.6</td>
+              <td>85.0</td>
+              <td>3e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AKL71638.1</td>
+              <td>NocE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001703/1">BGC0001703</a></td>
+              <td>Other</td>
+              <td>26.0</td>
+              <td>37.0</td>
+              <td>82.0</td>
+              <td>2e-15</td>
+          </tr>
+    
+          <tr>
+              <td>EED49414.1</td>
+              <td>monooxygenase,_putative</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000627/1">BGC0000627</a></td>
+              <td>RiPP:Thiopeptide</td>
+              <td>26.0</td>
+              <td>33.9</td>
+              <td>64.0</td>
+              <td>9.5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AEA29650.1</td>
+              <td>putative_flavin_containing_monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000409/1">BGC0000409</a></td>
+              <td>NRP</td>
+              <td>27.0</td>
+              <td>38.3</td>
+              <td>61.0</td>
+              <td>8e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

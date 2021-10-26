@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAL01055.1</td>
+              <td>putative_steroid_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000865/1">BGC0000865</a></td>
+              <td>Other</td>
+              <td>39.0</td>
+              <td>93.1</td>
+              <td>217.0</td>
+              <td>2.8e-56</td>
+          </tr>
+    
+          <tr>
+              <td>AAG02361.1</td>
+              <td>sugar_epimerase_BlmG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000963/1">BGC0000963</a></td>
+              <td>NRP:Glycopeptide + Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>29.0</td>
+              <td>79.9</td>
+              <td>74.0</td>
+              <td>5e-13</td>
+          </tr>
+    
+          <tr>
+              <td>CAF31840.1</td>
+              <td>putative_NDP-heptose/hexose_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000699/1">BGC0000699</a></td>
+              <td>Saccharide</td>
+              <td>31.0</td>
+              <td>68.1</td>
+              <td>64.0</td>
+              <td>3e-10</td>
+          </tr>
+    
+          <tr>
+              <td>CBA11571.1</td>
+              <td>NDP-glucose-4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001046/1">BGC0001046</a></td>
+              <td>NRP + Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>26.0</td>
+              <td>101.4</td>
+              <td>55.0</td>
+              <td>2.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ88619.1</td>
+              <td>putative_epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000327/1">BGC0000327</a></td>
+              <td>NRP</td>
+              <td>32.0</td>
+              <td>58.3</td>
+              <td>53.0</td>
+              <td>9.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AHW57779.1</td>
+              <td>PgaZ3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000262/1">BGC0000262</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>29.0</td>
+              <td>83.6</td>
+              <td>50.0</td>
+              <td>4.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>CAE17544.1</td>
+              <td>NDP-4-ketoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000210/1">BGC0000210</a></td>
+              <td>Polyketide:Type II + Saccharide:Oligosaccharide</td>
+              <td>29.0</td>
+              <td>89.1</td>
+              <td>50.0</td>
+              <td>5.9e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

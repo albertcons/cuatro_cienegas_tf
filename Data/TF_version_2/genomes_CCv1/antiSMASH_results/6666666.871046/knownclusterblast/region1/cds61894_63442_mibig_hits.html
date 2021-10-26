@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QED55424.1</td>
+              <td>alpha/beta_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001984/1">BGC0001984</a></td>
+              <td>NRP</td>
+              <td>73.0</td>
+              <td>91.3</td>
+              <td>680.0</td>
+              <td>3e-195</td>
+          </tr>
+    
+          <tr>
+              <td>BAN83915.1</td>
+              <td>protease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001803/1">BGC0001803</a></td>
+              <td>RiPP</td>
+              <td>73.0</td>
+              <td>91.3</td>
+              <td>678.0</td>
+              <td>1.1e-194</td>
+          </tr>
+    
+          <tr>
+              <td>BAW27668.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001764/1">BGC0001764</a></td>
+              <td>NRP</td>
+              <td>62.0</td>
+              <td>101.6</td>
+              <td>616.0</td>
+              <td>3.1e-176</td>
+          </tr>
+    
+          <tr>
+              <td>ACO94476.1</td>
+              <td>putative_tripeptidylaminopeptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000029/1">BGC0000029</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>35.0</td>
+              <td>93.0</td>
+              <td>225.0</td>
+              <td>2e-58</td>
+          </tr>
+    
+          <tr>
+              <td>AAP03104.1</td>
+              <td>putative_secreted_peptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000874/1">BGC0000874</a></td>
+              <td>Other</td>
+              <td>38.0</td>
+              <td>58.1</td>
+              <td>169.0</td>
+              <td>1.3e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AAP85358.1</td>
+              <td>putative_secreted_tripeptidylaminopeptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000233/1">BGC0000233</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>91.1</td>
+              <td>153.0</td>
+              <td>9.6e-37</td>
+          </tr>
+    
+          <tr>
+              <td>QDQ37893.1</td>
+              <td>alpha/_beta_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001979/1">BGC0001979</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>98.8</td>
+              <td>153.0</td>
+              <td>1.3e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ABP54663.1</td>
+              <td>TAP_domain_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000241/1">BGC0000241</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>88.7</td>
+              <td>152.0</td>
+              <td>1.6e-36</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ61881.1</td>
+              <td>TAP-domain_containing_protein;_secreted_peptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000240/1">BGC0000240</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>91.7</td>
+              <td>149.0</td>
+              <td>1.8e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AME18010.1</td>
+              <td>secreted_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001804/1">BGC0001804</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>91.3</td>
+              <td>145.0</td>
+              <td>2e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ARD70888.1</td>
+              <td>secreted_peptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001693/1">BGC0001693</a></td>
+              <td>Polyketide</td>
+              <td>27.0</td>
+              <td>88.3</td>
+              <td>145.0</td>
+              <td>2.6e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AMK92575.1</td>
+              <td>hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001815/1">BGC0001815</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>90.5</td>
+              <td>142.0</td>
+              <td>2.2e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ACB47068.1</td>
+              <td>putative_secreted_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001060/1">BGC0001060</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>94.4</td>
+              <td>139.0</td>
+              <td>1.1e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AMK92574.1</td>
+              <td>hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001815/1">BGC0001815</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>93.8</td>
+              <td>134.0</td>
+              <td>4.6e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AME18011.1</td>
+              <td>secreted_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001804/1">BGC0001804</a></td>
+              <td>Polyketide</td>
+              <td>28.0</td>
+              <td>92.6</td>
+              <td>126.0</td>
+              <td>1.6e-28</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

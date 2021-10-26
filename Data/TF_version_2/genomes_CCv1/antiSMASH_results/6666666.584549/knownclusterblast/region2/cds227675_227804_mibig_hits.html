@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAP34702.1</td>
+              <td>MbtH-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000078/1">BGC0000078</a></td>
+              <td>Polyketide</td>
+              <td>66.0</td>
+              <td>83.3</td>
+              <td>56.0</td>
+              <td>1.7e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BAE98157.1</td>
+              <td>MbtH_like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000339/1">BGC0000339</a></td>
+              <td>NRP</td>
+              <td>62.0</td>
+              <td>88.1</td>
+              <td>55.0</td>
+              <td>2.9e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ATL73054.1</td>
+              <td>MbtH-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001807/1">BGC0001807</a></td>
+              <td>NRP + Polyketide</td>
+              <td>66.0</td>
+              <td>83.3</td>
+              <td>54.0</td>
+              <td>3.8e-08</td>
+          </tr>
+    
+          <tr>
+              <td>WP_054234618.1</td>
+              <td>MbtH_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002014/1">BGC0002014</a></td>
+              <td>NRP + Polyketide</td>
+              <td>63.0</td>
+              <td>83.3</td>
+              <td>54.0</td>
+              <td>5e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABV56590.1</td>
+              <td>KtzJ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000378/1">BGC0000378</a></td>
+              <td>NRP</td>
+              <td>60.0</td>
+              <td>83.3</td>
+              <td>52.0</td>
+              <td>1.9e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAE53358.1</td>
+              <td>MbtH-like_short_polypeptide</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000440/1">BGC0000440</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>60.0</td>
+              <td>88.1</td>
+              <td>52.0</td>
+              <td>2.5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AQZ69230.1</td>
+              <td>MbtH_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001635/1">BGC0001635</a></td>
+              <td>NRP + Polyketide</td>
+              <td>58.0</td>
+              <td>85.7</td>
+              <td>51.0</td>
+              <td>3.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAM02314.1</td>
+              <td>MbtH_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000349/1">BGC0000349</a></td>
+              <td>NRP</td>
+              <td>54.0</td>
+              <td>83.3</td>
+              <td>51.0</td>
+              <td>4.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AGN74884.1</td>
+              <td>MbtH_domain-containing_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000459/1">BGC0000459</a></td>
+              <td>NRP:Cyclic depsipeptide + Polyketide:Trans-AT type I</td>
+              <td>61.0</td>
+              <td>78.6</td>
+              <td>51.0</td>
+              <td>4.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ77694.1</td>
+              <td>MbtH_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000363/1">BGC0000363</a></td>
+              <td>NRP</td>
+              <td>53.0</td>
+              <td>85.7</td>
+              <td>50.0</td>
+              <td>5.5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ77714.1</td>
+              <td>MbtH_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000364/1">BGC0000364</a></td>
+              <td>NRP</td>
+              <td>53.0</td>
+              <td>85.7</td>
+              <td>50.0</td>
+              <td>5.5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AGS77320.1</td>
+              <td>MbtH-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001178/1">BGC0001178</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>58.0</td>
+              <td>85.7</td>
+              <td>50.0</td>
+              <td>5.5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AIG79239.1</td>
+              <td>Hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000419/1">BGC0000419</a></td>
+              <td>Saccharide + NRP:Glycopeptide</td>
+              <td>61.0</td>
+              <td>78.6</td>
+              <td>50.0</td>
+              <td>7.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ34376.1</td>
+              <td>MbtH_homologue</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000445/1">BGC0000445</a></td>
+              <td>NRP:Cyclic depsipeptide</td>
+              <td>57.0</td>
+              <td>83.3</td>
+              <td>50.0</td>
+              <td>9.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>WP_028678147.1</td>
+              <td>MbtH-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001228/1">BGC0001228</a></td>
+              <td>NRP:Cyclic depsipeptide</td>
+              <td>57.0</td>
+              <td>83.3</td>
+              <td>50.0</td>
+              <td>9.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>OLZ50887.1</td>
+              <td>MbtH_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001461/1">BGC0001461</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>56.0</td>
+              <td>85.7</td>
+              <td>50.0</td>
+              <td>9.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AYA22332.1</td>
+              <td>MbtH</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001955/1">BGC0001955</a></td>
+              <td>Other</td>
+              <td>56.0</td>
+              <td>85.7</td>
+              <td>50.0</td>
+              <td>9.4e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AIE77061.1</td>
+              <td>putative_MbtH_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000418/1">BGC0000418</a></td>
+              <td>NRP</td>
+              <td>61.0</td>
+              <td>78.6</td>
+              <td>49.0</td>
+              <td>1.2e-06</td>
+          </tr>
+    
+          <tr>
+              <td>OKA09426.1</td>
+              <td>MbtH_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001459/1">BGC0001459</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>54.0</td>
+              <td>88.1</td>
+              <td>49.0</td>
+              <td>1.2e-06</td>
+          </tr>
+    
+          <tr>
+              <td>CAC48363.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000311/1">BGC0000311</a></td>
+              <td>NRP</td>
+              <td>54.0</td>
+              <td>88.1</td>
+              <td>49.0</td>
+              <td>1.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ABW00332.1</td>
+              <td>MbtH_domain_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000333/1">BGC0000333</a></td>
+              <td>NRP</td>
+              <td>64.0</td>
+              <td>78.6</td>
+              <td>49.0</td>
+              <td>1.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>EME52987.1</td>
+              <td>MbtH-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001460/1">BGC0001460</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>54.0</td>
+              <td>88.1</td>
+              <td>49.0</td>
+              <td>1.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>OLZ52455.1</td>
+              <td>MbtH_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001462/1">BGC0001462</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>54.0</td>
+              <td>88.1</td>
+              <td>49.0</td>
+              <td>1.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>CAE53354.1</td>
+              <td>MbtH-like_short_polypeptide</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000440/1">BGC0000440</a></td>
+              <td>NRP:Glycopeptide</td>
+              <td>51.0</td>
+              <td>92.9</td>
+              <td>49.0</td>
+              <td>2.1e-06</td>
+          </tr>
+    
+          <tr>
+              <td>CAG15013.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000441/1">BGC0000441</a></td>
+              <td>NRP</td>
+              <td>51.0</td>
+              <td>92.9</td>
+              <td>49.0</td>
+              <td>2.1e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ALV86870.1</td>
+              <td>Tlo24</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001406/1">BGC0001406</a></td>
+              <td>NRP</td>
+              <td>60.0</td>
+              <td>83.3</td>
+              <td>49.0</td>
+              <td>2.1e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AAK81828.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000326/1">BGC0000326</a></td>
+              <td>NRP</td>
+              <td>58.0</td>
+              <td>78.6</td>
+              <td>48.0</td>
+              <td>2.7e-06</td>
+          </tr>
+    
+          <tr>
+              <td>WP_067426772.1</td>
+              <td>MbtH_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001567/1">BGC0001567</a></td>
+              <td>NRP</td>
+              <td>58.0</td>
+              <td>78.6</td>
+              <td>48.0</td>
+              <td>2.7e-06</td>
+          </tr>
+    
+          <tr>
+              <td>BAP27941.1</td>
+              <td>MbtH</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001085/1">BGC0001085</a></td>
+              <td>NRP + Terpene</td>
+              <td>57.0</td>
+              <td>83.3</td>
+              <td>48.0</td>
+              <td>3.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>WP_050383092.1</td>
+              <td>MbtH_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001451/1">BGC0001451</a></td>
+              <td>NRP</td>
+              <td>58.0</td>
+              <td>78.6</td>
+              <td>48.0</td>
+              <td>3.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AET98904.1</td>
+              <td>MbtH-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000415/1">BGC0000415</a></td>
+              <td>NRP</td>
+              <td>57.0</td>
+              <td>83.3</td>
+              <td>47.0</td>
+              <td>4.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>BAH04160.1</td>
+              <td>MbtH-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000450/1">BGC0000450</a></td>
+              <td>NRP</td>
+              <td>57.0</td>
+              <td>83.3</td>
+              <td>47.0</td>
+              <td>4.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AKC91858.1</td>
+              <td>mbtH-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001414/1">BGC0001414</a></td>
+              <td>NRP</td>
+              <td>54.0</td>
+              <td>97.6</td>
+              <td>47.0</td>
+              <td>4.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>BAI63290.1</td>
+              <td>MbtH-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000434/1">BGC0000434</a></td>
+              <td>NRP</td>
+              <td>54.0</td>
+              <td>83.3</td>
+              <td>47.0</td>
+              <td>6.1e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ALK27912.1</td>
+              <td>putative_antibiotic_synthesis_protein_MbtH</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001233/1">BGC0001233</a></td>
+              <td>NRP</td>
+              <td>50.0</td>
+              <td>85.7</td>
+              <td>47.0</td>
+              <td>7.9e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

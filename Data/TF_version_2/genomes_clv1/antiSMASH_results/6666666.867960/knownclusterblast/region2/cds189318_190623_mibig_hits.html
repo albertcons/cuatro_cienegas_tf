@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ctg1_orf12</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000846/1">BGC0000846</a></td>
+              <td>Other</td>
+              <td>34.0</td>
+              <td>93.5</td>
+              <td>194.0</td>
+              <td>4.2e-49</td>
+          </tr>
+    
+          <tr>
+              <td>CAN89659.1</td>
+              <td>putative_pyridoxal-phosphate_dependent_enzyme</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001070/1">BGC0001070</a></td>
+              <td>NRP + Polyketide:Modular type I + Polyketide:Trans-AT type I</td>
+              <td>31.0</td>
+              <td>70.7</td>
+              <td>100.0</td>
+              <td>6.2e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ARU08088.1</td>
+              <td>mlcS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001448/1">BGC0001448</a></td>
+              <td>NRP:Ca+-dependent lipopeptide</td>
+              <td>30.0</td>
+              <td>70.3</td>
+              <td>84.0</td>
+              <td>4.6e-16</td>
+          </tr>
+    
+          <tr>
+              <td>QCX41955.1</td>
+              <td>Amc18</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001958/1">BGC0001958</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>72.4</td>
+              <td>62.0</td>
+              <td>1.4e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABS50465.1</td>
+              <td>putative_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001079/1">BGC0001079</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>73.0</td>
+              <td>100.6</td>
+              <td>543.0</td>
+              <td>3e-154</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68906.1</td>
+              <td>methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001083/1">BGC0001083</a></td>
+              <td>Terpene + Polyketide:Type III</td>
+              <td>70.0</td>
+              <td>100.0</td>
+              <td>528.0</td>
+              <td>9.9e-150</td>
+          </tr>
+    
+          <tr>
+              <td>ABS50493.1</td>
+              <td>NapB5</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000652/1">BGC0000652</a></td>
+              <td>Terpene</td>
+              <td>72.0</td>
+              <td>96.9</td>
+              <td>524.0</td>
+              <td>1.9e-148</td>
+          </tr>
+    
+          <tr>
+              <td>BAE78974.1</td>
+              <td>Probable_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001078/1">BGC0001078</a></td>
+              <td>Terpene + Polyketide</td>
+              <td>70.0</td>
+              <td>100.3</td>
+              <td>523.0</td>
+              <td>2.4e-148</td>
+          </tr>
+    
+          <tr>
+              <td>ASZ00163.1</td>
+              <td>SAM-dependent_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001785/1">BGC0001785</a></td>
+              <td>Polyketide</td>
+              <td>69.0</td>
+              <td>100.0</td>
+              <td>500.0</td>
+              <td>2.9e-141</td>
+          </tr>
+    
+          <tr>
+              <td>CQR60478.1</td>
+              <td>Methyltransferase_SAM-dependent;_not_homolog_to_rifamycin_Orf14</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001287/1">BGC0001287</a></td>
+              <td>Polyketide</td>
+              <td>65.0</td>
+              <td>100.6</td>
+              <td>481.0</td>
+              <td>1.4e-135</td>
+          </tr>
+    
+          <tr>
+              <td>BAE78989.1</td>
+              <td>Probable_methyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001078/1">BGC0001078</a></td>
+              <td>Terpene + Polyketide</td>
+              <td>58.0</td>
+              <td>99.2</td>
+              <td>434.0</td>
+              <td>1.9e-121</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

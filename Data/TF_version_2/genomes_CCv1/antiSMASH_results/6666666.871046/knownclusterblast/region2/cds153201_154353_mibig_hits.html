@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>EFG10351.1</td>
+              <td>AmphRI-like_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000373/1">BGC0000373</a></td>
+              <td>NRP</td>
+              <td>61.0</td>
+              <td>83.3</td>
+              <td>335.0</td>
+              <td>1e-91</td>
+          </tr>
+    
+          <tr>
+              <td>ABG02266.1</td>
+              <td>SalRII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000143/1">BGC0000143</a></td>
+              <td>Polyketide</td>
+              <td>38.0</td>
+              <td>68.7</td>
+              <td>118.0</td>
+              <td>2e-26</td>
+          </tr>
+    
+          <tr>
+              <td>QBF51750.1</td>
+              <td>LuxR_family_transcriptional_regulator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001856/1">BGC0001856</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>37.0</td>
+              <td>66.6</td>
+              <td>114.0</td>
+              <td>4.8e-25</td>
+          </tr>
+    
+          <tr>
+              <td>TXD00037.1</td>
+              <td>AAA_family_ATPase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001877/1">BGC0001877</a></td>
+              <td>Polyketide</td>
+              <td>35.0</td>
+              <td>73.4</td>
+              <td>105.0</td>
+              <td>2.2e-22</td>
+          </tr>
+    
+          <tr>
+              <td>AAF71780.1</td>
+              <td>nysRIII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000115/1">BGC0000115</a></td>
+              <td>Polyketide:Modular type I + Saccharide:Hybrid/tailoring</td>
+              <td>36.0</td>
+              <td>58.2</td>
+              <td>98.0</td>
+              <td>2.1e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AMX23313.1</td>
+              <td>transcriptional_regulatory_protein_LuxR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001500/1">BGC0001500</a></td>
+              <td>Polyketide</td>
+              <td>32.0</td>
+              <td>60.1</td>
+              <td>56.0</td>
+              <td>1.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AFK78083.1</td>
+              <td>XiaQ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000666/1">BGC0000666</a></td>
+              <td>Terpene</td>
+              <td>30.0</td>
+              <td>71.5</td>
+              <td>54.0</td>
+              <td>3.5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>CCH63740.1</td>
+              <td>XiaN_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000665/1">BGC0000665</a></td>
+              <td>Terpene + Alkaloid</td>
+              <td>30.0</td>
+              <td>71.5</td>
+              <td>54.0</td>
+              <td>4.5e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

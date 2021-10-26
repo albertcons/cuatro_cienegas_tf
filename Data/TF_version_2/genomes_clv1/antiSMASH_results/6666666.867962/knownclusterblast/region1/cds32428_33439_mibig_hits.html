@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAX31569.1</td>
+              <td>putative_ABC_transporter_permease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000336/1">BGC0000336</a></td>
+              <td>NRP</td>
+              <td>50.0</td>
+              <td>79.2</td>
+              <td>267.0</td>
+              <td>3.9e-71</td>
+          </tr>
+    
+          <tr>
+              <td>AUD08669.1</td>
+              <td>sugar_ABC_transporter_permease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001553/1">BGC0001553</a></td>
+              <td>NRP + Polyketide</td>
+              <td>28.0</td>
+              <td>86.6</td>
+              <td>93.0</td>
+              <td>5.9e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ACR33050.1</td>
+              <td>ABC_transport_permease</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000495/1">BGC0000495</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>28.0</td>
+              <td>74.4</td>
+              <td>91.0</td>
+              <td>2.2e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAH10092.1</td>
+              <td>putative_transport_system_permease_ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000268/1">BGC0000268</a></td>
+              <td>Polyketide</td>
+              <td>25.0</td>
+              <td>81.5</td>
+              <td>73.0</td>
+              <td>8.3e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ACR50750.1</td>
+              <td>putative_ABC_transporter_permease_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000163/1">BGC0000163</a></td>
+              <td>Polyketide</td>
+              <td>24.0</td>
+              <td>84.2</td>
+              <td>62.0</td>
+              <td>1.5e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

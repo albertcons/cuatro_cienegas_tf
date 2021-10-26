@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AJI44172.1</td>
+              <td>ferredoxin_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001193/1">BGC0001193</a></td>
+              <td>NRP</td>
+              <td>34.0</td>
+              <td>42.7</td>
+              <td>76.0</td>
+              <td>1.8e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AME30282.1</td>
+              <td>ferredoxin_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001463/1">BGC0001463</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>42.9</td>
+              <td>66.0</td>
+              <td>1.1e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ESP90841.1</td>
+              <td>NAD(FAD)-dependent_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000891/1">BGC0000891</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>27.0</td>
+              <td>37.3</td>
+              <td>65.0</td>
+              <td>2.5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AKJ75105.1</td>
+              <td>Bmp10</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001464/1">BGC0001464</a></td>
+              <td>Other</td>
+              <td>28.0</td>
+              <td>43.9</td>
+              <td>62.0</td>
+              <td>2.8e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AHA34031.1</td>
+              <td>Bmp10,_Ferredoxin_Reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000890/1">BGC0000890</a></td>
+              <td>Other:Aminocoumarin</td>
+              <td>27.0</td>
+              <td>36.5</td>
+              <td>61.0</td>
+              <td>6.1e-09</td>
+          </tr>
+    
+          <tr>
+              <td>WP_013663187.1</td>
+              <td>ferredoxin--NAD(+)_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001465/1">BGC0001465</a></td>
+              <td>Other</td>
+              <td>30.0</td>
+              <td>43.9</td>
+              <td>59.0</td>
+              <td>1.4e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ALG65312.1</td>
+              <td>Cal24</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001297/1">BGC0001297</a></td>
+              <td>NRP</td>
+              <td>27.0</td>
+              <td>43.9</td>
+              <td>50.0</td>
+              <td>6.3e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

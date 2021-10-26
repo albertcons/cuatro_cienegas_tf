@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAX48971.1</td>
+              <td>serine/threonine_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000519/1">BGC0000519</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>46.0</td>
+              <td>69.1</td>
+              <td>413.0</td>
+              <td>7.6e-115</td>
+          </tr>
+    
+          <tr>
+              <td>SSHG_03588</td>
+              <td>serine/threonine_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000546/1">BGC0000546</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>44.0</td>
+              <td>73.1</td>
+              <td>406.0</td>
+              <td>1.2e-112</td>
+          </tr>
+    
+          <tr>
+              <td>WP_037629851.1</td>
+              <td>protein_kinase/lanthionine_synthetase_C_family_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000546/1">BGC0000546</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>44.0</td>
+              <td>73.1</td>
+              <td>406.0</td>
+              <td>1.2e-112</td>
+          </tr>
+    
+          <tr>
+              <td>CAA19960.1</td>
+              <td>putative_serine/threonine_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000551/1">BGC0000551</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>43.0</td>
+              <td>72.8</td>
+              <td>394.0</td>
+              <td>4.8e-109</td>
+          </tr>
+    
+          <tr>
+              <td>ACU73103.1</td>
+              <td>serine/threonine_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000501/1">BGC0000501</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>40.0</td>
+              <td>68.6</td>
+              <td>363.0</td>
+              <td>6.9e-100</td>
+          </tr>
+    
+          <tr>
+              <td>CAM03499.1</td>
+              <td>serine/threonine_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000513/1">BGC0000513</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>40.0</td>
+              <td>68.2</td>
+              <td>342.0</td>
+              <td>1.3e-93</td>
+          </tr>
+    
+          <tr>
+              <td>EFL36750.1</td>
+              <td>membrane_translocator</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000518/1">BGC0000518</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>40.0</td>
+              <td>68.7</td>
+              <td>339.0</td>
+              <td>1.1e-92</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

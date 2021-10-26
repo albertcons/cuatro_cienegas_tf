@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADM69290.1</td>
+              <td>cyclase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001727/1">BGC0001727</a></td>
+              <td>RiPP</td>
+              <td>31.0</td>
+              <td>82.9</td>
+              <td>106.0</td>
+              <td>7.1e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AEK64493.1</td>
+              <td>EtnC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000506/1">BGC0000506</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>26.0</td>
+              <td>83.1</td>
+              <td>95.0</td>
+              <td>2.2e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAB91588.1</td>
+              <td>SpaC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000559/1">BGC0000559</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>26.0</td>
+              <td>92.1</td>
+              <td>92.0</td>
+              <td>1.4e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AAL15566.1</td>
+              <td>putative_SpaT</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000511/1">BGC0000511</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>25.0</td>
+              <td>98.6</td>
+              <td>89.0</td>
+              <td>9e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AGL93174.1</td>
+              <td>lanthionine_synthetase_C-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000560/1">BGC0000560</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>28.0</td>
+              <td>61.0</td>
+              <td>86.0</td>
+              <td>1e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AFS60103.1</td>
+              <td>PaenC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000540/1">BGC0000540</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>27.0</td>
+              <td>75.8</td>
+              <td>71.0</td>
+              <td>4.3e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

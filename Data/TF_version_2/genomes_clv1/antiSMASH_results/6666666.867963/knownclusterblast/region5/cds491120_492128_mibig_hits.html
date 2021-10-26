@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAL15614.1</td>
+              <td>hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000270/1">BGC0000270</a></td>
+              <td>Polyketide</td>
+              <td>30.0</td>
+              <td>94.9</td>
+              <td>128.0</td>
+              <td>2.2e-29</td>
+          </tr>
+    
+          <tr>
+              <td>CAN89620.1</td>
+              <td>putative_hydrolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001070/1">BGC0001070</a></td>
+              <td>NRP + Polyketide:Modular type I + Polyketide:Trans-AT type I</td>
+              <td>29.0</td>
+              <td>56.1</td>
+              <td>68.0</td>
+              <td>2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ATX68116.1</td>
+              <td>malonyl_CoA-acyl_carrier_protein_transacylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001772/1">BGC0001772</a></td>
+              <td>Polyketide</td>
+              <td>31.0</td>
+              <td>36.1</td>
+              <td>68.0</td>
+              <td>2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ADN13832.1</td>
+              <td>Polyketide_Synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001164/1">BGC0001164</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>34.0</td>
+              <td>27.8</td>
+              <td>66.0</td>
+              <td>1e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ACV42478.1</td>
+              <td>polyketide_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000043/1">BGC0000043</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>36.7</td>
+              <td>63.0</td>
+              <td>8.5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AEE88277.1</td>
+              <td>CurM</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000976/1">BGC0000976</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>29.0</td>
+              <td>36.7</td>
+              <td>63.0</td>
+              <td>8.5e-10</td>
+          </tr>
+    
+          <tr>
+              <td>CAE45657.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000031/1">BGC0000031</a></td>
+              <td>Polyketide:Modular type I</td>
+              <td>23.0</td>
+              <td>88.7</td>
+              <td>57.0</td>
+              <td>6.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ALV82327.1</td>
+              <td>chloroperoxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001533/1">BGC0001533</a></td>
+              <td>Polyketide</td>
+              <td>23.0</td>
+              <td>88.7</td>
+              <td>57.0</td>
+              <td>6.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AAT70108.1</td>
+              <td>CurM</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001165/1">BGC0001165</a></td>
+              <td>NRP + Polyketide:Modular type I</td>
+              <td>31.0</td>
+              <td>30.7</td>
+              <td>56.0</td>
+              <td>8e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AHL46712.1</td>
+              <td>ketosynthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001179/1">BGC0001179</a></td>
+              <td>Polyketide:Type II</td>
+              <td>36.0</td>
+              <td>101.2</td>
+              <td>205.0</td>
+              <td>1.1e-52</td>
+          </tr>
+    
+          <tr>
+              <td>AWM72906.1</td>
+              <td>3-oxoacyl-ACP_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001719/1">BGC0001719</a></td>
+              <td>Polyketide</td>
+              <td>37.0</td>
+              <td>100.6</td>
+              <td>203.0</td>
+              <td>5.4e-52</td>
+          </tr>
+    
+          <tr>
+              <td>BAL90265.1</td>
+              <td>putative_3-oxoacyl-ACP_synthase_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0002021/1">BGC0002021</a></td>
+              <td>Polyketide</td>
+              <td>29.0</td>
+              <td>107.0</td>
+              <td>166.0</td>
+              <td>5.6e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AAN65231.1</td>
+              <td>acyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000832/1">BGC0000832</a></td>
+              <td>Saccharide:Hybrid/tailoring + Other:Aminocoumarin</td>
+              <td>33.0</td>
+              <td>100.9</td>
+              <td>164.0</td>
+              <td>3.6e-40</td>
+          </tr>
+    
+          <tr>
+              <td>AAG29787.2</td>
+              <td>acyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000833/1">BGC0000833</a></td>
+              <td>Saccharide:Hybrid/tailoring + Other:Aminocoumarin</td>
+              <td>33.0</td>
+              <td>101.2</td>
+              <td>161.0</td>
+              <td>3.1e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ADE34509.1</td>
+              <td>ssfG</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000269/1">BGC0000269</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>32.0</td>
+              <td>98.2</td>
+              <td>153.0</td>
+              <td>8.4e-37</td>
+          </tr>
+    
+          <tr>
+              <td>ACJ24876.1</td>
+              <td>ketoacyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000119/1">BGC0000119</a></td>
+              <td>Polyketide:Iterative type I + Saccharide:Hybrid/tailoring</td>
+              <td>26.0</td>
+              <td>99.1</td>
+              <td>123.0</td>
+              <td>9.3e-28</td>
+          </tr>
+    
+          <tr>
+              <td>BAF92602.1</td>
+              <td>ketoacyl-ACP_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000118/1">BGC0000118</a></td>
+              <td>Polyketide</td>
+              <td>26.0</td>
+              <td>99.4</td>
+              <td>118.0</td>
+              <td>2.3e-26</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

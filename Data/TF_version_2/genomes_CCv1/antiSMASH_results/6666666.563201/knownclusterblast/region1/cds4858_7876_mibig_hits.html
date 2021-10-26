@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CCQ18696.1</td>
+              <td>lantibiotic_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000544/1">BGC0000544</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>29.0</td>
+              <td>102.9</td>
+              <td>263.0</td>
+              <td>1.3e-69</td>
+          </tr>
+    
+          <tr>
+              <td>AHF21234.1</td>
+              <td>PabB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000542/1">BGC0000542</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>25.0</td>
+              <td>103.2</td>
+              <td>233.0</td>
+              <td>1.9e-60</td>
+          </tr>
+    
+          <tr>
+              <td>ADM69294.1</td>
+              <td>dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001727/1">BGC0001727</a></td>
+              <td>RiPP</td>
+              <td>25.0</td>
+              <td>103.0</td>
+              <td>225.0</td>
+              <td>3.9e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ALR96370.1</td>
+              <td>lanthionine_biosynthesis_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001289/1">BGC0001289</a></td>
+              <td>RiPP</td>
+              <td>27.0</td>
+              <td>102.0</td>
+              <td>222.0</td>
+              <td>4.3e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AFW17835.1</td>
+              <td>PaeB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000541/1">BGC0000541</a></td>
+              <td>RiPP:Lanthipeptide</td>
+              <td>23.0</td>
+              <td>103.4</td>
+              <td>205.0</td>
+              <td>4.2e-52</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

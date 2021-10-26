@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAB69144.1</td>
+              <td>phytoene_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000633/1">BGC0000633</a></td>
+              <td>Terpene</td>
+              <td>85.0</td>
+              <td>99.8</td>
+              <td>862.0</td>
+              <td>2.4e-250</td>
+          </tr>
+    
+          <tr>
+              <td>crtaI</td>
+              <td>phytoene_desaturase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001456/1">BGC0001456</a></td>
+              <td>Terpene</td>
+              <td>82.0</td>
+              <td>99.2</td>
+              <td>837.0</td>
+              <td>1.4e-242</td>
+          </tr>
+    
+          <tr>
+              <td>BAG23658.1</td>
+              <td>putative_phytoene_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000664/1">BGC0000664</a></td>
+              <td>Terpene</td>
+              <td>80.0</td>
+              <td>97.8</td>
+              <td>807.0</td>
+              <td>1.2e-233</td>
+          </tr>
+    
+          <tr>
+              <td>AAG28700.1</td>
+              <td>CrtI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000649/1">BGC0000649</a></td>
+              <td>Terpene</td>
+              <td>80.0</td>
+              <td>97.8</td>
+              <td>802.0</td>
+              <td>3.9e-232</td>
+          </tr>
+    
+          <tr>
+              <td>AGS67378.1</td>
+              <td>phytoene_desaturase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001227/1">BGC0001227</a></td>
+              <td>Terpene</td>
+              <td>79.0</td>
+              <td>95.1</td>
+              <td>774.0</td>
+              <td>1.1e-223</td>
+          </tr>
+    
+          <tr>
+              <td>CAA79956.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000648/1">BGC0000648</a></td>
+              <td>Terpene</td>
+              <td>34.0</td>
+              <td>98.0</td>
+              <td>272.0</td>
+              <td>1.4e-72</td>
+          </tr>
+    
+          <tr>
+              <td>ABB88948.1</td>
+              <td>CrtI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000650/1">BGC0000650</a></td>
+              <td>Terpene</td>
+              <td>27.0</td>
+              <td>96.9</td>
+              <td>175.0</td>
+              <td>1.8e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ61848.1</td>
+              <td>protoporphyrinogen_oxidase,_amine_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000240/1">BGC0000240</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>63.8</td>
+              <td>56.0</td>
+              <td>2.1e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ABP54637.1</td>
+              <td>protoporphyrinogen_oxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000241/1">BGC0000241</a></td>
+              <td>Polyketide:Type II + Saccharide:Hybrid/tailoring</td>
+              <td>26.0</td>
+              <td>63.0</td>
+              <td>55.0</td>
+              <td>2.7e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

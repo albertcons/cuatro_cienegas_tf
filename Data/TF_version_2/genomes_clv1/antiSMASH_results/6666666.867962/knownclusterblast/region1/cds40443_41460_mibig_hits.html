@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAG17299.1</td>
+              <td>monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000282/1">BGC0000282</a></td>
+              <td>Polyketide</td>
+              <td>92.0</td>
+              <td>100.0</td>
+              <td>597.0</td>
+              <td>1.3e-170</td>
+          </tr>
+    
+          <tr>
+              <td>AYM52862.1</td>
+              <td>monooxygenase_FAD-binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001964/1">BGC0001964</a></td>
+              <td>Polyketide</td>
+              <td>46.0</td>
+              <td>106.2</td>
+              <td>231.0</td>
+              <td>1.8e-60</td>
+          </tr>
+    
+          <tr>
+              <td>ABF92878.1</td>
+              <td>monooxygenase,_FAD-binding</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001831/1">BGC0001831</a></td>
+              <td>Polyketide</td>
+              <td>45.0</td>
+              <td>106.2</td>
+              <td>229.0</td>
+              <td>9.1e-60</td>
+          </tr>
+    
+          <tr>
+              <td>AEE65502.1</td>
+              <td>geranylgeranyl_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000223/1">BGC0000223</a></td>
+              <td>Polyketide:Type II</td>
+              <td>34.0</td>
+              <td>88.8</td>
+              <td>83.0</td>
+              <td>8e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AKQ99277.1</td>
+              <td>pentachlorophenol_4-monooxygenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001484/1">BGC0001484</a></td>
+              <td>Other</td>
+              <td>32.0</td>
+              <td>92.3</td>
+              <td>62.0</td>
+              <td>1.5e-09</td>
+          </tr>
+    
+          <tr>
+              <td>EFG04594.1</td>
+              <td>Staurosporine_biosynthesis_monooxygenase_StaC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000826/1">BGC0000826</a></td>
+              <td>Alkaloid</td>
+              <td>28.0</td>
+              <td>100.0</td>
+              <td>50.0</td>
+              <td>7.5e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>
